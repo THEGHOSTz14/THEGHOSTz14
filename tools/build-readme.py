@@ -297,11 +297,11 @@ def build():
     a("")
     p.extend(centered([
         "  " + img(f"{STATS}?username={USERNAME}&show_icons=true&count_private=true"
-                   f"&show=prs_merged,prs_merged_percentage,reviews&{THEME}&card_width=500", "GitHub stats"),
+                   f"&show=prs_merged,prs_merged_percentage,reviews&{THEME}&card_width=360", "GitHub stats"),
         "  " + img(
             "https://github-readme-streak-stats.herokuapp.com/?user=" + USERNAME
             + "&theme=tokyonight&background=0d1117&border=181712&ring=4FC1E9&fire=FF6F00"
-            "&currStreakLabel=7C9AC4&sideLabels=C9D1D9&dates=8B949E&hide_border=true&card_width=500",
+            "&currStreakLabel=7C9AC4&sideLabels=C9D1D9&dates=8B949E&hide_border=true&card_width=360",
             "Contribution streak"),
     ]))
     a("## ⚡ Tech stack")
@@ -318,7 +318,7 @@ def build():
     for repo, pitch, _logo in shown:
         p.extend(centered([
             "  " + img(f"https://github-readme-stats.vercel.app/api/pin/?username={USERNAME}"
-                       f"&repo={repo}&card_width=500&{THEME}", repo),
+                       f"&repo={repo}&card_width=360&{THEME}", repo),
         ]))
     for repo, pitch, _logo in hidden:
         a(f"- **{repo}** — {pitch} _(private, ask me for a look)_")
@@ -327,7 +327,7 @@ def build():
     a("## 📊 Activity")
     a("")
     p.extend(centered([
-        "    " + img(f"{STATS}/top-langs/?username={USERNAME}&layout=compact&card_width=440&{THEME}", "Top languages"),
+        "    " + img(f"{STATS}/top-langs/?username={USERNAME}&layout=compact&card_width=340&{THEME}", "Top languages"),
     ]))
 
     a("<!-- github-snake.svg is regenerated nightly by .github/workflows/snake.yml -->")
@@ -365,7 +365,7 @@ def build():
     a("")
     a("<div align=\"center\">")
     a("")
-    a("  " + img("assets/profile-card.png", "Profile card", "620"))
+    a("  " + img("assets/profile-card.png", "Profile card", "100%"))
     a("")
     a("</div>")
     a("")
