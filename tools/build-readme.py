@@ -166,13 +166,34 @@ def esc(s):
     return out
 
 
+def readable(hex_color, floor=0.10):
+    """Blend a brand colour toward white until it is visible on a #181712 pill.
+
+    Pandas ships #150458, which is darker than the pill itself and rendered as an
+    invisible logo.
+    """
+    c = hex_color.lstrip("#")
+    r, g, b = (int(c[i:i + 2], 16) for i in (0, 2, 4))
+    def lum(v):
+        v /= 255
+        return v / 12.92 if v <= 0.03928 else ((v + 0.055) / 1.055) ** 2.4
+    def rel(rgb):
+        rl, gl, bl = (lum(x) for x in rgb)
+        return 0.2126 * rl + 0.7152 * gl + 0.0722 * bl
+    while rel((r, g, b)) < floor:
+        r = min(255, int(r + (255 - r) * 0.2))
+        g = min(255, int(g + (255 - g) * 0.2))
+        b = min(255, int(b + (255 - b) * 0.2))
+    return f"{r:02X}{g:02X}{b:02X}"
+
+
 def pill(label, logo="", logo_color=None):
     url = (
         f"https://img.shields.io/badge/-{esc(label)}-{PILL}"
         f"?style=flat&labelColor={PILL}&color={PILL}"
     )
     if logo:
-        url += f"&logo={logo}&logoColor={logo_color or 'white'}"
+        url += f"&logo={logo}&logoColor={readable(logo_color) if logo_color else 'white'}"
     return url
 
 
@@ -327,9 +348,7 @@ def build():
     p.extend(centered([
         "    " + img(f"{STATS}/top-langs/?username={USERNAME}&layout=compact&card_width=440&{THEME}", "Top languages"),
     ]))
-    p.extend(centered([
-        "    " + img(f"https://ghchart.rshah.org/4FC1E9/{USERNAME}", "Contribution chart", "100%"),
-    ]))
+
     a("<!-- github-snake.svg is regenerated nightly by .github/workflows/snake.yml -->")
     snake = f"https://raw.githubusercontent.com/{USERNAME}/{USERNAME}/github-snake"
     p.extend(centered([
