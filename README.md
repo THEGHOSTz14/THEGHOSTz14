@@ -28,7 +28,7 @@
 </td>
 <td width="46%" valign="top" align="center">
 
-  <img src="https://github-readme-stats.vercel.app/api?username=THEGHOSTz14&show_icons=true&count_private=true&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="GitHub stats" width="100%">
+  <img src="https://github-readme-stats.vercel.app/api?username=THEGHOSTz14&show_icons=true&count_private=true&show=prs_merged,prs_merged_percentage,reviews&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="GitHub stats" width="100%">
 
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=THEGHOSTz14&theme=tokyonight&background=0d1117&border=181712&ring=4FC1E9&fire=FF6F00&currStreakLabel=7C9AC4&sideLabels=C9D1D9&dates=8B949E&hide_border=true" alt="Contribution streak" width="100%">
 
@@ -103,13 +103,24 @@
 
 ## 🚀 Things I have shipped
 
+<table><tr>
+<td width="50%" valign="top" align="center">
+
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=THEGHOSTz14&repo=YOLO-BASIC-MODEL&card_width=320&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="YOLO-BASIC-MODEL">
+
+  Object detection model trained from scratch in Python
+
+</td>
+<td width="50%" valign="top" align="center">
+
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=THEGHOSTz14&repo=C-&card_width=320&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="C-">
+
+  C# basics written while learning the language in VS Code
+
+</td>
+</tr></table>
+
 - **GHOST_WEB_GAME-** — Godot 4.7 arcade game, exported to WASM for the y8 browser portal _(private, ask me for a look)_
-
-- [**YOLO-BASIC-MODEL**](https://github.com/THEGHOSTz14/YOLO-BASIC-MODEL) — Object detection model trained from scratch in Python  
-  <img src="https://img.shields.io/github/stars/THEGHOSTz14/YOLO-BASIC-MODEL?style=flat&labelColor=181712&color=181712&logo=github&logoColor=white" alt="stars"> <img src="https://img.shields.io/github/forks/THEGHOSTz14/YOLO-BASIC-MODEL?style=flat&labelColor=181712&color=181712" alt="forks"> <img src="https://img.shields.io/github/languages/top/THEGHOSTz14/YOLO-BASIC-MODEL?style=flat&labelColor=181712&color=181712&logo=ultralytics&logoColor=white" alt="top language"> <img src="https://img.shields.io/github/last-commit/THEGHOSTz14/YOLO-BASIC-MODEL?style=flat&labelColor=181712&color=181712" alt="last commit">
-
-- [**C-**](https://github.com/THEGHOSTz14/C-) — C# basics written while learning the language in VS Code  
-  <img src="https://img.shields.io/github/stars/THEGHOSTz14/C-?style=flat&labelColor=181712&color=181712&logo=github&logoColor=white" alt="stars"> <img src="https://img.shields.io/github/forks/THEGHOSTz14/C-?style=flat&labelColor=181712&color=181712" alt="forks"> <img src="https://img.shields.io/github/languages/top/THEGHOSTz14/C-?style=flat&labelColor=181712&color=181712&logo=dotnet&logoColor=white" alt="top language"> <img src="https://img.shields.io/github/last-commit/THEGHOSTz14/C-?style=flat&labelColor=181712&color=181712" alt="last commit">
 
 ## 📊 Activity
 

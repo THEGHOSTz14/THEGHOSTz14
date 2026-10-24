@@ -175,12 +175,6 @@ def centered(html_lines):
     return ["<p align=\"center\">", "", *[l.lstrip() for l in html_lines], "", "</p>", ""]
 
 
-def repo_pill(repo, kind, logo=""):
-    # repo names go in the path verbatim - shields escaping rules are for label text only
-    url = f"https://img.shields.io/github/{kind}/{USERNAME}/{repo}?style=flat&labelColor={PILL}&color={PILL}"
-    if logo:
-        url += f"&logo={logo}&logoColor=white"
-    return url
 
 
 def public_repos():
@@ -255,7 +249,8 @@ def build():
     a("</td>")
     a("<td width=\"46%\" valign=\"top\" align=\"center\">")
     a("")
-    a("  " + img(f"{STATS}?username={USERNAME}&show_icons=true&count_private=true&{THEME}", "GitHub stats", "100%"))
+    a("  " + img(f"{STATS}?username={USERNAME}&show_icons=true&count_private=true"
+             f"&show=prs_merged,prs_merged_percentage,reviews&{THEME}", "GitHub stats", "100%"))
     a("")
     a("  " + img(
         "https://github-readme-streak-stats.herokuapp.com/?user=" + USERNAME
@@ -276,16 +271,24 @@ def build():
         p.extend(centered([f"    {tiles}"]))
     a("## 🚀 Things I have shipped")
     a("")
-    for repo, pitch, logo in PROJECTS:
-        if repo not in visible:
-            a(f"- **{repo}** — {pitch} _(private, ask me for a look)_")
+    shown = [row for row in PROJECTS if row[0] in visible]
+    hidden = [row for row in PROJECTS if row[0] not in visible]
+    if shown:
+        col = 100 // len(shown)
+        a("<table><tr>")
+        for repo, pitch, _logo in shown:
+            a(f'<td width="{col}%" valign="top" align="center">')
             a("")
-            continue
-        a(f"- [**{repo}**](https://github.com/{USERNAME}/{repo}) — {pitch}  ")
-        a("  " + img(repo_pill(repo, "stars", "github"), "stars") + " "
-          + img(repo_pill(repo, "forks"), "forks") + " "
-          + img(repo_pill(repo, "languages/top", logo), "top language") + " "
-          + img(repo_pill(repo, "last-commit"), "last commit"))
+            a("  " + img(f"https://github-readme-stats.vercel.app/api/pin/?username={USERNAME}"
+                         f"&repo={repo}&card_width=320&{THEME}", repo))
+            a("")
+            a(f"  {pitch}")
+            a("")
+            a("</td>")
+        a("</tr></table>")
+        a("")
+    for repo, pitch, _logo in hidden:
+        a(f"- **{repo}** — {pitch} _(private, ask me for a look)_")
         a("")
 
     a("## 📊 Activity")
