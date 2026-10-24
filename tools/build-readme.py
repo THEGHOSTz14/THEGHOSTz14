@@ -264,8 +264,8 @@ def build():
     a("  Manesar, India · *Om Industries Pvt Ltd* · I write code that either runs a plant or runs in a browser")
     a("")
     a("  " + img(
-        "https://readme-typing-svg.demolab.com/?font=Fira%20Code&center=true&width=680&height=52"
-        "&color=4FC1E9&vCenter=true&size=23&pause=1000&lines="
+        "https://readme-typing-svg.demolab.com/?font=Fira%20Code&center=true&width=360&height=44"
+        "&color=4FC1E9&vCenter=true&size=19&pause=1000&lines="
         + ";".join(["Rohan%20from%20Manesar",
                     "Industrial%20%26%20PLC%20engineer",
                     "Godot%204%20%2B%20GDScript",
