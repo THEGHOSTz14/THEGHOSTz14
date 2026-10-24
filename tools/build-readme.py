@@ -263,14 +263,20 @@ def build():
     a("")
     a("  Manesar, India · *Om Industries Pvt Ltd* · I write code that either runs a plant or runs in a browser")
     a("")
-    a("  " + img(
-        "https://readme-typing-svg.demolab.com/?font=Fira%20Code&center=true&width=360&height=44"
-        "&color=4FC1E9&vCenter=true&size=19&pause=1000&lines="
-        + ";".join(["Rohan%20from%20Manesar",
-                    "Industrial%20%26%20PLC%20engineer",
-                    "Godot%204%20%2B%20GDScript",
-                    "Automating%20the%20boring%20parts"]),
-        "typewriter intro"))
+    # teal on dark, GitHub blue on light - the same widget would be unreadable
+    # in one of the two themes without this
+    def typing(color):
+        return ("https://readme-typing-svg.demolab.com/?font=Fira%20Code&center=true&width=360&height=44"
+                f"&color={color}&vCenter=true&size=19&pause=1000&lines="
+                + ";".join(["Rohan%20from%20Manesar",
+                            "Industrial%20%26%20PLC%20engineer",
+                            "Godot%204%20%2B%20GDScript",
+                            "Automating%20the%20boring%20parts"]))
+    a("  <picture>")
+    a(f'    <source media="(prefers-color-scheme: dark)" srcset="{typing("4FC1E9")}" />')
+    a(f'    <source media="(prefers-color-scheme: light)" srcset="{typing("0969DA")}" />')
+    a(f'    <img alt="typewriter intro" src="{typing("4FC1E9")}" width="360" />')
+    a("  </picture>")
     a("")
     a("  " + img(
         f"https://komarev.com/ghpvc/?username={USERNAME}&style=flat&labelColor={PILL}&color={PILL}&label=visitors",

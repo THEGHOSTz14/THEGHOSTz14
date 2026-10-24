@@ -8,7 +8,11 @@
 
   Manesar, India · *Om Industries Pvt Ltd* · I write code that either runs a plant or runs in a browser
 
-  <img src="https://readme-typing-svg.demolab.com/?font=Fira%20Code&center=true&width=360&height=44&color=4FC1E9&vCenter=true&size=19&pause=1000&lines=Rohan%20from%20Manesar;Industrial%20%26%20PLC%20engineer;Godot%204%20%2B%20GDScript;Automating%20the%20boring%20parts" alt="typewriter intro">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com/?font=Fira%20Code&center=true&width=360&height=44&color=4FC1E9&vCenter=true&size=19&pause=1000&lines=Rohan%20from%20Manesar;Industrial%20%26%20PLC%20engineer;Godot%204%20%2B%20GDScript;Automating%20the%20boring%20parts" />
+    <source media="(prefers-color-scheme: light)" srcset="https://readme-typing-svg.demolab.com/?font=Fira%20Code&center=true&width=360&height=44&color=0969DA&vCenter=true&size=19&pause=1000&lines=Rohan%20from%20Manesar;Industrial%20%26%20PLC%20engineer;Godot%204%20%2B%20GDScript;Automating%20the%20boring%20parts" />
+    <img alt="typewriter intro" src="https://readme-typing-svg.demolab.com/?font=Fira%20Code&center=true&width=360&height=44&color=4FC1E9&vCenter=true&size=19&pause=1000&lines=Rohan%20from%20Manesar;Industrial%20%26%20PLC%20engineer;Godot%204%20%2B%20GDScript;Automating%20the%20boring%20parts" width="360" />
+  </picture>
 
   <img src="https://komarev.com/ghpvc/?username=THEGHOSTz14&style=flat&labelColor=181712&color=181712&label=visitors" alt="profile views"> <img src="https://img.shields.io/github/followers/THEGHOSTz14?style=flat&labelColor=181712&color=181712&logo=github&logoColor=white&label=followers" alt="followers"> <img src="https://img.shields.io/github/stars/THEGHOSTz14?style=flat&labelColor=181712&color=181712&label=stars%20received" alt="stars received">
 
