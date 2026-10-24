@@ -287,9 +287,6 @@ def build():
     a("</div>")
     a("")
 
-    a("<table><tr>")
-    a("<td width=\"54%\" valign=\"top\">")
-    a("")
     a("### 🧾 About me")
     a("")
     a("- 🔭 **Building** → *GHOST WEB GAME* — a Godot 4.7 arcade game exported to WASM for the y8 browser portal")
@@ -298,22 +295,15 @@ def build():
     a("- 💬 **Ask me about** → ladder logic, 24 V sensor wiring, why a contactor chatters, Godot web exports")
     a("- ⚡ **Method** → I debug PLCs with a multimeter and games with `print()`. Both work.")
     a("")
-    a("</td>")
-    a("<td width=\"46%\" valign=\"top\" align=\"center\">")
-    a("")
-    a("  " + img(f"{STATS}?username={USERNAME}&show_icons=true&count_private=true"
-             f"&show=prs_merged,prs_merged_percentage,reviews&{THEME}", "GitHub stats", "100%"))
-    a("")
-    a("  " + img(
-        "https://github-readme-streak-stats.herokuapp.com/?user=" + USERNAME
-        + "&theme=tokyonight&background=0d1117&border=181712&ring=4FC1E9&fire=FF6F00"
-        "&currStreakLabel=7C9AC4&sideLabels=C9D1D9&dates=8B949E&hide_border=true",
-        "Contribution streak", "100%"))
-    a("")
-    a("</td>")
-    a("</tr></table>")
-    a("")
-
+    p.extend(centered([
+        "  " + img(f"{STATS}?username={USERNAME}&show_icons=true&count_private=true"
+                   f"&show=prs_merged,prs_merged_percentage,reviews&{THEME}&card_width=500", "GitHub stats"),
+        "  " + img(
+            "https://github-readme-streak-stats.herokuapp.com/?user=" + USERNAME
+            + "&theme=tokyonight&background=0d1117&border=181712&ring=4FC1E9&fire=FF6F00"
+            "&currStreakLabel=7C9AC4&sideLabels=C9D1D9&dates=8B949E&hide_border=true&card_width=500",
+            "Contribution streak"),
+    ]))
     a("## ⚡ Tech stack")
     a("")
     for title, items in TECH.items():
@@ -325,19 +315,11 @@ def build():
     a("")
     shown = [row for row in PROJECTS if row[0] in visible]
     hidden = [row for row in PROJECTS if row[0] not in visible]
-    if shown:
-        col = 100 // len(shown)
-        a("<table><tr>")
-        for repo, pitch, _logo in shown:
-            a(f'<td width="{col}%" valign="top" align="center">')
-            a("")
-            # the pin card already renders the repo's About text, so no caption here
-            a("  " + img(f"https://github-readme-stats.vercel.app/api/pin/?username={USERNAME}"
-                         f"&repo={repo}&card_width=320&{THEME}", repo))
-            a("")
-            a("</td>")
-        a("</tr></table>")
-        a("")
+    for repo, pitch, _logo in shown:
+        p.extend(centered([
+            "  " + img(f"https://github-readme-stats.vercel.app/api/pin/?username={USERNAME}"
+                       f"&repo={repo}&card_width=500&{THEME}", repo),
+        ]))
     for repo, pitch, _logo in hidden:
         a(f"- **{repo}** — {pitch} _(private, ask me for a look)_")
         a("")

@@ -16,9 +16,6 @@
 
 </div>
 
-<table><tr>
-<td width="54%" valign="top">
-
 ### 🧾 About me
 
 - 🔭 **Building** → *GHOST WEB GAME* — a Godot 4.7 arcade game exported to WASM for the y8 browser portal
@@ -27,15 +24,12 @@
 - 💬 **Ask me about** → ladder logic, 24 V sensor wiring, why a contactor chatters, Godot web exports
 - ⚡ **Method** → I debug PLCs with a multimeter and games with `print()`. Both work.
 
-</td>
-<td width="46%" valign="top" align="center">
+<p align="center">
 
-  <img src="https://github-readme-stats.vercel.app/api?username=THEGHOSTz14&show_icons=true&count_private=true&show=prs_merged,prs_merged_percentage,reviews&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="GitHub stats" width="100%">
+<img src="https://github-readme-stats.vercel.app/api?username=THEGHOSTz14&show_icons=true&count_private=true&show=prs_merged,prs_merged_percentage,reviews&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true&card_width=500" alt="GitHub stats">
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=THEGHOSTz14&theme=tokyonight&background=0d1117&border=181712&ring=4FC1E9&fire=FF6F00&currStreakLabel=7C9AC4&sideLabels=C9D1D9&dates=8B949E&hide_border=true&card_width=500" alt="Contribution streak">
 
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=THEGHOSTz14&theme=tokyonight&background=0d1117&border=181712&ring=4FC1E9&fire=FF6F00&currStreakLabel=7C9AC4&sideLabels=C9D1D9&dates=8B949E&hide_border=true" alt="Contribution streak" width="100%">
-
-</td>
-</tr></table>
+</p>
 
 ## ⚡ Tech stack
 
@@ -105,18 +99,17 @@
 
 ## 🚀 Things I have shipped
 
-<table><tr>
-<td width="50%" valign="top" align="center">
+<p align="center">
 
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=THEGHOSTz14&repo=YOLO-BASIC-MODEL&card_width=320&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="YOLO-BASIC-MODEL">
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=THEGHOSTz14&repo=YOLO-BASIC-MODEL&card_width=500&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="YOLO-BASIC-MODEL">
 
-</td>
-<td width="50%" valign="top" align="center">
+</p>
 
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=THEGHOSTz14&repo=C-&card_width=320&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="C-">
+<p align="center">
 
-</td>
-</tr></table>
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=THEGHOSTz14&repo=C-&card_width=500&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="C-">
+
+</p>
 
 - **GHOST_WEB_GAME-** — Godot 4.7 arcade game, exported to WASM for the y8 browser portal _(private, ask me for a look)_
 
