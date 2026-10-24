@@ -8,7 +8,9 @@
 
   Manesar, India · *Om Industries Pvt Ltd* · I write code that either runs a plant or runs in a browser
 
-  <img src="https://komarev.com/ghpvc/?username=THEGHOSTz14&style=flat&labelColor=181712&color=181712&label=visitors" alt="profile views">
+  <img src="https://readme-typing-svg.demolab.com/?font=Fira%20Code&center=true&width=680&height=52&color=4FC1E9&vCenter=true&size=23&pause=1000&lines=Rohan%20from%20Manesar;Industrial%20%26%20PLC%20engineer;Godot%204%20%2B%20GDScript;Automating%20the%20boring%20parts" alt="typewriter intro">
+
+  <img src="https://komarev.com/ghpvc/?username=THEGHOSTz14&style=flat&labelColor=181712&color=181712&label=visitors" alt="profile views"> <img src="https://img.shields.io/github/followers/THEGHOSTz14?style=flat&labelColor=181712&color=181712&logo=github&logoColor=white&label=followers" alt="followers"> <img src="https://img.shields.io/github/stars/THEGHOSTz14?style=flat&labelColor=181712&color=181712&label=stars%20received" alt="stars received">
 
   ---
 
@@ -157,10 +159,10 @@
 
 > Prefer the noreply address — it reaches me and keeps the inbox out of public git history.
 
----
-
 <div align="center">
 
 > `while (alive) { learn(); build(); ship(); }`
+
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1f6feb,100:0d1117&height=130&section=footer&text=stay%20haunting&fontSize=26&fontColor=c9d1d9&fontAlignY=82" alt="footer wave" width="100%">
 
 </div>

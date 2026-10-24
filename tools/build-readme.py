@@ -245,8 +245,23 @@ def build():
     a("  Manesar, India · *Om Industries Pvt Ltd* · I write code that either runs a plant or runs in a browser")
     a("")
     a("  " + img(
+        "https://readme-typing-svg.demolab.com/?font=Fira%20Code&center=true&width=680&height=52"
+        "&color=4FC1E9&vCenter=true&size=23&pause=1000&lines="
+        + ";".join(["Rohan%20from%20Manesar",
+                    "Industrial%20%26%20PLC%20engineer",
+                    "Godot%204%20%2B%20GDScript",
+                    "Automating%20the%20boring%20parts"]),
+        "typewriter intro"))
+    a("")
+    a("  " + img(
         f"https://komarev.com/ghpvc/?username={USERNAME}&style=flat&labelColor={PILL}&color={PILL}&label=visitors",
-        "profile views"))
+        "profile views") + " " + img(
+        f"https://img.shields.io/github/followers/{USERNAME}?style=flat&labelColor={PILL}&color={PILL}"
+        f"&logo=github&logoColor=white&label=followers",
+        "followers") + " " + img(
+        f"https://img.shields.io/github/stars/{USERNAME}?style=flat&labelColor={PILL}&color={PILL}"
+        f"&label=stars%20received",
+        "stars received"))
     a("")
     a("  ---")
     a("")
@@ -350,11 +365,13 @@ def build():
     p.extend(centered([f"    {tiles}"]))
     a("> Prefer the noreply address — it reaches me and keeps the inbox out of public git history.")
     a("")
-    a("---")
-    a("")
     a("<div align=\"center\">")
     a("")
     a("> `while (alive) { learn(); build(); ship(); }`")
+    a("")
+    a("  " + img("https://capsule-render.vercel.app/api?type=waving&color=0:1f6feb,100:0d1117"
+                 "&height=130&section=footer&text=stay%20haunting&fontSize=26&fontColor=c9d1d9"
+                 "&fontAlignY=82", "footer wave", "100%"))
     a("")
     a("</div>")
     a("")
