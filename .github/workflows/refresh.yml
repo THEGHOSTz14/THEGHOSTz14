@@ -1,0 +1,54 @@
+name: refresh profile stats
+
+# The ghost card is a PNG and the README embeds numbers, so both go stale on their
+# own. This rebuilds them weekly, runs the same gates as tools/verify.sh, and only
+# commits when something actually changed.
+
+on:
+  schedule:
+    - cron: "30 5 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: install the only build dependency
+        run: python -m pip install --quiet pillow
+
+      - name: rebuild the card and README
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python tools/build-card.py
+          python tools/build-readme.py
+
+      - name: gate - every badge and widget must resolve
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python tools/check-readme-links.py
+          python tools/render-check.py
+
+      - name: commit if anything changed
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- README.md assets/profile-card.png; then
+            echo "nothing changed"
+          else
+            git add README.md assets/profile-card.png
+            git commit -m "Refresh profile stats [skip ci]"
+            git push
+          fi
