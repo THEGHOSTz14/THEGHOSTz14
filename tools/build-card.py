@@ -31,8 +31,27 @@ def api(path):
     return gh.get_json(f"https://api.github.com{path}")
 
 
+FONTS = {
+    "C:/Windows/Fonts/consolab.ttf": ["C:/Windows/Fonts/consolab.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf"],
+    "C:/Windows/Fonts/consola.ttf": ["C:/Windows/Fonts/consola.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"],
+    "C:/Windows/Fonts/segoeui.ttf": ["C:/Windows/Fonts/segoeui.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"],
+}
+
+
+class NoFont(Exception):
+    pass
+
+
 def font(name, size):
-    return ImageFont.truetype(name, size * SCALE)
+    for candidate in FONTS.get(name, [name]):
+        try:
+            return ImageFont.truetype(candidate, size * SCALE)
+        except OSError:
+            continue
+    raise NoFont(name)
 
 
 def main():
@@ -95,4 +114,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except NoFont as e:
+        print(f"no usable font for {e} on this host - kept the existing card", file=sys.stderr)
