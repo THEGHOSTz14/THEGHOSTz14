@@ -10,6 +10,7 @@ import os
 import re
 import subprocess
 import sys
+import time
 
 URL = "https://github.com/THEGHOSTz14"
 
@@ -37,14 +38,17 @@ if "Tech stack" not in page:
 sources = sorted({html.unescape(u) for u in re.findall(r'<img[^>]+src="(https://(?:camo\.githubusercontent\.com|raw\.githubusercontent\.com|avatars\.githubusercontent\.com)/[^"]+)"', page)})
 print(f"profile page fetched, {len(sources)} hosted images to check")
 
-bad = []
-with concurrent.futures.ThreadPoolExecutor(max_workers=12) as ex:
-    for src, (code, size) in ex.map(status, sources):
-        if code != "200" or int(size) < 200:
-            bad.append(f"HTTP {code} {size}B  {src[:110]}")
+def check(urls):
+    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as ex:
+        return [s for s, (c, n) in ex.map(status, urls) if c != "200" or int(n) < 200]
+
+bad = check(sources)
+if bad:  # camo throttles bursts; one serial retry separates throttling from breakage
+    time.sleep(3)
+    bad = check([u.split("  ")[-1] for u in bad])
 
 for b in bad:
-    print("  " + b, file=sys.stderr)
+    print(f"  not loaded: {b[:110]}", file=sys.stderr)
 if bad:
     print(f"FAILED: {len(bad)} of {len(sources)} images did not load", file=sys.stderr)
     sys.exit(1)

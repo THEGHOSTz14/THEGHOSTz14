@@ -4,24 +4,18 @@
 Catches the failures a link check cannot see: markdown that GitHub shows as raw
 text, accidental code blocks from 4-space indents, and unbalanced HTML tables.
 """
-import json
 import re
 import sys
-import urllib.request
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import gh
 
 ROOT = Path(__file__).resolve().parent.parent
 
-req = urllib.request.Request(
-    "https://api.github.com/markdown",
-    data=json.dumps({"text": (ROOT / "README.md").read_text(encoding="utf-8"), "mode": "markdown"}).encode(),
-    headers={
-        "Accept": "application/vnd.github+json",
-        "Content-Type": "application/json",
-        "User-Agent": "readme-render-check",
-    },
-)
-html = urllib.request.urlopen(req, timeout=90).read().decode()
+html = gh.post_json("https://api.github.com/markdown",
+                    {"text": (ROOT / "README.md").read_text(encoding="utf-8"), "mode": "markdown"})
+print(f"api auth: {gh.note()}")
 
 counts = {tag: html.count(f"<{tag}") for tag in ("h1", "h2", "h3", "table", "td", "tr", "img", "picture", "pre", "ul", "blockquote")}
 print("rendered:", counts)

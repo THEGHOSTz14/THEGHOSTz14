@@ -6,11 +6,13 @@ Edit TECH / PROJECTS / LINKS here, then run:  python tools/build-readme.py
 Every logo slug is HEAD-checked against cdn.simpleicons.org before anything is
 written, so a typo fails the build instead of showing a broken tile on the profile.
 """
-import json
 import re
 import sys
 import urllib.request
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import gh
 
 ROOT = Path(__file__).resolve().parent.parent
 PILL = "181712"
@@ -135,8 +137,8 @@ TECH = {
 # "repo not found" pill. build-readme.py checks this against the API on every run.
 PROJECTS = [
     ("GHOST_WEB_GAME-", "Godot 4.7 arcade game, exported to WASM for the y8 browser portal", "godotengine"),
-    ("YOLO-BASIC-MODEL", "Object detection model trained from scratch in Python", "ultralytics"),
-    ("C-", "C# basics written while learning the language in VS Code", "dotnet"),
+    ("YOLO-BASIC-MODEL", "PyQt6 webcam app - YOLOv8 detection with DeepSORT tracking, MediaPipe finger counting and drawn count-zones", "ultralytics"),
+    ("C-", "C# fundamentals exercises - syntax, input, math, booleans, branching - on .NET 10", "dotnet"),
 ]
 
 # Only links the account actually owns. Add real handles, then re-run the script.
@@ -197,12 +199,8 @@ def reachable(url):
 
 def public_repos():
     """Repo names that are actually visible on the account right now."""
-    req = urllib.request.Request(
-        f"https://api.github.com/users/{USERNAME}/repos?per_page=100",
-        headers={"User-Agent": "readme-builder", "Accept": "application/vnd.github+json"},
-    )
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return {row["name"] for row in json.load(r) if not row.get("private")}
+    rows = gh.get_json(f"https://api.github.com/users/{USERNAME}/repos?per_page=100")
+    return {row["name"] for row in rows if not row.get("private")}
 
 
 def build():

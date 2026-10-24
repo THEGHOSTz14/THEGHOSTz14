@@ -4,9 +4,11 @@
 Numbers are pulled live from api.github.com so re-running before a push refreshes
 them. Rendered as PNG, not SVG: GitHub does not reliably show SVGs hosted in a repo.
 """
-import json
-import urllib.request
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import gh
 
 from PIL import Image, ImageDraw, ImageFont
 
@@ -26,12 +28,7 @@ MUTED = (139, 148, 158)
 
 
 def api(path):
-    req = urllib.request.Request(
-        f"https://api.github.com{path}",
-        headers={"User-Agent": "profile-card", "Accept": "application/vnd.github+json"},
-    )
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return json.load(r)
+    return gh.get_json(f"https://api.github.com{path}")
 
 
 def font(name, size):
