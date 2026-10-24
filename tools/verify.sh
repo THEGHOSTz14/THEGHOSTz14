@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Rebuild every generated artefact, then fail if anything on the profile would break.
-# Run this before every commit:  bash tools/verify.sh
+# Run this before and after every push:  bash tools/verify.sh
 set -uo pipefail
 cd "$(dirname "$0")/.."
 
@@ -8,7 +8,7 @@ status=0
 python tools/build-card.py || status=1
 python tools/build-readme.py || status=1
 
-for gate in check-readme-links render-check; do
+for gate in check-readme-links render-check check-live-profile; do
   if python "tools/${gate}.py"; then
     printf 'PASS  %s\n' "$gate"
   else
