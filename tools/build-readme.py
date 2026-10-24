@@ -367,6 +367,12 @@ def build():
     a("")
     a("<div align=\"center\">")
     a("")
+    a("  " + img("assets/profile-card.png", "Profile card", "620"))
+    a("")
+    a("</div>")
+    a("")
+    a("<div align=\"center\">")
+    a("")
     a("> `while (alive) { learn(); build(); ship(); }`")
     a("")
     a("  " + img("https://capsule-render.vercel.app/api?type=waving&color=0:1f6feb,100:0d1117"

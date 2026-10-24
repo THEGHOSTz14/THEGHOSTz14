@@ -30,13 +30,22 @@ STYLE = """
 """
 
 
-def banner_data_uri():
+def data_uri(name, width=1000):
     from PIL import Image
-    im = Image.open(ROOT / "assets" / "banner.png").convert("RGB")
-    im = im.resize((1000, round(1000 * im.height / im.width)), Image.LANCZOS)
+    im = Image.open(ROOT / "assets" / name).convert("RGB")
+    if im.width > width:
+        im = im.resize((width, round(width * im.height / im.width)), Image.LANCZOS)
     buf = io.BytesIO()
     im.save(buf, format="JPEG", quality=82, optimize=True)
     return "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode()
+
+
+def inline_assets(html):
+    for name, width in (("banner.png", 1000), ("profile-card.png", 1240)):
+        uri = data_uri(name, width)
+        html = re.sub(rf'<img src="assets/{re.escape(name)}"([^>]*)>',
+                      lambda m, u=uri: f'<img src="{u}"{m.group(1)}>', html)
+    return html
 
 
 def main():
@@ -53,8 +62,7 @@ def main():
                  "User-Agent": "readme-preview"},
     )
     body = urllib.request.urlopen(req, timeout=90).read().decode()
-    body = re.sub(r'<img src="assets/banner\.png"([^>]*)>',
-                  lambda m: f'<img src="{banner_data_uri()}"{m.group(1)}>', body)
+    body = inline_assets(body)
     html = f"<style>{STYLE}</style><div class='wrap'><div class='gh'>{body}</div></div>"
     out.write_text(html, encoding="utf-8")
     print(f"{out} written ({len(html)//1024} KB)")

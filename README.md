@@ -161,6 +161,12 @@
 
 <div align="center">
 
+  <img src="assets/profile-card.png" alt="Profile card" width="620">
+
+</div>
+
+<div align="center">
+
 > `while (alive) { learn(); build(); ship(); }`
 
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1f6feb,100:0d1117&height=130&section=footer&text=stay%20haunting&fontSize=26&fontColor=c9d1d9&fontAlignY=82" alt="footer wave" width="100%">
