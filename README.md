@@ -103,8 +103,7 @@
 
 ## 🚀 Things I have shipped
 
-- [**GHOST_WEB_GAME-**](https://github.com/THEGHOSTz14/GHOST_WEB_GAME-) — Godot 4.7 arcade game, exported to WASM and live on the y8 browser portal  
-  <img src="https://img.shields.io/github/stars/THEGHOSTz14/GHOST_WEB_GAME-?style=flat&labelColor=181712&color=181712&logo=github&logoColor=white" alt="stars"> <img src="https://img.shields.io/github/forks/THEGHOSTz14/GHOST_WEB_GAME-?style=flat&labelColor=181712&color=181712" alt="forks"> <img src="https://img.shields.io/github/languages/top/THEGHOSTz14/GHOST_WEB_GAME-?style=flat&labelColor=181712&color=181712&logo=godotengine&logoColor=white" alt="top language"> <img src="https://img.shields.io/github/last-commit/THEGHOSTz14/GHOST_WEB_GAME-?style=flat&labelColor=181712&color=181712" alt="last commit">
+- **GHOST_WEB_GAME-** — Godot 4.7 arcade game, exported to WASM for the y8 browser portal _(private, ask me for a look)_
 
 - [**YOLO-BASIC-MODEL**](https://github.com/THEGHOSTz14/YOLO-BASIC-MODEL) — Object detection model trained from scratch in Python  
   <img src="https://img.shields.io/github/stars/THEGHOSTz14/YOLO-BASIC-MODEL?style=flat&labelColor=181712&color=181712&logo=github&logoColor=white" alt="stars"> <img src="https://img.shields.io/github/forks/THEGHOSTz14/YOLO-BASIC-MODEL?style=flat&labelColor=181712&color=181712" alt="forks"> <img src="https://img.shields.io/github/languages/top/THEGHOSTz14/YOLO-BASIC-MODEL?style=flat&labelColor=181712&color=181712&logo=ultralytics&logoColor=white" alt="top language"> <img src="https://img.shields.io/github/last-commit/THEGHOSTz14/YOLO-BASIC-MODEL?style=flat&labelColor=181712&color=181712" alt="last commit">
@@ -141,7 +140,7 @@
 
 <p align="center">
 
-<img src="https://img.shields.io/badge/-GitHub-181712?style=flat&labelColor=181712&color=181712&logo=github&logoColor=FFFFFF" alt="GitHub"> <img src="https://img.shields.io/badge/-Email-181712?style=flat&labelColor=181712&color=181712&logo=gmail&logoColor=EA4335" alt="Email">
+<a href="https://github.com/THEGHOSTz14"><img src="https://img.shields.io/badge/-GitHub-181712?style=flat&labelColor=181712&color=181712&logo=github&logoColor=FFFFFF" alt="GitHub"></a> <a href="mailto:204194426+THEGHOSTz14@users.noreply.github.com"><img src="https://img.shields.io/badge/-Email-181712?style=flat&labelColor=181712&color=181712&logo=gmail&logoColor=EA4335" alt="Email"></a>
 
 </p>
 

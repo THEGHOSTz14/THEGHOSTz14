@@ -6,6 +6,7 @@ Edit TECH / PROJECTS / LINKS here, then run:  python tools/build-readme.py
 Every logo slug is HEAD-checked against cdn.simpleicons.org before anything is
 written, so a typo fails the build instead of showing a broken tile on the profile.
 """
+import json
 import re
 import sys
 import urllib.request
@@ -130,8 +131,10 @@ TECH = {
 }
 
 # (repo, one-line pitch, logo slug for the language tile)
+# Repos that are not public are rendered as a plain bullet - no dead link, no
+# "repo not found" pill. build-readme.py checks this against the API on every run.
 PROJECTS = [
-    ("GHOST_WEB_GAME-", "Godot 4.7 arcade game, exported to WASM and live on the y8 browser portal", "godotengine"),
+    ("GHOST_WEB_GAME-", "Godot 4.7 arcade game, exported to WASM for the y8 browser portal", "godotengine"),
     ("YOLO-BASIC-MODEL", "Object detection model trained from scratch in Python", "ultralytics"),
     ("C-", "C# basics written while learning the language in VS Code", "dotnet"),
 ]
@@ -180,7 +183,21 @@ def repo_pill(repo, kind, logo=""):
     return url
 
 
+def public_repos():
+    """Repo names that are actually visible on the account right now."""
+    req = urllib.request.Request(
+        f"https://api.github.com/users/{USERNAME}/repos?per_page=100",
+        headers={"User-Agent": "readme-builder", "Accept": "application/vnd.github+json"},
+    )
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return {row["name"] for row in json.load(r) if not row.get("private")}
+
+
 def build():
+    visible = public_repos()
+    hidden = [name for name, _, _ in PROJECTS if name not in visible]
+    if hidden:
+        print("not public, rendered without links: " + ", ".join(hidden), file=sys.stderr)
     slugs = sorted(
         {s for row in TECH.values() for _, s, _ in row if s}
         | {s for _, _, s in PROJECTS if s}
@@ -260,6 +277,10 @@ def build():
     a("## 🚀 Things I have shipped")
     a("")
     for repo, pitch, logo in PROJECTS:
+        if repo not in visible:
+            a(f"- **{repo}** — {pitch} _(private, ask me for a look)_")
+            a("")
+            continue
         a(f"- [**{repo}**](https://github.com/{USERNAME}/{repo}) — {pitch}  ")
         a("  " + img(repo_pill(repo, "stars", "github"), "stars") + " "
           + img(repo_pill(repo, "forks"), "forks") + " "
@@ -287,7 +308,10 @@ def build():
 
     a("## 📫 Reach me")
     a("")
-    tiles = " ".join(img(pill(label, logo, color), label) for label, _, logo, color in LINKS)
+    tiles = " ".join(
+        f'<a href="{href}">' + img(pill(label, logo, color), label) + "</a>"
+        for label, href, logo, color in LINKS
+    )
     p.extend(centered([f"    {tiles}"]))
     a("> Prefer the noreply address — it reaches me and keeps the inbox out of public git history.")
     a("")

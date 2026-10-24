@@ -9,7 +9,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 # branch-only artefacts that do not exist until the first Actions run
 ALLOW_MISSING = {"github-snake.svg"}
-BAD_WORDS = ("repo does not exist", "user does not exist", "invalid", "cannot be parsed", "no public")
+BAD_WORDS = ("repo does not exist", "repo not found", "user does not exist", "user not found",
+           "invalid", "cannot be parsed", "no public", "not found")
 
 
 def fetch(url):
