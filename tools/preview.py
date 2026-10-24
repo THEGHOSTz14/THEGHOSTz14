@@ -26,6 +26,7 @@ STYLE = """
 .gh hr{border:0;border-top:1px solid #30363d;margin:22px 0}
 .gh blockquote{color:#8b949e;border-left:.25em solid #30363d;margin:0;padding:0 1em}
 .gh ul{padding-left:1.5em}
+.wrap{background:#010409;padding:24px;margin:0}
 """
 
 
@@ -54,8 +55,7 @@ def main():
     body = urllib.request.urlopen(req, timeout=90).read().decode()
     body = re.sub(r'<img src="assets/banner\.png"([^>]*)>',
                   lambda m: f'<img src="{banner_data_uri()}"{m.group(1)}>', body)
-    html = (f"<style>{STYLE}</style><body style='background:#010409;margin:0;padding:24px'>"
-            f"<div class='gh'>{body}</div></body>")
+    html = f"<style>{STYLE}</style><div class='wrap'><div class='gh'>{body}</div></div>"
     out.write_text(html, encoding="utf-8")
     print(f"{out} written ({len(html)//1024} KB)")
 
