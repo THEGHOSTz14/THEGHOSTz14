@@ -1,0 +1,34 @@
+name: github snake
+
+on:
+  schedule:
+    - cron: "24 6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: render snake over the contribution graph
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+
+      - name: publish it on the github-snake branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: github-snake
+          build_dir: dist
+          keep_files: false
+          jekyll: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

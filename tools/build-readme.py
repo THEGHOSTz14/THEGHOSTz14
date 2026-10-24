@@ -1,0 +1,309 @@
+#!/usr/bin/env python3
+"""Regenerate README.md from the spec below.
+
+Edit TECH / PROJECTS / LINKS here, then run:  python tools/build-readme.py
+
+Every logo slug is HEAD-checked against cdn.simpleicons.org before anything is
+written, so a typo fails the build instead of showing a broken tile on the profile.
+"""
+import re
+import sys
+import urllib.request
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+PILL = "181712"
+USERNAME = "THEGHOSTz14"
+
+# (label, simple-icons slug or "" for a text-only tile, logo colour)
+TECH = {
+    "Languages & scripting": [
+        ("Python", "python", "3776AB"),
+        ("C", "c", "A8B9CC"),
+        ("C++", "cplusplus", "00599C"),
+        ("C#", "dotnet", "512BD4"),
+        ("GDScript", "godotengine", "478CBF"),
+        ("JavaScript", "javascript", "F7DF1E"),
+        ("TypeScript", "typescript", "3178C6"),
+        ("SQL", "", "4479A1"),
+        ("Bash", "gnubash", "4EAA25"),
+        ("MATLAB", "", "E1673C"),
+    ],
+    "Web": [
+        ("HTML5", "html5", "E34F26"),
+        ("CSS3", "css", "1572B6"),
+        ("React", "react", "61DAFB"),
+        ("Vite", "vite", "7D68FF"),
+        ("Node.js", "nodedotjs", "5FA04E"),
+        ("Express", "express", "FFFFFF"),
+        ("Tailwind CSS", "tailwindcss", "06B6D4"),
+        ("Nginx", "nginx", "009639"),
+        ("Flask", "flask", "FFFFFF"),
+        ("FastAPI", "fastapi", "009688"),
+        ("GitHub Pages", "githubpages", "FFFFFF"),
+    ],
+    "AI / CV / data": [
+        ("TensorFlow", "tensorflow", "FF6F00"),
+        ("PyTorch", "pytorch", "EE4C2C"),
+        ("Keras", "keras", "D00000"),
+        ("OpenCV", "opencv", "5C3EE8"),
+        ("scikit-learn", "scikitlearn", "F7931E"),
+        ("NumPy", "numpy", "0095D5"),
+        ("Pandas", "pandas", "150458"),
+        ("Ultralytics YOLO", "ultralytics", "FFFF00"),
+        ("Hugging Face", "huggingface", "FFD21E"),
+        ("Ollama", "ollama", "FFFFFF"),
+        ("CUDA", "nvidia", "76B900"),
+        ("Jupyter", "jupyter", "F37626"),
+    ],
+    "Game dev & 3D": [
+        ("Godot 4", "godotengine", "478CBF"),
+        ("Unity", "unity", "FFFFFF"),
+        ("Unreal Engine", "unrealengine", "FFFFFF"),
+        ("Blender", "blender", "F5792A"),
+        ("CLion", "clion", "21D789"),
+        ("Rider", "rider", "FCA326"),
+        ("TinkerCAD", "tinkercad", "2CBDF1"),
+        ("SketchUp", "sketchup", "005F9E"),
+    ],
+    "PLC & automation platforms": [
+        ("Siemens S7", "siemens", "009999"),
+        ("TIA Portal", "", "009999"),
+        ("Allen-Bradley", "rockwellautomation", "CD6321"),
+        ("Studio 5000", "", "CD6321"),
+        ("Schneider Electric", "schneiderelectric", "3DCD58"),
+        ("ABB", "abb", "FF000F"),
+        ("Delta", "delta", "FF6000"),
+        ("Panasonic FPWIN", "panasonic", "FFFFFF"),
+        ("Mitsubishi GX Works", "mitsubishi", "E60012"),
+        ("Keyence KV Studio", "", "C8102E"),
+        ("Omron CX-Programmer", "", "005E9E"),
+        ("Ignition SCADA", "inductiveautomation", "00A0DF"),
+        ("MQTT", "mqtt", "660066"),
+        ("Modbus", "", "0072C6"),
+        ("OPC UA", "", "F08119"),
+    ],
+    "Electrical design & simulation": [
+        ("Ladder Logic", "", "00C2A8"),
+        ("VFD & Servo", "", "FFB300"),
+        ("24V DC / Sensor", "", "00C2A8"),
+        ("Relay & Contactor", "", "FFB300"),
+        ("Panel Wiring", "", "8AB4F8"),
+        ("AutoCAD Electrical", "autodesk", "0696D7"),
+        ("EPLAN", "", "FFCC00"),
+        ("LabVIEW", "labview", "FFC220"),
+        ("Proteus", "proteus", "1F4E79"),
+        ("LTspice", "ltspice", "D6D6D6"),
+        ("Multisim", "multisim", "00B4D8"),
+    ],
+    "Tooling, OS & cloud": [
+        ("Git", "git", "F05032"),
+        ("GitHub", "github", "FFFFFF"),
+        ("GitLab", "gitlab", "FC6D26"),
+        ("Docker", "docker", "2496ED"),
+        ("Kubernetes", "kubernetes", "326CE5"),
+        ("Linux", "linux", "FCC624"),
+        ("Ubuntu", "ubuntu", "E95420"),
+        ("Debian", "debian", "A81D33"),
+        ("Kali Linux", "kalilinux", "557C94"),
+        ("VS Code", "", "007ACC"),
+        ("Vim", "vim", "019733"),
+        ("Ansible", "ansible", "EE0000"),
+        ("Terraform", "terraform", "7B42BC"),
+        ("Jenkins", "jenkins", "D24939"),
+        ("AWS", "", "FF9900"),
+        ("Google Cloud", "googlecloud", "34A853"),
+        ("Azure", "", "0089D6"),
+        ("Cloudflare", "cloudflare", "F38020"),
+        ("Grafana", "grafana", "F47A20"),
+        ("Prometheus", "prometheus", "E6522C"),
+        ("Windows Terminal", "", "4CC2FF"),
+        ("Android", "android", "3DDC84"),
+    ],
+    "Hardware & IoT": [
+        ("Arduino", "arduino", "008184"),
+        ("Raspberry Pi", "raspberrypi", "C51A4A"),
+        ("ESP32", "espressif", "E7352C"),
+        ("STM32", "stmicroelectronics", "03239B"),
+        ("Home Assistant", "homeassistant", "41BDF5"),
+    ],
+}
+
+# (repo, one-line pitch, logo slug for the language tile)
+PROJECTS = [
+    ("GHOST_WEB_GAME-", "Godot 4.7 arcade game, exported to WASM and live on the y8 browser portal", "godotengine"),
+    ("YOLO-BASIC-MODEL", "Object detection model trained from scratch in Python", "ultralytics"),
+    ("C-", "C# basics written while learning the language in VS Code", "dotnet"),
+]
+
+# Only links the account actually owns. Add real handles, then re-run the script.
+LINKS = [
+    ("GitHub", f"https://github.com/{USERNAME}", "github", "FFFFFF"),
+    ("Email", f"mailto:204194426+{USERNAME}@users.noreply.github.com", "gmail", "EA4335"),
+]
+
+STATS = "https://github-readme-stats.vercel.app/api"
+THEME = "theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true"
+
+
+def esc(s):
+    out = s.replace("_", "__").replace("-", "--").replace("+", "%2B")
+    out = out.replace("/", "%2F").replace("#", "%23").replace("&", "%26").replace(" ", "%20")
+    return out
+
+
+def pill(label, logo="", logo_color=None):
+    url = (
+        f"https://img.shields.io/badge/-{esc(label)}-{PILL}"
+        f"?style=flat&labelColor={PILL}&color={PILL}"
+    )
+    if logo:
+        url += f"&logo={logo}&logoColor={logo_color or 'white'}"
+    return url
+
+
+def img(url, alt, width=None):
+    w = f' width="{width}"' if width else ""
+    return f'<img src="{url}" alt="{alt}"{w}>'
+
+
+def centered(html_lines):
+    # flush-left on purpose: a 4-space indent after a blank line is a code block in markdown
+    return ["<p align=\"center\">", "", *[l.lstrip() for l in html_lines], "", "</p>", ""]
+
+
+def repo_pill(repo, kind, logo=""):
+    # repo names go in the path verbatim - shields escaping rules are for label text only
+    url = f"https://img.shields.io/github/{kind}/{USERNAME}/{repo}?style=flat&labelColor={PILL}&color={PILL}"
+    if logo:
+        url += f"&logo={logo}&logoColor=white"
+    return url
+
+
+def build():
+    slugs = sorted(
+        {s for row in TECH.values() for _, s, _ in row if s}
+        | {s for _, _, s in PROJECTS if s}
+        | {s for _, _, s, _ in LINKS if s}
+    )
+    bad = []
+    for slug in slugs:
+        req = urllib.request.Request(
+            f"https://cdn.simpleicons.org/{slug}",
+            headers={"User-Agent": "readme-builder", "Accept": "image/svg+xml"},
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=25) as r:
+                if r.status != 200:
+                    bad.append(slug)
+        except Exception:
+            bad.append(slug)
+    if bad:
+        print(f"unknown simple-icons slug(s): {', '.join(bad)}", file=sys.stderr)
+        sys.exit(1)
+
+    p = []
+    a = p.append
+
+    a("<div align=\"center\">")
+    a("")
+    a("  " + img("assets/banner.png", "Ghost circuit banner", "100%"))
+    a("")
+    a("  # 👻 Rohan · `THEGHOSTz14`")
+    a("")
+    a("  ### Industrial Electrical & PLC Engineer · Godot game dev · automating the boring parts")
+    a("")
+    a("  Manesar, India · *Om Industries Pvt Ltd* · I write code that either runs a plant or runs in a browser")
+    a("")
+    a("  " + img(
+        f"https://komarev.com/ghpvc/?username={USERNAME}&style=flat&labelColor={PILL}&color={PILL}&label=visitors",
+        "profile views"))
+    a("")
+    a("  ---")
+    a("")
+    a("</div>")
+    a("")
+
+    a("<table><tr>")
+    a("<td width=\"54%\" valign=\"top\">")
+    a("")
+    a("### 🧾 About me")
+    a("")
+    a("- 🔭 **Building** → *GHOST WEB GAME* — a Godot 4.7 arcade game exported to WASM for the y8 browser portal")
+    a("- 🏭 **Day job** → panel design, PLC programming, VFD & servo commissioning, plant troubleshooting")
+    a("- 🌱 **Learning** → C#, computer vision with YOLO, and finishing projects instead of starting them")
+    a("- 💬 **Ask me about** → ladder logic, 24 V sensor wiring, why a contactor chatters, Godot web exports")
+    a("- ⚡ **Method** → I debug PLCs with a multimeter and games with `print()`. Both work.")
+    a("")
+    a("</td>")
+    a("<td width=\"46%\" valign=\"top\" align=\"center\">")
+    a("")
+    a("  " + img(f"{STATS}?username={USERNAME}&show_icons=true&count_private=true&{THEME}", "GitHub stats", "100%"))
+    a("")
+    a("  " + img(
+        "https://github-readme-streak-stats.herokuapp.com/?user=" + USERNAME
+        + "&theme=tokyonight&background=0d1117&border=181712&ring=4FC1E9&fire=FF6F00"
+        "&currStreakLabel=7C9AC4&sideLabels=C9D1D9&dates=8B949E&hide_border=true",
+        "Contribution streak", "100%"))
+    a("")
+    a("</td>")
+    a("</tr></table>")
+    a("")
+
+    a("## ⚡ Tech stack")
+    a("")
+    for title, items in TECH.items():
+        a(f"**{title}**")
+        a("")
+        tiles = " ".join(img(pill(label, logo, color), label) for label, logo, color in items)
+        p.extend(centered([f"    {tiles}"]))
+    a("## 🚀 Things I have shipped")
+    a("")
+    for repo, pitch, logo in PROJECTS:
+        a(f"- [**{repo}**](https://github.com/{USERNAME}/{repo}) — {pitch}  ")
+        a("  " + img(repo_pill(repo, "stars", "github"), "stars") + " "
+          + img(repo_pill(repo, "forks"), "forks") + " "
+          + img(repo_pill(repo, "languages/top", logo), "top language") + " "
+          + img(repo_pill(repo, "last-commit"), "last commit"))
+        a("")
+
+    a("## 📊 Activity")
+    a("")
+    p.extend(centered([
+        "    " + img(f"{STATS}/top-langs/?username={USERNAME}&layout=compact&card_width=440&{THEME}", "Top languages"),
+    ]))
+    p.extend(centered([
+        "    " + img(f"https://ghchart.rshah.org/4FC1E9/{USERNAME}", "Contribution chart", "100%"),
+    ]))
+    a("<!-- github-snake.svg is regenerated nightly by .github/workflows/snake.yml -->")
+    snake = f"https://raw.githubusercontent.com/{USERNAME}/{USERNAME}/github-snake"
+    p.extend(centered([
+        "    <picture>",
+        f'      <source media="(prefers-color-scheme: dark)" srcset="{snake}/github-snake-dark.svg" />',
+        f'      <source media="(prefers-color-scheme: light)" srcset="{snake}/github-snake.svg" />',
+        f'      <img alt="snake eating my contributions" src="{snake}/github-snake.svg" width="100%" />',
+        "    </picture>",
+    ]))
+
+    a("## 📫 Reach me")
+    a("")
+    tiles = " ".join(img(pill(label, logo, color), label) for label, _, logo, color in LINKS)
+    p.extend(centered([f"    {tiles}"]))
+    a("> Prefer the noreply address — it reaches me and keeps the inbox out of public git history.")
+    a("")
+    a("---")
+    a("")
+    a("<div align=\"center\">")
+    a("")
+    a("> `while (alive) { learn(); build(); ship(); }`")
+    a("")
+    a("</div>")
+    a("")
+
+    (ROOT / "README.md").write_text("\n".join(p), encoding="utf-8", newline="\n")
+    urls = re.findall(r'src="(https?://[^"]+)"', "\n".join(p))
+    print(f"README.md written: {len(p)} lines, {len(urls)} remote images")
+
+
+if __name__ == "__main__":
+    build()
