@@ -255,7 +255,7 @@ def build():
 
     a("<div align=\"center\">")
     a("")
-    a("  " + img("assets/banner.png", "Ghost circuit banner", "100%"))
+    a("  " + img("assets/banner.png", "Ghost circuit banner", "72%"))
     a("")
     a("  # 👻 Rohan · `THEGHOSTz14`")
     a("")
