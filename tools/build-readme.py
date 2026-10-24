@@ -145,6 +145,15 @@ LINKS = [
     ("Email", f"mailto:204194426+{USERNAME}@users.noreply.github.com", "gmail", "EA4335"),
 ]
 
+# Uncomment once you have the real handle/ID - anything that does not resolve is
+# dropped with a warning instead of being published as a dead tile.
+EXTRA_LINKS = []
+#     ("TryHackMe", f"https://tryhackme.com/p/HANDLE", "tryhackme", "DD00AA"),
+#     ("HackTheBox", "https://app.hackthebox.com/users/ID", "hackthebox", "8CE100"),
+
+# Your TryHackMe username, to show the profile card from the reference design.
+THM_USER = ""
+
 STATS = "https://github-readme-stats.vercel.app/api"
 THEME = "theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true"
 
@@ -177,6 +186,15 @@ def centered(html_lines):
 
 
 
+def reachable(url):
+    req = urllib.request.Request(url, headers={"User-Agent": "readme-builder"}, method="GET")
+    try:
+        with urllib.request.urlopen(req, timeout=25) as r:
+            return r.status == 200
+    except Exception:
+        return False
+
+
 def public_repos():
     """Repo names that are actually visible on the account right now."""
     req = urllib.request.Request(
@@ -195,7 +213,7 @@ def build():
     slugs = sorted(
         {s for row in TECH.values() for _, s, _ in row if s}
         | {s for _, _, s in PROJECTS if s}
-        | {s for _, _, s, _ in LINKS if s}
+        | {s for _, _, s, _ in LINKS + EXTRA_LINKS if s}
     )
     bad = []
     for slug in slugs:
@@ -309,11 +327,25 @@ def build():
         "    </picture>",
     ]))
 
+    if THM_USER:
+        card = f"https://tryhackme-badges.s3.amazonaws.com/tryhackme.com/{THM_USER}.png"
+        if reachable(card):
+            a("## 🚩 TryHackMe")
+            a("")
+            p.extend(centered([img(card, "TryHackMe profile card", "620")]))
+        else:
+            print(f"tryhackme card does not resolve for {THM_USER!r} - section skipped", file=sys.stderr)
+
     a("## 📫 Reach me")
     a("")
+    links = [row for row in LINKS + EXTRA_LINKS
+             if row[1].startswith("mailto:") or reachable(row[1])]
+    for row in LINKS + EXTRA_LINKS:
+        if row not in links:
+            print(f"link does not resolve, skipped: {row[1]}", file=sys.stderr)
     tiles = " ".join(
         f'<a href="{href}">' + img(pill(label, logo, color), label) + "</a>"
-        for label, href, logo, color in LINKS
+        for label, href, logo, color in links
     )
     p.extend(centered([f"    {tiles}"]))
     a("> Prefer the noreply address — it reaches me and keeps the inbox out of public git history.")
