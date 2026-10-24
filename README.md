@@ -110,14 +110,10 @@
 
   <img src="https://github-readme-stats.vercel.app/api/pin/?username=THEGHOSTz14&repo=YOLO-BASIC-MODEL&card_width=320&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="YOLO-BASIC-MODEL">
 
-  PyQt6 webcam app - YOLOv8 detection with DeepSORT tracking, MediaPipe finger counting and drawn count-zones
-
 </td>
 <td width="50%" valign="top" align="center">
 
   <img src="https://github-readme-stats.vercel.app/api/pin/?username=THEGHOSTz14&repo=C-&card_width=320&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="C-">
-
-  C# fundamentals exercises - syntax, input, math, booleans, branching - on .NET 10
 
 </td>
 </tr></table>

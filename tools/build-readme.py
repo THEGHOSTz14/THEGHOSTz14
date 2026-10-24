@@ -331,10 +331,9 @@ def build():
         for repo, pitch, _logo in shown:
             a(f'<td width="{col}%" valign="top" align="center">')
             a("")
+            # the pin card already renders the repo's About text, so no caption here
             a("  " + img(f"https://github-readme-stats.vercel.app/api/pin/?username={USERNAME}"
                          f"&repo={repo}&card_width=320&{THEME}", repo))
-            a("")
-            a(f"  {pitch}")
             a("")
             a("</td>")
         a("</tr></table>")
