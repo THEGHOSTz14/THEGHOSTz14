@@ -7,8 +7,8 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-# branch-only artefacts that do not exist until the first Actions run
-ALLOW_MISSING = {"github-snake.svg"}
+# branch-only artefacts: created by the Actions run, so 404 until the repo exists
+ALLOW_MISSING = {"/github-snake/"}
 BAD_WORDS = ("repo does not exist", "repo not found", "user does not exist", "user not found",
            "invalid", "cannot be parsed", "no public", "not found")
 
@@ -42,11 +42,12 @@ def main():
             problems.append(f"empty body [{len(body)}B]  {url}")
         else:
             print(f"ok       200  {name:28} {len(body)}B")
+    print(flush=True)
     print()
     if problems:
-        print("FAILED:", file=sys.stderr)
+        print("FAILED:", file=sys.stderr, flush=True)
         for p in problems:
-            print("  " + p, file=sys.stderr)
+            print("  " + p, file=sys.stderr, flush=True)
         sys.exit(1)
     print(f"all {len(urls)} remote images resolve")
 
