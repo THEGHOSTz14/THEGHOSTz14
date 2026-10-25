@@ -136,7 +136,7 @@ TECH = {
 # Repos that are not public are rendered as a plain bullet - no dead link, no
 # "repo not found" pill. build-readme.py checks this against the API on every run.
 PROJECTS = [
-    ("GHOST_WEB_GAME-", "Godot 4.7 arcade game, exported to WASM for the y8 browser portal", "godotengine"),
+    ("GHOST_WEB_GAME-", "Drone vs Droids - Godot 4.7 arcade game, exported to WASM for the browser and targeting y8", "godotengine"),
     ("YOLO-BASIC-MODEL", "PyQt6 webcam app - YOLOv8 detection with DeepSORT tracking, MediaPipe finger counting and drawn count-zones", "ultralytics"),
     ("C-", "C# fundamentals exercises - syntax, input, math, booleans, branching - on .NET 10", "dotnet"),
 ]
@@ -295,7 +295,7 @@ def build():
 
     a("### 🧾 About me")
     a("")
-    a("- 🔭 **Building** → *GHOST WEB GAME* — a Godot 4.7 arcade game exported to WASM for the y8 browser portal")
+    a("- 🔭 **Building** → *Drone vs Droids* (repo `GHOST_WEB_GAME-`) — a Godot 4.7 arcade game exported to WASM for the y8 browser portal")
     a("- 🏭 **Day job** → panel design, PLC programming, VFD & servo commissioning, plant troubleshooting")
     a("- 🌱 **Learning** → C#, computer vision with YOLO, and finishing projects instead of starting them")
     a("- 💬 **Ask me about** → ladder logic, 24 V sensor wiring, why a contactor chatters, Godot web exports")

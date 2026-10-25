@@ -22,7 +22,7 @@
 
 ### 🧾 About me
 
-- 🔭 **Building** → *GHOST WEB GAME* — a Godot 4.7 arcade game exported to WASM for the y8 browser portal
+- 🔭 **Building** → *Drone vs Droids* (repo `GHOST_WEB_GAME-`) — a Godot 4.7 arcade game exported to WASM for the y8 browser portal
 - 🏭 **Day job** → panel design, PLC programming, VFD & servo commissioning, plant troubleshooting
 - 🌱 **Learning** → C#, computer vision with YOLO, and finishing projects instead of starting them
 - 💬 **Ask me about** → ladder logic, 24 V sensor wiring, why a contactor chatters, Godot web exports
