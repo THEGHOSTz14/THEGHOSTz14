@@ -7,6 +7,10 @@ on:
   push:
     branches: [main]
 
+concurrency:
+  group: snake
+  cancel-in-progress: false
+
 permissions:
   contents: write
   pages: write
