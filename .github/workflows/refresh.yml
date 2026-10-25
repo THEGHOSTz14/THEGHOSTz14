@@ -1,12 +1,13 @@
 name: refresh profile stats
 
 # The ghost card is a PNG and the README embeds numbers, so both go stale on their
-# own. This rebuilds them weekly, runs the same gates as tools/verify.sh, and only
-# commits when something actually changed.
+# own. This rebuilds them daily, runs the same gates as tools/verify.sh, and only
+# commits when something actually changed. Daily also means a widget service dying
+# is caught within a day instead of sitting broken for a week.
 
 on:
   schedule:
-    - cron: "30 5 * * 1"
+    - cron: "30 5 * * *"
   workflow_dispatch:
 
 permissions:
