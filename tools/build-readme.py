@@ -301,8 +301,12 @@ def build():
     a("- 💬 **Ask me about** → ladder logic, 24 V sensor wiring, why a contactor chatters, Godot web exports")
     a("- ⚡ **Method** → I debug PLCs with a multimeter and games with `print()`. Both work.")
     a("")
+    # the card's own title is built from the account name, which carries a trailing
+    # space, so it renders "Rohan 's GitHub Stats" - hide it and label it here
+    a("### 📈 GitHub stats")
+    a("")
     p.extend(centered([
-        "  " + img(f"{STATS}?username={USERNAME}&show_icons=true&count_private=true"
+        "  " + img(f"{STATS}?username={USERNAME}&hide_title=true&show_icons=true&count_private=true"
                    f"&show=prs_merged,prs_merged_percentage,reviews&{THEME}&card_width=360", "GitHub stats"),
         "  " + img(
             "https://github-readme-streak-stats.herokuapp.com/?user=" + USERNAME
