@@ -105,6 +105,12 @@
 
 <p align="center">
 
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=THEGHOSTz14&repo=GHOST_WEB_GAME-&card_width=360&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="GHOST_WEB_GAME-">
+
+</p>
+
+<p align="center">
+
 <img src="https://github-readme-stats.vercel.app/api/pin/?username=THEGHOSTz14&repo=YOLO-BASIC-MODEL&card_width=360&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="YOLO-BASIC-MODEL">
 
 </p>
@@ -114,8 +120,6 @@
 <img src="https://github-readme-stats.vercel.app/api/pin/?username=THEGHOSTz14&repo=C-&card_width=360&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="C-">
 
 </p>
-
-- **GHOST_WEB_GAME-** — Godot 4.7 arcade game, exported to WASM for the y8 browser portal _(private, ask me for a look)_
 
 ## 📊 Activity
 
