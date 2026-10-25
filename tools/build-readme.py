@@ -327,8 +327,10 @@ def build():
     hidden = [row for row in PROJECTS if row[0] not in visible]
     for repo, pitch, _logo in shown:
         p.extend(centered([
+            # locale is a no-op visually but changes the URL, which forces GitHub's
+            # camo proxy to re-fetch instead of serving a stale cached card
             "  " + img(f"https://github-readme-stats.vercel.app/api/pin/?username={USERNAME}"
-                       f"&repo={repo}&card_width=360&{THEME}", repo),
+                       f"&repo={repo}&card_width=360&locale=en&{THEME}", repo),
         ]))
     for repo, pitch, _logo in hidden:
         a(f"- **{repo}** — {pitch} _(private, ask me for a look)_")
