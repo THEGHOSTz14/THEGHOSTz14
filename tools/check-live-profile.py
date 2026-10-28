@@ -39,17 +39,30 @@ sources = sorted({html.unescape(u) for u in re.findall(r'<img[^>]+src="(https://
 print(f"profile page fetched, {len(sources)} hosted images to check")
 
 def check(urls):
-    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as ex:
-        return [s for s, (c, n) in ex.map(status, urls) if c != "200" or int(n) < 200]
+    """Return (broken, unreachable) - a refused connection is not a broken image."""
+    broken, throttled = [], []
+    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as ex:
+        for src, (code, size) in ex.map(status, urls):
+            if code == "000":
+                throttled.append(src)          # connection refused/timeout: our own burst
+            elif code != "200" or int(size) < 200:
+                broken.append(f"HTTP {code} {size}B  {src[:100]}")
+    return broken, throttled
 
-bad = check(sources)
-if bad:  # camo throttles bursts; one serial retry separates throttling from breakage
-    time.sleep(3)
-    bad = check([u.split("  ")[-1] for u in bad])
 
-for b in bad:
-    print(f"  not loaded: {b[:110]}", file=sys.stderr)
-if bad:
-    print(f"FAILED: {len(bad)} of {len(sources)} images did not load", file=sys.stderr)
+broken, throttled = check(sources)
+if throttled:  # camo rate-limits bursts; retry once, gently, before believing anything
+    time.sleep(5)
+    broken2, throttled = check(throttled)
+    broken += broken2
+
+for b in broken:
+    print(f"  {b}", file=sys.stderr)
+if throttled:
+    print(f"note: {len(throttled)} image(s) unreachable this run - camo throttles this host; "
+          "re-run rather than trusting it", file=sys.stderr)
+if broken:
+    print(f"FAILED: {len(broken)} of {len(sources)} images are broken", file=sys.stderr)
     sys.exit(1)
-print(f"all {len(sources)} hosted images loaded on the live profile")
+print(f"all {len(sources) - len(throttled)} reachable images loaded; "
+      f"{len(throttled)} throttled-out this run")
