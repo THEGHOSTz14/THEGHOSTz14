@@ -111,6 +111,8 @@
 
 </p>
 
+<p align="center"><sub>Drone vs Droids - Godot 4.7 arcade game, exported to WASM for the browser and targeting y8</sub></p>
+
 <p align="center">
 
 <img src="https://github-readme-stats.vercel.app/api/pin/?username=THEGHOSTz14&repo=YOLO-BASIC-MODEL&card_width=360&locale=en&v=20261028&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="YOLO-BASIC-MODEL">
@@ -128,6 +130,8 @@
 <img src="https://github-readme-stats.vercel.app/api/pin/?username=THEGHOSTz14&repo=PROFICADDD&card_width=360&locale=en&v=20261028&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="PROFICADDD">
 
 </p>
+
+<p align="center"><sub>OpenDraft - a 2D CAD editor in TypeScript: lines, arcs, splines, text, layers and object snapping</sub></p>
 
 ## 📊 Activity
 

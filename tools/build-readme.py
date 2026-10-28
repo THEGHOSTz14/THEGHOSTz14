@@ -329,6 +329,8 @@ def build():
         p.extend(centered([f"    {tiles}"]))
     a("## 🚀 Things I have shipped")
     a("")
+    live_desc = {r["name"]: (r.get("description") or "").strip()
+                 for r in gh.get_json(f"https://api.github.com/users/{USERNAME}/repos?per_page=100")}
     shown = [row for row in PROJECTS if row[0] in visible]
     hidden = [row for row in PROJECTS if row[0] not in visible]
     for repo, pitch, _logo in shown:
@@ -338,6 +340,11 @@ def build():
             "  " + img(f"https://github-readme-stats.vercel.app/api/pin/?username={USERNAME}"
                        f"&repo={repo}&card_width=360&locale=en{BUST}&{THEME}", repo),
         ]))
+        if live_desc.get(repo, "") != pitch:
+            # the pin card prints the repo's own About text; if that is missing or
+            # casual, the curated pitch has to appear here or it is lost entirely
+            a(f'<p align="center"><sub>{pitch}</sub></p>')
+            a("")
     for repo, pitch, _logo in hidden:
         a(f"- **{repo}** — {pitch} _(private, ask me for a look)_")
         a("")
