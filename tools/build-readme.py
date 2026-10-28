@@ -137,6 +137,9 @@ TECH = {
     ],
 }
 
+# Live demos, shown as a launch pill under the matching repo card.
+DEMOS = {"PROFICADDD": "https://theghostz14.github.io/PROFICADDD/"}
+
 # (repo, one-line pitch, logo slug for the language tile)
 # Repos that are not public are rendered as a plain bullet - no dead link, no
 # "repo not found" pill. build-readme.py checks this against the API on every run.
@@ -360,6 +363,13 @@ def build():
             "  " + img(f"https://github-readme-stats.vercel.app/api/pin/?username={USERNAME}"
                        f"&repo={repo}&card_width=360&locale=en{BUST}&{THEME}", repo),
         ]))
+        demo = DEMOS.get(repo)
+        if demo:
+            p.extend(centered([
+                "  " + img(f"https://img.shields.io/badge/-Launch%20demo-181712?style=flat"
+                           f"&labelColor=181712&color=181712&logo=googlechrome&logoColor=4FC1E9",
+                           "launch demo").replace('<img ', '<a href="' + demo + '"><img ', 1) + "</a>",
+            ]))
         if live_desc.get(repo, "") != pitch:
             # the pin card prints the repo's own About text; if that is missing or
             # casual, the curated pitch has to appear here or it is lost entirely
