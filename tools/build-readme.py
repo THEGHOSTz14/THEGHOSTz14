@@ -6,6 +6,8 @@ Edit TECH / PROJECTS / LINKS here, then run:  python tools/build-readme.py
 Every logo slug is HEAD-checked against cdn.simpleicons.org before anything is
 written, so a typo fails the build instead of showing a broken tile on the profile.
 """
+import hashlib
+import json
 import re
 import sys
 import time
@@ -142,7 +144,7 @@ PROJECTS = [
     ("GHOST_WEB_GAME-", "Drone vs Droids - a Godot 4.7 2D arcade game for the browser: fly a scout drone over a factory floor and dodge the anti-air rockets", "godotengine"),
     ("YOLO-BASIC-MODEL", "PyQt6 webcam app - YOLOv8 detection with DeepSORT tracking, MediaPipe finger counting and drawn count-zones", "ultralytics"),
     ("C-", "C# fundamentals exercises - syntax, input, math, booleans, branching - on .NET 10", "dotnet"),
-    ("PROFICADDD", "OpenDraft - a 2D CAD editor in TypeScript: lines, arcs, splines, text, layers and object snapping", "typescript"),
+    ("PROFICADDD", "OpenDraft - a 2D CAD editor in TypeScript: line, arc, spline and text entities, layers, multi-page drawings, undo history and object snapping", "typescript"),
 ]
 
 # Only links the account actually owns. Add real handles, then re-run the script.
@@ -164,7 +166,7 @@ STATS = "https://github-readme-stats.vercel.app/api"
 # GitHub proxies README images through camo, which caches per URL. Without this the
 # live-data widgets below keep showing weeks-old numbers even though the services
 # return fresh ones; the daily refresh job rewrites this date, so they re-fetch.
-BUST = f"&v={date.today():%Y%m%d}"
+BUST = f"&v={date.today():%Y%m%d}"  # rebuilt below with the repo descriptions
 THEME = "theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true"
 
 
@@ -226,14 +228,20 @@ def reachable(url):
         return False
 
 
-def public_repos():
-    """Repo names that are actually visible on the account right now."""
-    rows = gh.get_json(f"https://api.github.com/users/{USERNAME}/repos?per_page=100")
-    return {row["name"] for row in rows if not row.get("private")}
+def repo_rows():
+    return gh.get_json(f"https://api.github.com/users/{USERNAME}/repos?per_page=100")
 
 
 def build():
-    visible = public_repos()
+    global BUST
+    rows = repo_rows()
+    visible = {r["name"] for r in rows if not r.get("private")}
+    live_desc = {r["name"]: (r.get("description") or "").strip() for r in rows}
+    # camo caches per URL, so the bust has to move when the data behind a card moves -
+    # folding the About texts in makes a description edit show up on the next push
+    BUST = "&v=" + hashlib.sha1(
+        (f"{date.today():%Y%m%d}" + json.dumps(live_desc, sort_keys=True)).encode()
+    ).hexdigest()[:10]
     hidden = [name for name, _, _ in PROJECTS if name not in visible]
     if hidden:
         print("not public, rendered without links: " + ", ".join(hidden), file=sys.stderr)
@@ -343,8 +351,6 @@ def build():
         p.extend(centered([f"    {tiles}"]))
     a("## 🚀 Things I have shipped")
     a("")
-    live_desc = {r["name"]: (r.get("description") or "").strip()
-                 for r in gh.get_json(f"https://api.github.com/users/{USERNAME}/repos?per_page=100")}
     shown = [row for row in PROJECTS if row[0] in visible]
     hidden = [row for row in PROJECTS if row[0] not in visible]
     for repo, pitch, _logo in shown:
