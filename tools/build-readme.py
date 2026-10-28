@@ -113,7 +113,7 @@ TECH = {
         ("VS Code", "", "007ACC"),
         ("Vim", "vim", "019733"),
         ("Ansible", "ansible", "EE0000"),
-        ("Terraform", "terraform", "7B42BC"),
+        ("Terraform", "", "B4A5EC"),  # simple-icons removed the HashiCorp marks
         ("Jenkins", "jenkins", "D24939"),
         ("AWS", "", "FF9900"),
         ("Google Cloud", "googlecloud", "34A853"),
