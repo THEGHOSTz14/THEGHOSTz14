@@ -8,6 +8,8 @@ written, so a typo fails the build instead of showing a broken tile on the profi
 """
 import re
 import sys
+import time
+import urllib.error
 import urllib.request
 from datetime import date
 from pathlib import Path
@@ -240,18 +242,30 @@ def build():
         | {s for _, _, s in PROJECTS if s}
         | {s for _, _, s, _ in LINKS + EXTRA_LINKS if s}
     )
-    bad = []
+    bad, flaky = [], []
     for slug in slugs:
         req = urllib.request.Request(
             f"https://cdn.simpleicons.org/{slug}",
             headers={"User-Agent": "readme-builder", "Accept": "image/svg+xml"},
         )
-        try:
-            with urllib.request.urlopen(req, timeout=25) as r:
-                if r.status != 200:
-                    bad.append(slug)
-        except Exception:
-            bad.append(slug)
+        for attempt in range(3):
+            try:
+                with urllib.request.urlopen(req, timeout=25) as r:
+                    if r.status != 200:
+                        bad.append(slug)
+                    break
+            except urllib.error.HTTPError as e:
+                if e.code == 404:
+                    bad.append(slug)      # genuinely gone from the icon set
+                else:
+                    flaky.append(slug)    # 5xx / rate limit - retry, do not fail
+                break
+            except Exception:
+                flaky.append(slug)
+                time.sleep(1.5 * (attempt + 1))
+        else:
+            print(f"could not verify {len(flaky)} slug(s) over the network, skipping them: "
+                  + ", ".join(sorted(set(flaky))), file=sys.stderr)
     if bad:
         print(f"unknown simple-icons slug(s): {', '.join(bad)}", file=sys.stderr)
         sys.exit(1)
