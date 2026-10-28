@@ -9,6 +9,7 @@ written, so a typo fails the build instead of showing a broken tile on the profi
 import re
 import sys
 import urllib.request
+from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -157,6 +158,10 @@ EXTRA_LINKS = []
 THM_USER = ""
 
 STATS = "https://github-readme-stats.vercel.app/api"
+# GitHub proxies README images through camo, which caches per URL. Without this the
+# live-data widgets below keep showing weeks-old numbers even though the services
+# return fresh ones; the daily refresh job rewrites this date, so they re-fetch.
+BUST = f"&v={date.today():%Y%m%d}"
 THEME = "theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true"
 
 
@@ -261,14 +266,14 @@ def build():
     a("")
     a("  ### Industrial Electrical & PLC Engineer · Godot game dev · automating the boring parts")
     a("")
-    a("  Manesar, India · *Om Industries Pvt Ltd* · I write code that either runs a plant or runs in a browser")
+    a("  GURGAOW , India · *Om Industries Pvt Ltd* · I write code that either runs a plant or runs in a browser")
     a("")
     # teal on dark, GitHub blue on light - the same widget would be unreadable
     # in one of the two themes without this
     def typing(color):
         return ("https://readme-typing-svg.demolab.com/?font=Fira%20Code&center=true&width=360&height=44"
                 f"&color={color}&vCenter=true&size=19&pause=1000&lines="
-                + ";".join(["Rohan%20from%20Manesar",
+                + ";".join(["Rohan%20from%20GURGAOW",
                             "Industrial%20%26%20PLC%20engineer",
                             "Godot%204%20%2B%20GDScript",
                             "Automating%20the%20boring%20parts"]))
@@ -306,10 +311,10 @@ def build():
     a("### 📈 GitHub stats")
     a("")
     p.extend(centered([
-        "  " + img(f"{STATS}?username={USERNAME}&hide_title=true&show_icons=true&count_private=true"
+        "  " + img(f"{STATS}?username={USERNAME}&hide_title=true&show_icons=true&count_private=true{BUST}"
                    f"&show=prs_merged,prs_merged_percentage,reviews&{THEME}&card_width=360", "GitHub stats"),
         "  " + img(
-            "https://github-readme-streak-stats.herokuapp.com/?user=" + USERNAME
+            "https://github-readme-streak-stats.herokuapp.com/?user=" + USERNAME + BUST
             + "&theme=tokyonight&background=0d1117&border=181712&ring=4FC1E9&fire=FF6F00"
             "&currStreakLabel=7C9AC4&sideLabels=C9D1D9&dates=8B949E&hide_border=true&card_width=360",
             "Contribution streak"),
@@ -330,7 +335,7 @@ def build():
             # locale is a no-op visually but changes the URL, which forces GitHub's
             # camo proxy to re-fetch instead of serving a stale cached card
             "  " + img(f"https://github-readme-stats.vercel.app/api/pin/?username={USERNAME}"
-                       f"&repo={repo}&card_width=360&locale=en&{THEME}", repo),
+                       f"&repo={repo}&card_width=360&locale=en{BUST}&{THEME}", repo),
         ]))
     for repo, pitch, _logo in hidden:
         a(f"- **{repo}** — {pitch} _(private, ask me for a look)_")
@@ -339,7 +344,7 @@ def build():
     a("## 📊 Activity")
     a("")
     p.extend(centered([
-        "    " + img(f"{STATS}/top-langs/?username={USERNAME}&layout=compact&card_width=340&{THEME}", "Top languages"),
+        "    " + img(f"{STATS}/top-langs/?username={USERNAME}&layout=compact&card_width=340{BUST}&{THEME}", "Top languages"),
     ]))
 
     a("<!-- github-snake.svg is regenerated nightly by .github/workflows/snake.yml -->")

@@ -6,12 +6,12 @@
 
   ### Industrial Electrical & PLC Engineer · Godot game dev · automating the boring parts
 
-  Manesar, India · *Om Industries Pvt Ltd* · I write code that either runs a plant or runs in a browser
+  GURGAOW , India · *Om Industries Pvt Ltd* · I write code that either runs a plant or runs in a browser
 
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com/?font=Fira%20Code&center=true&width=360&height=44&color=4FC1E9&vCenter=true&size=19&pause=1000&lines=Rohan%20from%20Manesar;Industrial%20%26%20PLC%20engineer;Godot%204%20%2B%20GDScript;Automating%20the%20boring%20parts" />
-    <source media="(prefers-color-scheme: light)" srcset="https://readme-typing-svg.demolab.com/?font=Fira%20Code&center=true&width=360&height=44&color=0969DA&vCenter=true&size=19&pause=1000&lines=Rohan%20from%20Manesar;Industrial%20%26%20PLC%20engineer;Godot%204%20%2B%20GDScript;Automating%20the%20boring%20parts" />
-    <img alt="typewriter intro" src="https://readme-typing-svg.demolab.com/?font=Fira%20Code&center=true&width=360&height=44&color=4FC1E9&vCenter=true&size=19&pause=1000&lines=Rohan%20from%20Manesar;Industrial%20%26%20PLC%20engineer;Godot%204%20%2B%20GDScript;Automating%20the%20boring%20parts" width="360" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com/?font=Fira%20Code&center=true&width=360&height=44&color=4FC1E9&vCenter=true&size=19&pause=1000&lines=Rohan%20from%20GURGAOW;Industrial%20%26%20PLC%20engineer;Godot%204%20%2B%20GDScript;Automating%20the%20boring%20parts" />
+    <source media="(prefers-color-scheme: light)" srcset="https://readme-typing-svg.demolab.com/?font=Fira%20Code&center=true&width=360&height=44&color=0969DA&vCenter=true&size=19&pause=1000&lines=Rohan%20from%20GURGAOW;Industrial%20%26%20PLC%20engineer;Godot%204%20%2B%20GDScript;Automating%20the%20boring%20parts" />
+    <img alt="typewriter intro" src="https://readme-typing-svg.demolab.com/?font=Fira%20Code&center=true&width=360&height=44&color=4FC1E9&vCenter=true&size=19&pause=1000&lines=Rohan%20from%20GURGAOW;Industrial%20%26%20PLC%20engineer;Godot%204%20%2B%20GDScript;Automating%20the%20boring%20parts" width="360" />
   </picture>
 
   <img src="https://komarev.com/ghpvc/?username=THEGHOSTz14&style=flat&labelColor=181712&color=181712&label=visitors" alt="profile views"> <img src="https://img.shields.io/github/followers/THEGHOSTz14?style=flat&labelColor=181712&color=181712&logo=github&logoColor=white&label=followers" alt="followers"> <img src="https://img.shields.io/github/stars/THEGHOSTz14?style=flat&labelColor=181712&color=181712&label=stars%20received" alt="stars received">
@@ -32,8 +32,8 @@
 
 <p align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=THEGHOSTz14&hide_title=true&show_icons=true&count_private=true&show=prs_merged,prs_merged_percentage,reviews&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true&card_width=360" alt="GitHub stats">
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=THEGHOSTz14&theme=tokyonight&background=0d1117&border=181712&ring=4FC1E9&fire=FF6F00&currStreakLabel=7C9AC4&sideLabels=C9D1D9&dates=8B949E&hide_border=true&card_width=360" alt="Contribution streak">
+<img src="https://github-readme-stats.vercel.app/api?username=THEGHOSTz14&hide_title=true&show_icons=true&count_private=true&v=20261028&show=prs_merged,prs_merged_percentage,reviews&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true&card_width=360" alt="GitHub stats">
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=THEGHOSTz14&v=20261028&theme=tokyonight&background=0d1117&border=181712&ring=4FC1E9&fire=FF6F00&currStreakLabel=7C9AC4&sideLabels=C9D1D9&dates=8B949E&hide_border=true&card_width=360" alt="Contribution streak">
 
 </p>
 
@@ -107,19 +107,19 @@
 
 <p align="center">
 
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=THEGHOSTz14&repo=GHOST_WEB_GAME-&card_width=360&locale=en&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="GHOST_WEB_GAME-">
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=THEGHOSTz14&repo=GHOST_WEB_GAME-&card_width=360&locale=en&v=20261028&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="GHOST_WEB_GAME-">
 
 </p>
 
 <p align="center">
 
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=THEGHOSTz14&repo=YOLO-BASIC-MODEL&card_width=360&locale=en&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="YOLO-BASIC-MODEL">
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=THEGHOSTz14&repo=YOLO-BASIC-MODEL&card_width=360&locale=en&v=20261028&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="YOLO-BASIC-MODEL">
 
 </p>
 
 <p align="center">
 
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=THEGHOSTz14&repo=C-&card_width=360&locale=en&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="C-">
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=THEGHOSTz14&repo=C-&card_width=360&locale=en&v=20261028&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="C-">
 
 </p>
 
@@ -127,7 +127,7 @@
 
 <p align="center">
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=THEGHOSTz14&layout=compact&card_width=340&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="Top languages">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=THEGHOSTz14&layout=compact&card_width=340&v=20261028&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="Top languages">
 
 </p>
 
