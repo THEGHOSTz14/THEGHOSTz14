@@ -140,6 +140,7 @@ PROJECTS = [
     ("GHOST_WEB_GAME-", "Drone vs Droids - Godot 4.7 arcade game, exported to WASM for the browser and targeting y8", "godotengine"),
     ("YOLO-BASIC-MODEL", "PyQt6 webcam app - YOLOv8 detection with DeepSORT tracking, MediaPipe finger counting and drawn count-zones", "ultralytics"),
     ("C-", "C# fundamentals exercises - syntax, input, math, booleans, branching - on .NET 10", "dotnet"),
+    ("PROFICADDD", "OpenDraft - a 2D CAD editor in TypeScript: lines, arcs, splines, text, layers and object snapping", "typescript"),
 ]
 
 # Only links the account actually owns. Add real handles, then re-run the script.

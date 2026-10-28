@@ -123,6 +123,12 @@
 
 </p>
 
+<p align="center">
+
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=THEGHOSTz14&repo=PROFICADDD&card_width=360&locale=en&v=20261028&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="PROFICADDD">
+
+</p>
+
 ## 📊 Activity
 
 <p align="center">
