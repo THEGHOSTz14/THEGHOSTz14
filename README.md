@@ -51,7 +51,7 @@
 
 <p align="center">
 
-<img src="assets/tech/html5.svg?v=t4" alt="HTML5" width="88"> <img src="assets/tech/css3.svg?v=t4" alt="CSS3" width="88"> <img src="assets/tech/react.svg?v=t4" alt="React" width="88"> <img src="assets/tech/vite.svg?v=t4" alt="Vite" width="88"> <img src="assets/tech/node-js.svg?v=t4" alt="Node.js" width="88"> <img src="assets/tech/express.svg?v=t4" alt="Express" width="88"> <img src="assets/tech/tailwind-css.svg?v=t4" alt="Tailwind CSS" width="88"> <img src="assets/tech/nginx.svg?v=t4" alt="Nginx" width="88"> <img src="assets/tech/flask.svg?v=t4" alt="Flask" width="88"> <img src="assets/tech/fastapi.svg?v=t4" alt="FastAPI" width="88"> <img src="assets/tech/github-pages.svg?v=t4" alt="GitHub Pages" width="88">
+<img src="assets/tech/html5.svg?v=t4" alt="HTML5" width="88"> <img src="assets/tech/css3.svg?v=t4" alt="CSS3" width="88"> <img src="assets/tech/react.svg?v=t4" alt="React" width="88"> <img src="assets/tech/vite.svg?v=t4" alt="Vite" width="88"> <img src="assets/tech/node-js.svg?v=t4" alt="Node.js" width="88"> <img src="assets/tech/express.svg?v=t4" alt="Express" width="88"> <img src="assets/tech/tailwind-css.svg?v=t4" alt="Tailwind CSS" width="88"> <img src="assets/tech/nginx.svg?v=t4" alt="Nginx" width="88"> <img src="assets/tech/flask.svg?v=t4" alt="Flask" width="88"> <img src="assets/tech/fastapi.svg?v=t4" alt="FastAPI" width="88"> <img src="assets/tech/gh-pages.svg?v=t4" alt="GH Pages" width="88">
 
 </p>
 

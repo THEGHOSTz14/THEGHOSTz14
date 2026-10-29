@@ -49,7 +49,7 @@ TECH = {
         ("Nginx", "nginx", "009639"),
         ("Flask", "flask", "FFFFFF"),
         ("FastAPI", "fastapi", "009688"),
-        ("GitHub Pages", "githubpages", "FFFFFF"),
+        ("GH Pages", None, "FFFFFF"),
     ],
     "AI / CV / data": [
         ("TensorFlow", "tensorflow", "FF6F00"),
@@ -103,7 +103,7 @@ TECH = {
         ("LabVIEW", "labview", "FFC220"),
         ("Proteus", "proteus", "1F4E79"),
         ("LTspice", "ltspice", "D6D6D6"),
-        ("Multisim", "multisim", "00B4D8"),
+        ("Multisim", None, "00B4D8"),
     ],
     "Tooling, OS & cloud": [
         ("Git", "git", "F05032"),

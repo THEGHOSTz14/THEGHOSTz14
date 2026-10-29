@@ -322,10 +322,17 @@ def build_stats_card():
     """Draw the stats card locally: the public github-readme-stats deploy has been down."""
     import gh
 
-    totals = contribution_counts()
-    repos = gh.get_json(
-        f"https://api.github.com/users/{USERNAME_FOR_API}/repos?per_page=100&affiliation=owner"
-    )
+    path = ROOT / "assets" / "stats.svg"
+    try:
+        totals = contribution_counts()
+        repos = gh.get_json(
+            f"https://api.github.com/users/{USERNAME_FOR_API}/repos?per_page=100&affiliation=owner"
+        )
+    except Exception as exc:
+        # the refresh job still wants to publish tiles and cards when GitHub's API
+        # sulks, so keep yesterday's numbers rather than failing the whole build
+        print(f"stats card: kept the old one ({exc})", file=sys.stderr)
+        return path if path.exists() else None
     numbers = {
         "contributions": totals["contributions"], "commits": totals["commits"],
         "repos": len(repos), "stars": sum(r["stargazers_count"] for r in repos),
