@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="assets/banner.png" alt="Ghost circuit banner" width="72%">
+  <img src="assets/banner.jpg?v=003aacf8" alt="Profile banner" width="72%">
 
   # 👻 Rohan · `THEGHOSTz14`
 

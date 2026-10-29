@@ -287,7 +287,9 @@ def build():
 
     a("<div align=\"center\">")
     a("")
-    a("  " + img("assets/banner.png", "Ghost circuit banner", "72%"))
+    banner = ROOT / "assets" / "banner.jpg"
+    banner_v = hashlib.sha1(banner.read_bytes()).hexdigest()[:8] if banner.exists() else "0"
+    a("  " + img(f"assets/banner.jpg?v={banner_v}", "Profile banner", "72%"))
     a("")
     a("  # 👻 Rohan · `THEGHOSTz14`")
     a("")
