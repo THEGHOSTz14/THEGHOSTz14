@@ -32,8 +32,8 @@
 
 <p align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=THEGHOSTz14&hide_title=true&show_icons=true&count_private=true&v=82f60832d6&show=prs_merged,prs_merged_percentage,reviews&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true&card_width=360" alt="GitHub stats">
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=THEGHOSTz14&v=82f60832d6&theme=tokyonight&background=0d1117&border=181712&ring=4FC1E9&fire=FF6F00&currStreakLabel=7C9AC4&sideLabels=C9D1D9&dates=8B949E&hide_border=true&card_width=360" alt="Contribution streak">
+<img src="https://github-readme-stats.vercel.app/api?username=THEGHOSTz14&hide_title=true&show_icons=true&count_private=true&v=efa5d06beb&show=prs_merged,prs_merged_percentage,reviews&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true&card_width=360" alt="GitHub stats">
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=THEGHOSTz14&v=efa5d06beb&theme=tokyonight&background=0d1117&border=181712&ring=4FC1E9&fire=FF6F00&currStreakLabel=7C9AC4&sideLabels=C9D1D9&dates=8B949E&hide_border=true&card_width=360" alt="Contribution streak">
 
 </p>
 
@@ -107,25 +107,25 @@
 
 <p align="center">
 
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=THEGHOSTz14&repo=GHOST_WEB_GAME-&card_width=360&locale=en&v=82f60832d6&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="GHOST_WEB_GAME-">
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=THEGHOSTz14&repo=GHOST_WEB_GAME-&card_width=360&locale=en&v=efa5d06beb&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="GHOST_WEB_GAME-">
 
 </p>
 
 <p align="center">
 
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=THEGHOSTz14&repo=YOLO-BASIC-MODEL&card_width=360&locale=en&v=82f60832d6&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="YOLO-BASIC-MODEL">
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=THEGHOSTz14&repo=YOLO-BASIC-MODEL&card_width=360&locale=en&v=efa5d06beb&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="YOLO-BASIC-MODEL">
 
 </p>
 
 <p align="center">
 
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=THEGHOSTz14&repo=C-&card_width=360&locale=en&v=82f60832d6&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="C-">
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=THEGHOSTz14&repo=C-&card_width=360&locale=en&v=efa5d06beb&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="C-">
 
 </p>
 
 <p align="center">
 
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=THEGHOSTz14&repo=PROFICADDD&card_width=360&locale=en&v=82f60832d6&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="PROFICADDD">
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=THEGHOSTz14&repo=PROFICADDD&card_width=360&locale=en&v=efa5d06beb&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="PROFICADDD">
 
 </p>
 
@@ -135,21 +135,15 @@
 
 </p>
 
-## 📊 Activity
+## 🏙️ Contribution skyline
 
-<p align="center">
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=THEGHOSTz14&layout=compact&card_width=340&v=82f60832d6&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="Top languages">
-
-</p>
-
-<!-- github-snake.svg is regenerated nightly by .github/workflows/snake.yml -->
+<!-- profile-3d-contrib/*.svg is regenerated nightly by .github/workflows/3d-contrib.yml -->
 <p align="center">
 
 <picture>
-<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/THEGHOSTz14/THEGHOSTz14/github-snake/github-snake-dark.svg" />
-<source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/THEGHOSTz14/THEGHOSTz14/github-snake/github-snake.svg" />
-<img alt="snake eating my contributions" src="https://raw.githubusercontent.com/THEGHOSTz14/THEGHOSTz14/github-snake/github-snake.svg" width="100%" />
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/THEGHOSTz14/THEGHOSTz14/main/profile-3d-contrib/skyline-night.svg" />
+<source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/THEGHOSTz14/THEGHOSTz14/main/profile-3d-contrib/skyline-green.svg" />
+<img alt="3D skyline of my last year - one building per day, taller on busier days" src="https://raw.githubusercontent.com/THEGHOSTz14/THEGHOSTz14/main/profile-3d-contrib/skyline-night.svg" width="100%" />
 </picture>
 
 </p>

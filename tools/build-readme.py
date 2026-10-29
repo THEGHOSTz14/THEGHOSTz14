@@ -379,20 +379,18 @@ def build():
         a(f"- **{repo}** — {pitch} _(private, ask me for a look)_")
         a("")
 
-    a("## 📊 Activity")
+    a("## 🏙️ Contribution skyline")
     a("")
+    # one building per day, height follows that day's contribution count; drawn by
+    # .github/workflows/3d-contrib.yml from tools/skyline.json
+    a("<!-- profile-3d-contrib/*.svg is regenerated nightly by .github/workflows/3d-contrib.yml -->")
+    city = f"https://raw.githubusercontent.com/{USERNAME}/{USERNAME}/main/profile-3d-contrib"
     p.extend(centered([
-        "    " + img(f"{STATS}/top-langs/?username={USERNAME}&layout=compact&card_width=340{BUST}&{THEME}", "Top languages"),
-    ]))
-
-    a("<!-- github-snake.svg is regenerated nightly by .github/workflows/snake.yml -->")
-    snake = f"https://raw.githubusercontent.com/{USERNAME}/{USERNAME}/github-snake"
-    p.extend(centered([
-        "    <picture>",
-        f'      <source media="(prefers-color-scheme: dark)" srcset="{snake}/github-snake-dark.svg" />',
-        f'      <source media="(prefers-color-scheme: light)" srcset="{snake}/github-snake.svg" />',
-        f'      <img alt="snake eating my contributions" src="{snake}/github-snake.svg" width="100%" />',
-        "    </picture>",
+        "  <picture>",
+        f'    <source media="(prefers-color-scheme: dark)" srcset="{city}/skyline-night.svg" />',
+        f'    <source media="(prefers-color-scheme: light)" srcset="{city}/skyline-green.svg" />',
+        f'    <img alt="3D skyline of my last year - one building per day, taller on busier days" src="{city}/skyline-night.svg" width="100%" />',
+        "  </picture>",
     ]))
 
     if THM_USER:
