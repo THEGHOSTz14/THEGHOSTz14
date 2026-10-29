@@ -293,14 +293,14 @@ def build():
     a("")
     a("  ### Industrial Electrical & PLC Engineer · Godot game dev · automating the boring parts")
     a("")
-    a("  GURGAOW , India · *Om Industries Pvt Ltd* · I write code that either runs a plant or runs in a browser")
+    a("  Gurgaon, India · *Om Industries Pvt Ltd* · I write code that either runs a plant or runs in a browser")
     a("")
     # teal on dark, GitHub blue on light - the same widget would be unreadable
     # in one of the two themes without this
     def typing(color):
         return ("https://readme-typing-svg.demolab.com/?font=Fira%20Code&center=true&width=360&height=44"
                 f"&color={color}&vCenter=true&size=19&pause=1000&lines="
-                + ";".join(["Rohan%20from%20GURGAOW",
+                + ";".join(["Rohan%20from%20Gurgaon",
                             "Industrial%20%26%20PLC%20engineer",
                             "Godot%204%20%2B%20GDScript",
                             "Automating%20the%20boring%20parts"]))
