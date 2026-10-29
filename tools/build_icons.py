@@ -24,7 +24,7 @@ ROOT = Path(__file__).resolve().parent.parent
 TECH_DIR = ROOT / "assets" / "tech"
 REPO_DIR = ROOT / "assets" / "repos"
 CACHE = Path(__file__).resolve().parent / ".icons"
-TILE_VERSION = "t5"
+TILE_VERSION = "t6"
 CARD_VERSION = "c4"
 
 FONT = "Segoe UI,Helvetica,Arial,sans-serif"
@@ -104,15 +104,16 @@ TILE = """<svg xmlns="http://www.w3.org/2000/svg" width="96" height="118" viewBo
 <!-- {version} -->
 <style>
   .float {{ animation: float 6.4s ease-in-out infinite; animation-delay: {delay:.2f}s; }}
-  .spin {{ transform-box: fill-box; transform-origin: 50% 50%; animation: spin 10s cubic-bezier(.6,.05,.4,.95) infinite; animation-delay: {delay:.2f}s; }}
+  .spin {{ transform-box: fill-box; transform-origin: 50% 50%; animation: spin 10s linear infinite; animation-delay: {delay:.2f}s; }}
   .gleam {{ animation: gleam 10s ease-in-out infinite; animation-delay: {delay:.2f}s; }}
   @keyframes float {{ 0%, 100% {{ transform: translateY(0); }} 50% {{ transform: translateY(-1.5px); }} }}
   @keyframes spin {{
-    0%, 60% {{ transform: perspective(190px) rotateY(0deg); opacity: 1; }}
-    64% {{ transform: perspective(190px) rotateY(90deg); opacity: .3; }}
-    68% {{ transform: perspective(190px) rotateY(180deg); opacity: .14; }}
-    72% {{ transform: perspective(190px) rotateY(270deg); opacity: .3; }}
-    76%, 100% {{ transform: perspective(190px) rotateY(360deg); opacity: 1; }}
+    0%, 58% {{ transform: perspective(190px) rotateY(0deg); opacity: 1; }}
+    61% {{ transform: perspective(190px) rotateY(45deg); opacity: .8; }}
+    63% {{ transform: perspective(190px) rotateY(90deg); opacity: 0; }}
+    66% {{ transform: perspective(190px) rotateY(270deg); opacity: 0; }}
+    68% {{ transform: perspective(190px) rotateY(315deg); opacity: .8; }}
+    71%, 100% {{ transform: perspective(190px) rotateY(360deg); opacity: 1; }}
   }}
   @keyframes gleam {{ 0%, 34% {{ transform: translateX(-70px); }} 58%, 100% {{ transform: translateX(130px); }} }}
 </style>
