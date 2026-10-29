@@ -293,7 +293,7 @@ def build():
     a("")
     a("  ### Industrial Electrical & PLC Engineer · Godot game dev · automating the boring parts")
     a("")
-    a("  Gurgaon, India · *Om Industries Pvt Ltd* · I write code that either runs a plant or runs in a browser")
+    a("  Gurgaon, India · *Cosmo Instruments* · I write code that either runs a plant or runs in a browser")
     a("")
     # teal on dark, GitHub blue on light - the same widget would be unreadable
     # in one of the two themes without this

@@ -6,7 +6,7 @@
 
   ### Industrial Electrical & PLC Engineer · Godot game dev · automating the boring parts
 
-  Gurgaon, India · *Om Industries Pvt Ltd* · I write code that either runs a plant or runs in a browser
+  Gurgaon, India · *Cosmo Instruments* · I write code that either runs a plant or runs in a browser
 
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com/?font=Fira%20Code&center=true&width=360&height=44&color=4FC1E9&vCenter=true&size=19&pause=1000&lines=Rohan%20from%20Gurgaon;Industrial%20%26%20PLC%20engineer;Godot%204%20%2B%20GDScript;Automating%20the%20boring%20parts" />
