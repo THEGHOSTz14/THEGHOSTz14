@@ -1,0 +1,52 @@
+name: 3d contribution skyline
+
+# One isometric building per day, height = log10(contributions/20 + 1) * 144 + 3,
+# so a heavy day is literally a taller tower. Regenerated daily and committed to
+# main; README.md embeds the two variants by raw URL.
+
+on:
+  schedule:
+    - cron: "0 7 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/3d-contrib.yml"
+      - "tools/skyline.json"
+
+concurrency:
+  group: 3d-contrib
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: draw the city
+        uses: yoshi389111/github-profile-3d-contrib@v0.9.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+          SETTING_JSON: tools/skyline.json
+
+      - name: publish the svgs to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile-3d-contrib
+          if git diff --cached --quiet; then
+            echo "nothing changed"
+            exit 0
+          fi
+          git commit -m "Refresh the 3D contribution skyline [skip ci]"
+          # the stats refresh can be pushing at the same minute; rebase and retry
+          for attempt in 1 2 3; do
+            if git push; then exit 0; fi
+            git pull --rebase --autostash
+          done
+          exit 1
