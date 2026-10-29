@@ -166,12 +166,12 @@ EXTRA_LINKS = []
 # Your TryHackMe username, to show the profile card from the reference design.
 THM_USER = ""
 
-STATS = "https://github-readme-stats.vercel.app/api"
+# github-readme-stats has been serving 503 since its Vercel deploy was paused, so the
+# totals card is generated from the API instead (tools/build_icons.py).
 # GitHub proxies README images through camo, which caches per URL. Without this the
 # live-data widgets below keep showing weeks-old numbers even though the services
 # return fresh ones; the daily refresh job rewrites this date, so they re-fetch.
 BUST = f"&v={date.today():%Y%m%d}"  # rebuilt below with the repo descriptions
-THEME = "theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true"
 
 
 def esc(s):
@@ -337,9 +337,9 @@ def build():
     # space, so it renders "Rohan 's GitHub Stats" - hide it and label it here
     a("### 📈 GitHub stats")
     a("")
+    build_icons.build_stats_card()
     p.extend(centered([
-        "  " + img(f"{STATS}?username={USERNAME}&hide_title=true&show_icons=true&count_private=true{BUST}"
-                   f"&show=prs_merged,prs_merged_percentage,reviews&{THEME}&card_width=360", "GitHub stats"),
+        "  " + img(f"assets/stats.svg?v={date.today():%Y%m%d}{build_icons.STATS_VERSION}", "GitHub stats", "360"),
         "  " + img(
             "https://github-readme-streak-stats.herokuapp.com/?user=" + USERNAME + BUST
             + "&theme=tokyonight&background=0d1117&border=181712&ring=4FC1E9&fire=FF6F00"

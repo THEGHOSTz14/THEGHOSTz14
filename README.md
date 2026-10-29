@@ -32,7 +32,7 @@
 
 <p align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=THEGHOSTz14&hide_title=true&show_icons=true&count_private=true&v=efa5d06beb&show=prs_merged,prs_merged_percentage,reviews&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true&card_width=360" alt="GitHub stats">
+<img src="assets/stats.svg?v=20261029s1" alt="GitHub stats" width="360">
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=THEGHOSTz14&v=efa5d06beb&theme=tokyonight&background=0d1117&border=181712&ring=4FC1E9&fire=FF6F00&currStreakLabel=7C9AC4&sideLabels=C9D1D9&dates=8B949E&hide_border=true&card_width=360" alt="Contribution streak">
 
 </p>

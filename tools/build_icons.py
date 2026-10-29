@@ -4,15 +4,20 @@
 assets/tech/<name>.svg   one rounded "cube" tile per technology, logo + label,
                          with a staggered 3D flip/shine loop
 assets/repos/<repo>.svg  a clickable preview card with live stars/forks
+assets/stats.svg         the totals card, built here because the public
+                         github-readme-stats deployment is down
+assets/languages.svg     the stacked language bar
 
 Both are plain SVG with inline CSS, which is the only animation GitHub's image
 proxy (camo) will run: it serves `style-src 'unsafe-inline'` and nothing else.
 """
 import html
+import json
 import re
 import sys
 import urllib.error
 import urllib.request
+from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -254,15 +259,103 @@ def build_repo_cards(projects, rows):
     print(f"repo cards: {len(by_name)} public repos, {written} rewritten")
 
 
+STATS = """<svg xmlns="http://www.w3.org/2000/svg" width="360" height="150" viewBox="0 0 360 150" role="img" aria-label="GitHub stats">
+<!-- {version} -->
+<style>
+  .sweep {{ animation: sweep 5.4s linear infinite; }}
+  @keyframes sweep {{ 0% {{ transform: translateX(-70px); }} 100% {{ transform: translateX(380px); }} }}
+</style>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#14150f"/><stop offset="1" stop-color="#0a0b07"/>
+  </linearGradient>
+  <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#4FC1E9" stop-opacity=".1"/><stop offset=".5" stop-color="#4FC1E9" stop-opacity=".85"/><stop offset="1" stop-color="#4FC1E9" stop-opacity=".1"/>
+  </linearGradient>
+  <clipPath id="card"><rect x="0.5" y="0.5" width="359" height="149" rx="14"/></clipPath>
+</defs>
+<rect x="0.5" y="0.5" width="359" height="149" rx="14" fill="url(#bg)" stroke="#2a2b21"/>
+<rect x="0.5" y="0.5" width="359" height="2.5" rx="1" fill="url(#edge)"/>
+<g clip-path="url(#card)">
+  <rect class="sweep" x="0" y="0" width="38" height="150" fill="#ffffff" opacity=".045"/>
+</g>
+{metrics}
+</svg>
+"""
+
+STATS_VERSION = "s1"
+STATS_CELLS = [
+    ("contributions", "Contributions"),
+    ("commits", "Commits"),
+    ("repos", "Public repos"),
+    ("stars", "Stars"),
+]
+
+
+def contribution_counts():
+    """Sum the contribution calendar over whole years, which is what the dashboard totals."""
+    import gh
+
+    user = gh.get_json(f"https://api.github.com/users/{USERNAME_FOR_API}")
+    start = int(user["created_at"][:4])
+    end = date.today().year
+    totals = {"contributions": 0, "commits": 0}
+    query = """query($login:String!,$from:DateTime!,$to:DateTime!){user(login:$login){
+      contributionsCollection(from:$from,to:$to){
+        contributionCalendar{totalContributions}
+        totalCommitContributions}}}"""
+    for year in range(start, end + 1):
+        body = {"query": query, "variables": {
+            "login": USERNAME_FOR_API,
+            "from": f"{year}-01-01T00:00:00Z",
+            "to": f"{year}-12-31T23:59:59Z"}}
+        payload = json.loads(gh.post_json("https://api.github.com/graphql", body))
+        if "errors" in payload:
+            raise RuntimeError(payload["errors"][0].get("message", "graphql error"))
+        cc = payload["data"]["user"]["contributionsCollection"]
+        totals["contributions"] += cc["contributionCalendar"]["totalContributions"]
+        totals["commits"] += cc["totalCommitContributions"]
+    return totals
+
+
+def build_stats_card():
+    """Draw the stats card locally: the public github-readme-stats deploy has been down."""
+    import gh
+
+    totals = contribution_counts()
+    repos = gh.get_json(
+        f"https://api.github.com/users/{USERNAME_FOR_API}/repos?per_page=100&affiliation=owner"
+    )
+    numbers = {
+        "contributions": totals["contributions"], "commits": totals["commits"],
+        "repos": len(repos), "stars": sum(r["stargazers_count"] for r in repos),
+    }
+    cells = []
+    for index, (key, label) in enumerate(STATS_CELLS):
+        col, row = index % 2, index // 2
+        x, y = 32 + col * 168, 58 + row * 54
+        cells.append(
+            f'<text x="{x}" y="{y}" font-family="{FONT}" font-size="24" font-weight="700" '
+            f'fill="#e6edf3">{numbers[key]:,}</text>\n'
+            f'<text x="{x}" y="{y + 18}" font-family="{FONT}" font-size="10.5" '
+            f'fill="#8b949e" letter-spacing=".4">{label}</text>'
+        )
+    svg = STATS.format(metrics="\n".join(cells), version=STATS_VERSION)
+    path = ROOT / "assets" / "stats.svg"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if not path.exists() or path.read_text(encoding="utf-8") != svg:
+        path.write_text(svg, encoding="utf-8", newline="\n")
+        print("stats card: rewritten")
+    return path
+
+
 def main():
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     import build_readme
     build_tiles(build_readme.TECH)
     build_repo_cards(build_readme.PROJECTS, build_readme.repo_rows())
+    build_stats_card()
 
-
-if __name__ == "__main__":
-    main()
 
 
 USERNAME_FOR_API = "THEGHOSTz14"
@@ -339,3 +432,7 @@ def build_languages(repo_names):
         path.write_text(svg, encoding="utf-8", newline="\n")
         print("languages card: rewritten")
     return path
+
+
+if __name__ == "__main__":
+    main()
