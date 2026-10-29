@@ -1,12 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="96" height="118" viewBox="0 0 96 118" role="img" aria-label="C#">
-<!-- t4 -->
+<!-- t5 -->
 <style>
-  .bob { animation: bob 5.6s ease-in-out infinite; animation-delay: 5.91s; }
-  .flip { transform-box: fill-box; transform-origin: 50% 50%; animation: flip 7.2s cubic-bezier(.45,.05,.3,1) infinite; animation-delay: 5.91s; }
-  .gleam { animation: gleam 7.2s ease-in-out infinite; animation-delay: 5.91s; }
-  @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-2.5px); } }
-  @keyframes flip { 0%, 60% { transform: scaleX(1); } 72% { transform: scaleX(.06); } 84%, 100% { transform: scaleX(1); } }
-  @keyframes gleam { 0%, 55% { transform: translateX(-70px); } 80%, 100% { transform: translateX(130px); } }
+  .float { animation: float 6.4s ease-in-out infinite; animation-delay: -5.70s; }
+  .spin { transform-box: fill-box; transform-origin: 50% 50%; animation: spin 10s cubic-bezier(.6,.05,.4,.95) infinite; animation-delay: -5.70s; }
+  .gleam { animation: gleam 10s ease-in-out infinite; animation-delay: -5.70s; }
+  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-1.5px); } }
+  @keyframes spin {
+    0%, 60% { transform: perspective(190px) rotateY(0deg); opacity: 1; }
+    64% { transform: perspective(190px) rotateY(90deg); opacity: .3; }
+    68% { transform: perspective(190px) rotateY(180deg); opacity: .14; }
+    72% { transform: perspective(190px) rotateY(270deg); opacity: .3; }
+    76%, 100% { transform: perspective(190px) rotateY(360deg); opacity: 1; }
+  }
+  @keyframes gleam { 0%, 34% { transform: translateX(-70px); } 58%, 100% { transform: translateX(130px); } }
 </style>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
@@ -17,15 +23,13 @@
   </linearGradient>
   <clipPath id="clip"><rect x="0" y="0" width="96" height="96" rx="22"/></clipPath>
 </defs>
-<g class="bob"><g class="flip">
-  <rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="url(#bg)" stroke="#34352a"/>
-  <g clip-path="url(#clip)">
-    <rect x="1" y="1" width="94" height="46" rx="20" fill="url(#sheen)"/>
-    <rect x="1" y="52" width="94" height="43" rx="18" fill="#000000" opacity=".22"/>
-    <g transform="rotate(16 48 48)"><rect class="gleam" x="-46" y="-40" width="18" height="180" fill="#ffffff" opacity=".09"/></g>
-    <g transform="translate(22 22) scale(2.1667)" fill="#9C87E6"><path d="M24 8.77h-2.468v7.565h-1.425V8.77h-2.462V7.53H24zm-6.852 7.565h-4.821V7.53h4.63v1.24h-3.205v2.494h2.953v1.234h-2.953v2.604h3.396zm-6.708 0H8.882L4.78 9.863a2.896 2.896 0 0 1-.258-.51h-.036c.032.189.048.592.048 1.21v5.772H3.157V7.53h1.659l3.965 6.32c.167.261.275.442.323.54h.024c-.04-.233-.06-.629-.06-1.185V7.529h1.372zm-8.703-.693a.868.829 0 0 1-.869.829.868.829 0 0 1-.868-.83.868.829 0 0 1 .868-.828.868.829 0 0 1 .869.829Z"/></g>
-  </g>
-  <rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="none" stroke="#eaf3ff" stroke-opacity=".07"/>
-</g></g>
+<rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="url(#bg)" stroke="#34352a"/>
+<g clip-path="url(#clip)">
+  <rect x="1" y="1" width="94" height="46" rx="20" fill="url(#sheen)"/>
+  <rect x="1" y="52" width="94" height="43" rx="18" fill="#000000" opacity=".22"/>
+  <g transform="rotate(16 48 48)"><rect class="gleam" x="-46" y="-40" width="18" height="180" fill="#ffffff" opacity=".09"/></g>
+  <g class="float"><g class="spin"><g transform="translate(22 22) scale(2.1667)" fill="#9C87E6"><path d="M24 8.77h-2.468v7.565h-1.425V8.77h-2.462V7.53H24zm-6.852 7.565h-4.821V7.53h4.63v1.24h-3.205v2.494h2.953v1.234h-2.953v2.604h3.396zm-6.708 0H8.882L4.78 9.863a2.896 2.896 0 0 1-.258-.51h-.036c.032.189.048.592.048 1.21v5.772H3.157V7.53h1.659l3.965 6.32c.167.261.275.442.323.54h.024c-.04-.233-.06-.629-.06-1.185V7.529h1.372zm-8.703-.693a.868.829 0 0 1-.869.829.868.829 0 0 1-.868-.83.868.829 0 0 1 .868-.828.868.829 0 0 1 .869.829Z"/></g></g></g>
+</g>
+<rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="none" stroke="#eaf3ff" stroke-opacity=".07"/>
 <text x="48" y="112" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="11.5" fill="#9aa4b4">C#</text>
 </svg>

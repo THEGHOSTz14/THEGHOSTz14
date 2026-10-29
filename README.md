@@ -43,7 +43,7 @@
 
 <p align="center">
 
-<img src="assets/tech/python.svg?v=t4" alt="Python" width="88"> <img src="assets/tech/c.svg?v=t4" alt="C" width="88"> <img src="assets/tech/cplusplus.svg?v=t4" alt="C++" width="88"> <img src="assets/tech/csharp.svg?v=t4" alt="C#" width="88"> <img src="assets/tech/gdscript.svg?v=t4" alt="GDScript" width="88"> <img src="assets/tech/javascript.svg?v=t4" alt="JavaScript" width="88"> <img src="assets/tech/typescript.svg?v=t4" alt="TypeScript" width="88"> <img src="assets/tech/sql.svg?v=t4" alt="SQL" width="88"> <img src="assets/tech/bash.svg?v=t4" alt="Bash" width="88"> <img src="assets/tech/matlab.svg?v=t4" alt="MATLAB" width="88">
+<img src="assets/tech/python.svg?v=t5" alt="Python" width="88"> <img src="assets/tech/c.svg?v=t5" alt="C" width="88"> <img src="assets/tech/cplusplus.svg?v=t5" alt="C++" width="88"> <img src="assets/tech/csharp.svg?v=t5" alt="C#" width="88"> <img src="assets/tech/gdscript.svg?v=t5" alt="GDScript" width="88"> <img src="assets/tech/javascript.svg?v=t5" alt="JavaScript" width="88"> <img src="assets/tech/typescript.svg?v=t5" alt="TypeScript" width="88"> <img src="assets/tech/sql.svg?v=t5" alt="SQL" width="88"> <img src="assets/tech/bash.svg?v=t5" alt="Bash" width="88"> <img src="assets/tech/matlab.svg?v=t5" alt="MATLAB" width="88">
 
 </p>
 
@@ -51,7 +51,7 @@
 
 <p align="center">
 
-<img src="assets/tech/html5.svg?v=t4" alt="HTML5" width="88"> <img src="assets/tech/css3.svg?v=t4" alt="CSS3" width="88"> <img src="assets/tech/react.svg?v=t4" alt="React" width="88"> <img src="assets/tech/vite.svg?v=t4" alt="Vite" width="88"> <img src="assets/tech/node-js.svg?v=t4" alt="Node.js" width="88"> <img src="assets/tech/express.svg?v=t4" alt="Express" width="88"> <img src="assets/tech/tailwind-css.svg?v=t4" alt="Tailwind CSS" width="88"> <img src="assets/tech/nginx.svg?v=t4" alt="Nginx" width="88"> <img src="assets/tech/flask.svg?v=t4" alt="Flask" width="88"> <img src="assets/tech/fastapi.svg?v=t4" alt="FastAPI" width="88"> <img src="assets/tech/gh-pages.svg?v=t4" alt="GH Pages" width="88">
+<img src="assets/tech/html5.svg?v=t5" alt="HTML5" width="88"> <img src="assets/tech/css3.svg?v=t5" alt="CSS3" width="88"> <img src="assets/tech/react.svg?v=t5" alt="React" width="88"> <img src="assets/tech/vite.svg?v=t5" alt="Vite" width="88"> <img src="assets/tech/node-js.svg?v=t5" alt="Node.js" width="88"> <img src="assets/tech/express.svg?v=t5" alt="Express" width="88"> <img src="assets/tech/tailwind-css.svg?v=t5" alt="Tailwind CSS" width="88"> <img src="assets/tech/nginx.svg?v=t5" alt="Nginx" width="88"> <img src="assets/tech/flask.svg?v=t5" alt="Flask" width="88"> <img src="assets/tech/fastapi.svg?v=t5" alt="FastAPI" width="88"> <img src="assets/tech/gh-pages.svg?v=t5" alt="GH Pages" width="88">
 
 </p>
 
@@ -59,7 +59,7 @@
 
 <p align="center">
 
-<img src="assets/tech/tensorflow.svg?v=t4" alt="TensorFlow" width="88"> <img src="assets/tech/pytorch.svg?v=t4" alt="PyTorch" width="88"> <img src="assets/tech/keras.svg?v=t4" alt="Keras" width="88"> <img src="assets/tech/opencv.svg?v=t4" alt="OpenCV" width="88"> <img src="assets/tech/scikit-learn.svg?v=t4" alt="scikit-learn" width="88"> <img src="assets/tech/numpy.svg?v=t4" alt="NumPy" width="88"> <img src="assets/tech/pandas.svg?v=t4" alt="Pandas" width="88"> <img src="assets/tech/ultralytics-yolo.svg?v=t4" alt="Ultralytics YOLO" width="88"> <img src="assets/tech/hugging-face.svg?v=t4" alt="Hugging Face" width="88"> <img src="assets/tech/ollama.svg?v=t4" alt="Ollama" width="88"> <img src="assets/tech/cuda.svg?v=t4" alt="CUDA" width="88"> <img src="assets/tech/jupyter.svg?v=t4" alt="Jupyter" width="88">
+<img src="assets/tech/tensorflow.svg?v=t5" alt="TensorFlow" width="88"> <img src="assets/tech/pytorch.svg?v=t5" alt="PyTorch" width="88"> <img src="assets/tech/keras.svg?v=t5" alt="Keras" width="88"> <img src="assets/tech/opencv.svg?v=t5" alt="OpenCV" width="88"> <img src="assets/tech/scikit-learn.svg?v=t5" alt="scikit-learn" width="88"> <img src="assets/tech/numpy.svg?v=t5" alt="NumPy" width="88"> <img src="assets/tech/pandas.svg?v=t5" alt="Pandas" width="88"> <img src="assets/tech/ultralytics-yolo.svg?v=t5" alt="Ultralytics YOLO" width="88"> <img src="assets/tech/hugging-face.svg?v=t5" alt="Hugging Face" width="88"> <img src="assets/tech/ollama.svg?v=t5" alt="Ollama" width="88"> <img src="assets/tech/cuda.svg?v=t5" alt="CUDA" width="88"> <img src="assets/tech/jupyter.svg?v=t5" alt="Jupyter" width="88">
 
 </p>
 
@@ -67,7 +67,7 @@
 
 <p align="center">
 
-<img src="assets/tech/godot-4.svg?v=t4" alt="Godot 4" width="88"> <img src="assets/tech/unity.svg?v=t4" alt="Unity" width="88"> <img src="assets/tech/unreal-engine.svg?v=t4" alt="Unreal Engine" width="88"> <img src="assets/tech/blender.svg?v=t4" alt="Blender" width="88"> <img src="assets/tech/clion.svg?v=t4" alt="CLion" width="88"> <img src="assets/tech/rider.svg?v=t4" alt="Rider" width="88"> <img src="assets/tech/tinkercad.svg?v=t4" alt="TinkerCAD" width="88"> <img src="assets/tech/sketchup.svg?v=t4" alt="SketchUp" width="88">
+<img src="assets/tech/godot-4.svg?v=t5" alt="Godot 4" width="88"> <img src="assets/tech/unity.svg?v=t5" alt="Unity" width="88"> <img src="assets/tech/unreal-engine.svg?v=t5" alt="Unreal Engine" width="88"> <img src="assets/tech/blender.svg?v=t5" alt="Blender" width="88"> <img src="assets/tech/clion.svg?v=t5" alt="CLion" width="88"> <img src="assets/tech/rider.svg?v=t5" alt="Rider" width="88"> <img src="assets/tech/tinkercad.svg?v=t5" alt="TinkerCAD" width="88"> <img src="assets/tech/sketchup.svg?v=t5" alt="SketchUp" width="88">
 
 </p>
 
@@ -75,7 +75,7 @@
 
 <p align="center">
 
-<img src="assets/tech/siemens-s7.svg?v=t4" alt="Siemens S7" width="88"> <img src="assets/tech/tia-portal.svg?v=t4" alt="TIA Portal" width="88"> <img src="assets/tech/allen-bradley.svg?v=t4" alt="Allen-Bradley" width="88"> <img src="assets/tech/studio-5000.svg?v=t4" alt="Studio 5000" width="88"> <img src="assets/tech/schneider-electric.svg?v=t4" alt="Schneider Electric" width="88"> <img src="assets/tech/abb.svg?v=t4" alt="ABB" width="88"> <img src="assets/tech/delta.svg?v=t4" alt="Delta" width="88"> <img src="assets/tech/panasonic-fpwin.svg?v=t4" alt="Panasonic FPWIN" width="88"> <img src="assets/tech/mitsubishi-gx-works.svg?v=t4" alt="Mitsubishi GX Works" width="88"> <img src="assets/tech/keyence-kv-studio.svg?v=t4" alt="Keyence KV Studio" width="88"> <img src="assets/tech/omron-cx-programmer.svg?v=t4" alt="Omron CX-Programmer" width="88"> <img src="assets/tech/ignition-scada.svg?v=t4" alt="Ignition SCADA" width="88"> <img src="assets/tech/mqtt.svg?v=t4" alt="MQTT" width="88"> <img src="assets/tech/modbus.svg?v=t4" alt="Modbus" width="88"> <img src="assets/tech/opc-ua.svg?v=t4" alt="OPC UA" width="88">
+<img src="assets/tech/siemens-s7.svg?v=t5" alt="Siemens S7" width="88"> <img src="assets/tech/tia-portal.svg?v=t5" alt="TIA Portal" width="88"> <img src="assets/tech/allen-bradley.svg?v=t5" alt="Allen-Bradley" width="88"> <img src="assets/tech/studio-5000.svg?v=t5" alt="Studio 5000" width="88"> <img src="assets/tech/schneider-electric.svg?v=t5" alt="Schneider Electric" width="88"> <img src="assets/tech/abb.svg?v=t5" alt="ABB" width="88"> <img src="assets/tech/delta.svg?v=t5" alt="Delta" width="88"> <img src="assets/tech/panasonic-fpwin.svg?v=t5" alt="Panasonic FPWIN" width="88"> <img src="assets/tech/mitsubishi-gx-works.svg?v=t5" alt="Mitsubishi GX Works" width="88"> <img src="assets/tech/keyence-kv-studio.svg?v=t5" alt="Keyence KV Studio" width="88"> <img src="assets/tech/omron-cx-programmer.svg?v=t5" alt="Omron CX-Programmer" width="88"> <img src="assets/tech/ignition-scada.svg?v=t5" alt="Ignition SCADA" width="88"> <img src="assets/tech/mqtt.svg?v=t5" alt="MQTT" width="88"> <img src="assets/tech/modbus.svg?v=t5" alt="Modbus" width="88"> <img src="assets/tech/opc-ua.svg?v=t5" alt="OPC UA" width="88">
 
 </p>
 
@@ -83,7 +83,7 @@
 
 <p align="center">
 
-<img src="assets/tech/ladder-logic.svg?v=t4" alt="Ladder Logic" width="88"> <img src="assets/tech/vfd-and-servo.svg?v=t4" alt="VFD & Servo" width="88"> <img src="assets/tech/24v-dc-sensor.svg?v=t4" alt="24V DC / Sensor" width="88"> <img src="assets/tech/relay-and-contactor.svg?v=t4" alt="Relay & Contactor" width="88"> <img src="assets/tech/panel-wiring.svg?v=t4" alt="Panel Wiring" width="88"> <img src="assets/tech/autocad-electrical.svg?v=t4" alt="AutoCAD Electrical" width="88"> <img src="assets/tech/eplan.svg?v=t4" alt="EPLAN" width="88"> <img src="assets/tech/labview.svg?v=t4" alt="LabVIEW" width="88"> <img src="assets/tech/proteus.svg?v=t4" alt="Proteus" width="88"> <img src="assets/tech/ltspice.svg?v=t4" alt="LTspice" width="88"> <img src="assets/tech/multisim.svg?v=t4" alt="Multisim" width="88">
+<img src="assets/tech/ladder-logic.svg?v=t5" alt="Ladder Logic" width="88"> <img src="assets/tech/vfd-and-servo.svg?v=t5" alt="VFD & Servo" width="88"> <img src="assets/tech/24v-dc-sensor.svg?v=t5" alt="24V DC / Sensor" width="88"> <img src="assets/tech/relay-and-contactor.svg?v=t5" alt="Relay & Contactor" width="88"> <img src="assets/tech/panel-wiring.svg?v=t5" alt="Panel Wiring" width="88"> <img src="assets/tech/autocad-electrical.svg?v=t5" alt="AutoCAD Electrical" width="88"> <img src="assets/tech/eplan.svg?v=t5" alt="EPLAN" width="88"> <img src="assets/tech/labview.svg?v=t5" alt="LabVIEW" width="88"> <img src="assets/tech/proteus.svg?v=t5" alt="Proteus" width="88"> <img src="assets/tech/ltspice.svg?v=t5" alt="LTspice" width="88"> <img src="assets/tech/multisim.svg?v=t5" alt="Multisim" width="88">
 
 </p>
 
@@ -91,7 +91,7 @@
 
 <p align="center">
 
-<img src="assets/tech/git.svg?v=t4" alt="Git" width="88"> <img src="assets/tech/github.svg?v=t4" alt="GitHub" width="88"> <img src="assets/tech/gitlab.svg?v=t4" alt="GitLab" width="88"> <img src="assets/tech/docker.svg?v=t4" alt="Docker" width="88"> <img src="assets/tech/kubernetes.svg?v=t4" alt="Kubernetes" width="88"> <img src="assets/tech/linux.svg?v=t4" alt="Linux" width="88"> <img src="assets/tech/ubuntu.svg?v=t4" alt="Ubuntu" width="88"> <img src="assets/tech/debian.svg?v=t4" alt="Debian" width="88"> <img src="assets/tech/kali-linux.svg?v=t4" alt="Kali Linux" width="88"> <img src="assets/tech/vs-code.svg?v=t4" alt="VS Code" width="88"> <img src="assets/tech/vim.svg?v=t4" alt="Vim" width="88"> <img src="assets/tech/ansible.svg?v=t4" alt="Ansible" width="88"> <img src="assets/tech/terraform.svg?v=t4" alt="Terraform" width="88"> <img src="assets/tech/jenkins.svg?v=t4" alt="Jenkins" width="88"> <img src="assets/tech/aws.svg?v=t4" alt="AWS" width="88"> <img src="assets/tech/google-cloud.svg?v=t4" alt="Google Cloud" width="88"> <img src="assets/tech/azure.svg?v=t4" alt="Azure" width="88"> <img src="assets/tech/cloudflare.svg?v=t4" alt="Cloudflare" width="88"> <img src="assets/tech/grafana.svg?v=t4" alt="Grafana" width="88"> <img src="assets/tech/prometheus.svg?v=t4" alt="Prometheus" width="88"> <img src="assets/tech/windows-terminal.svg?v=t4" alt="Windows Terminal" width="88"> <img src="assets/tech/android.svg?v=t4" alt="Android" width="88">
+<img src="assets/tech/git.svg?v=t5" alt="Git" width="88"> <img src="assets/tech/github.svg?v=t5" alt="GitHub" width="88"> <img src="assets/tech/gitlab.svg?v=t5" alt="GitLab" width="88"> <img src="assets/tech/docker.svg?v=t5" alt="Docker" width="88"> <img src="assets/tech/kubernetes.svg?v=t5" alt="Kubernetes" width="88"> <img src="assets/tech/linux.svg?v=t5" alt="Linux" width="88"> <img src="assets/tech/ubuntu.svg?v=t5" alt="Ubuntu" width="88"> <img src="assets/tech/debian.svg?v=t5" alt="Debian" width="88"> <img src="assets/tech/kali-linux.svg?v=t5" alt="Kali Linux" width="88"> <img src="assets/tech/vs-code.svg?v=t5" alt="VS Code" width="88"> <img src="assets/tech/vim.svg?v=t5" alt="Vim" width="88"> <img src="assets/tech/ansible.svg?v=t5" alt="Ansible" width="88"> <img src="assets/tech/terraform.svg?v=t5" alt="Terraform" width="88"> <img src="assets/tech/jenkins.svg?v=t5" alt="Jenkins" width="88"> <img src="assets/tech/aws.svg?v=t5" alt="AWS" width="88"> <img src="assets/tech/google-cloud.svg?v=t5" alt="Google Cloud" width="88"> <img src="assets/tech/azure.svg?v=t5" alt="Azure" width="88"> <img src="assets/tech/cloudflare.svg?v=t5" alt="Cloudflare" width="88"> <img src="assets/tech/grafana.svg?v=t5" alt="Grafana" width="88"> <img src="assets/tech/prometheus.svg?v=t5" alt="Prometheus" width="88"> <img src="assets/tech/windows-terminal.svg?v=t5" alt="Windows Terminal" width="88"> <img src="assets/tech/android.svg?v=t5" alt="Android" width="88">
 
 </p>
 
@@ -99,7 +99,7 @@
 
 <p align="center">
 
-<img src="assets/tech/arduino.svg?v=t4" alt="Arduino" width="88"> <img src="assets/tech/raspberry-pi.svg?v=t4" alt="Raspberry Pi" width="88"> <img src="assets/tech/esp32.svg?v=t4" alt="ESP32" width="88"> <img src="assets/tech/stm32.svg?v=t4" alt="STM32" width="88"> <img src="assets/tech/home-assistant.svg?v=t4" alt="Home Assistant" width="88">
+<img src="assets/tech/arduino.svg?v=t5" alt="Arduino" width="88"> <img src="assets/tech/raspberry-pi.svg?v=t5" alt="Raspberry Pi" width="88"> <img src="assets/tech/esp32.svg?v=t5" alt="ESP32" width="88"> <img src="assets/tech/stm32.svg?v=t5" alt="STM32" width="88"> <img src="assets/tech/home-assistant.svg?v=t5" alt="Home Assistant" width="88">
 
 </p>
 

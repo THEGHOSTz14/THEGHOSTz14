@@ -2,7 +2,7 @@
 """Generate the animated SVG artwork used by the profile README.
 
 assets/tech/<name>.svg   one rounded "cube" tile per technology, logo + label,
-                         with a staggered 3D flip/shine loop
+                         the logo alone turning in 3D on a static tile
 assets/repos/<repo>.svg  a clickable preview card with live stars/forks
 assets/stats.svg         the totals card, built here because the public
                          github-readme-stats deployment is down
@@ -24,7 +24,7 @@ ROOT = Path(__file__).resolve().parent.parent
 TECH_DIR = ROOT / "assets" / "tech"
 REPO_DIR = ROOT / "assets" / "repos"
 CACHE = Path(__file__).resolve().parent / ".icons"
-TILE_VERSION = "t4"
+TILE_VERSION = "t5"
 CARD_VERSION = "c4"
 
 FONT = "Segoe UI,Helvetica,Arial,sans-serif"
@@ -103,12 +103,18 @@ def icon_paths(svg):
 TILE = """<svg xmlns="http://www.w3.org/2000/svg" width="96" height="118" viewBox="0 0 96 118" role="img" aria-label="{label}">
 <!-- {version} -->
 <style>
-  .bob {{ animation: bob 5.6s ease-in-out infinite; animation-delay: {delay:.2f}s; }}
-  .flip {{ transform-box: fill-box; transform-origin: 50% 50%; animation: flip 7.2s cubic-bezier(.45,.05,.3,1) infinite; animation-delay: {delay:.2f}s; }}
-  .gleam {{ animation: gleam 7.2s ease-in-out infinite; animation-delay: {delay:.2f}s; }}
-  @keyframes bob {{ 0%, 100% {{ transform: translateY(0); }} 50% {{ transform: translateY(-2.5px); }} }}
-  @keyframes flip {{ 0%, 60% {{ transform: scaleX(1); }} 72% {{ transform: scaleX(.06); }} 84%, 100% {{ transform: scaleX(1); }} }}
-  @keyframes gleam {{ 0%, 55% {{ transform: translateX(-70px); }} 80%, 100% {{ transform: translateX(130px); }} }}
+  .float {{ animation: float 6.4s ease-in-out infinite; animation-delay: {delay:.2f}s; }}
+  .spin {{ transform-box: fill-box; transform-origin: 50% 50%; animation: spin 10s cubic-bezier(.6,.05,.4,.95) infinite; animation-delay: {delay:.2f}s; }}
+  .gleam {{ animation: gleam 10s ease-in-out infinite; animation-delay: {delay:.2f}s; }}
+  @keyframes float {{ 0%, 100% {{ transform: translateY(0); }} 50% {{ transform: translateY(-1.5px); }} }}
+  @keyframes spin {{
+    0%, 60% {{ transform: perspective(190px) rotateY(0deg); opacity: 1; }}
+    64% {{ transform: perspective(190px) rotateY(90deg); opacity: .3; }}
+    68% {{ transform: perspective(190px) rotateY(180deg); opacity: .14; }}
+    72% {{ transform: perspective(190px) rotateY(270deg); opacity: .3; }}
+    76%, 100% {{ transform: perspective(190px) rotateY(360deg); opacity: 1; }}
+  }}
+  @keyframes gleam {{ 0%, 34% {{ transform: translateX(-70px); }} 58%, 100% {{ transform: translateX(130px); }} }}
 </style>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
@@ -119,16 +125,14 @@ TILE = """<svg xmlns="http://www.w3.org/2000/svg" width="96" height="118" viewBo
   </linearGradient>
   <clipPath id="clip"><rect x="0" y="0" width="96" height="96" rx="22"/></clipPath>
 </defs>
-<g class="bob"><g class="flip">
-  <rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="url(#bg)" stroke="#34352a"/>
-  <g clip-path="url(#clip)">
-    <rect x="1" y="1" width="94" height="46" rx="20" fill="url(#sheen)"/>
-    <rect x="1" y="52" width="94" height="43" rx="18" fill="#000000" opacity=".22"/>
-    <g transform="rotate(16 48 48)"><rect class="gleam" x="-46" y="-40" width="18" height="180" fill="#ffffff" opacity=".09"/></g>
-    {art}
-  </g>
-  <rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="none" stroke="#eaf3ff" stroke-opacity=".07"/>
-</g></g>
+<rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="url(#bg)" stroke="#34352a"/>
+<g clip-path="url(#clip)">
+  <rect x="1" y="1" width="94" height="46" rx="20" fill="url(#sheen)"/>
+  <rect x="1" y="52" width="94" height="43" rx="18" fill="#000000" opacity=".22"/>
+  <g transform="rotate(16 48 48)"><rect class="gleam" x="-46" y="-40" width="18" height="180" fill="#ffffff" opacity=".09"/></g>
+  <g class="float"><g class="spin">{art}</g></g>
+</g>
+<rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="none" stroke="#eaf3ff" stroke-opacity=".07"/>
 <text x="48" y="112" text-anchor="middle" font-family="{font}" font-size="11.5" fill="#9aa4b4"{fit}>{label}</text>
 </svg>
 """
@@ -203,7 +207,7 @@ def tile_svg(label, slug, color, index):
                f'font-family="{FONT}" font-size="30" font-weight="700" '
                f'fill="{color}" letter-spacing="1">{html.escape(monogram(label))}</text>')
     return TILE.format(label=label_esc, art=art, font=FONT, fit=fit,
-                       delay=-(index * 0.43) % 7.2, version=TILE_VERSION)
+                       delay=-(index * 1.9 % 10.0), version=TILE_VERSION)
 
 
 def card_svg(repo, desc, stars, forks, language, index):
