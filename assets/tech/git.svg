@@ -1,17 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="96" height="118" viewBox="0 0 96 118" role="img" aria-label="Git">
-<!-- t7 -->
+<!-- t8 -->
 <style>
   .float { animation: float 6.4s ease-in-out infinite; animation-delay: -7.30s; }
-  .spin { transform-box: fill-box; transform-origin: 50% 50%; animation: spin 10s linear infinite; animation-delay: -7.30s; }
-  .gleam { animation: gleam 10s ease-in-out infinite; animation-delay: -7.30s; }
+  .spin { transform-box: fill-box; transform-origin: 50% 50%; animation: spin 12s linear infinite; animation-delay: -7.30s; }
+  .gleam { animation: gleam 12s ease-in-out infinite; animation-delay: -7.30s; }
   @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-1.5px); } }
   @keyframes spin {
-    0%, 58% { transform: perspective(190px) rotateY(0deg); opacity: 1; }
-    61% { transform: perspective(190px) rotateY(45deg); opacity: .8; }
-    62.5% { transform: perspective(190px) rotateY(90deg); opacity: 0; }
-    64% { transform: perspective(190px) rotateY(270deg); opacity: 0; }
-    66% { transform: perspective(190px) rotateY(315deg); opacity: .7; }
-    69%, 100% { transform: perspective(190px) rotateY(360deg); opacity: 1; }
+    0%, 50% { transform: perspective(190px) rotateY(0deg); opacity: 1; }
+    56% { transform: perspective(190px) rotateY(45deg); opacity: .85; }
+    59% { transform: perspective(190px) rotateY(90deg); opacity: 0; }
+    60.5% { transform: perspective(190px) rotateY(270deg); opacity: 0; }
+    66% { transform: perspective(190px) rotateY(315deg); opacity: .75; }
+    70%, 100% { transform: perspective(190px) rotateY(360deg); opacity: 1; }
   }
   @keyframes gleam { 0%, 34% { transform: translateX(-70px); } 58%, 100% { transform: translateX(130px); } }
 </style>
@@ -29,7 +29,7 @@
   <rect x="1" y="1" width="94" height="46" rx="20" fill="url(#sheen)"/>
   <rect x="1" y="52" width="94" height="43" rx="18" fill="#000000" opacity=".22"/>
   <g transform="rotate(16 48 48)"><rect class="gleam" x="-46" y="-40" width="18" height="180" fill="#ffffff" opacity=".09"/></g>
-  <g class="float"><g class="spin"><g transform="translate(22 22) scale(2.1667)" fill="#F05032"><path d="M13.09 23.549a1.54 1.54 0 0 1-2.18 0L.451 13.089a1.54 1.54 0 0 1 0-2.179l7.191-7.19 2.733 2.733a1.85 1.85 0 0 0 .964 2.326v6.66a1.849 1.849 0 1 0 1.54 0V8.957l2.508 2.508a1.85 1.85 0 1 0 1.09-1.09l-2.634-2.634a1.85 1.85 0 0 0-2.378-2.377L8.73 2.63 10.91.451a1.54 1.54 0 0 1 2.179 0l10.459 10.46a1.54 1.54 0 0 1 0 2.179z"/></g></g></g>
+  <g class="float"><g class="spin"><g transform="translate(26 26) scale(1.8333)" fill="#F05032"><path d="M13.09 23.549a1.54 1.54 0 0 1-2.18 0L.451 13.089a1.54 1.54 0 0 1 0-2.179l7.191-7.19 2.733 2.733a1.85 1.85 0 0 0 .964 2.326v6.66a1.849 1.849 0 1 0 1.54 0V8.957l2.508 2.508a1.85 1.85 0 1 0 1.09-1.09l-2.634-2.634a1.85 1.85 0 0 0-2.378-2.377L8.73 2.63 10.91.451a1.54 1.54 0 0 1 2.179 0l10.459 10.46a1.54 1.54 0 0 1 0 2.179z"/></g></g></g>
 </g>
 <rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="none" stroke="#eaf3ff" stroke-opacity=".07"/>
 <text x="48" y="112" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="11.5" fill="#9aa4b4">Git</text>

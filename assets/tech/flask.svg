@@ -1,17 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="96" height="118" viewBox="0 0 96 118" role="img" aria-label="Flask">
-<!-- t7 -->
+<!-- t8 -->
 <style>
-  .float { animation: float 6.4s ease-in-out infinite; animation-delay: -4.20s; }
-  .spin { transform-box: fill-box; transform-origin: 50% 50%; animation: spin 10s linear infinite; animation-delay: -4.20s; }
-  .gleam { animation: gleam 10s ease-in-out infinite; animation-delay: -4.20s; }
+  .float { animation: float 6.4s ease-in-out infinite; animation-delay: -10.20s; }
+  .spin { transform-box: fill-box; transform-origin: 50% 50%; animation: spin 12s linear infinite; animation-delay: -10.20s; }
+  .gleam { animation: gleam 12s ease-in-out infinite; animation-delay: -10.20s; }
   @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-1.5px); } }
   @keyframes spin {
-    0%, 58% { transform: perspective(190px) rotateY(0deg); opacity: 1; }
-    61% { transform: perspective(190px) rotateY(45deg); opacity: .8; }
-    62.5% { transform: perspective(190px) rotateY(90deg); opacity: 0; }
-    64% { transform: perspective(190px) rotateY(270deg); opacity: 0; }
-    66% { transform: perspective(190px) rotateY(315deg); opacity: .7; }
-    69%, 100% { transform: perspective(190px) rotateY(360deg); opacity: 1; }
+    0%, 50% { transform: perspective(190px) rotateY(0deg); opacity: 1; }
+    56% { transform: perspective(190px) rotateY(45deg); opacity: .85; }
+    59% { transform: perspective(190px) rotateY(90deg); opacity: 0; }
+    60.5% { transform: perspective(190px) rotateY(270deg); opacity: 0; }
+    66% { transform: perspective(190px) rotateY(315deg); opacity: .75; }
+    70%, 100% { transform: perspective(190px) rotateY(360deg); opacity: 1; }
   }
   @keyframes gleam { 0%, 34% { transform: translateX(-70px); } 58%, 100% { transform: translateX(130px); } }
 </style>
@@ -29,7 +29,7 @@
   <rect x="1" y="1" width="94" height="46" rx="20" fill="url(#sheen)"/>
   <rect x="1" y="52" width="94" height="43" rx="18" fill="#000000" opacity=".22"/>
   <g transform="rotate(16 48 48)"><rect class="gleam" x="-46" y="-40" width="18" height="180" fill="#ffffff" opacity=".09"/></g>
-  <g class="float"><g class="spin"><g transform="translate(22 22) scale(2.1667)" fill="#FFFFFF"><path d="M10.773 2.878c-.013 1.434.322 4.624.445 5.734l-8.558 3.83c-.56-.959-.98-2.304-1.237-3.38l-.06.027c-.205.09-.406.053-.494-.088l-.011-.018-.82-1.506c-.058-.105-.05-.252.024-.392a.78.78 0 0 1 .358-.331l9.824-4.207c.146-.064.299-.063.4.004.106.062.127.128.13.327Zm.68 7c.523 1.97.675 2.412.832 2.818l-7.263 3.7a19.35 19.35 0 0 1-1.81-2.83l8.24-3.689Zm12.432 8.786h.003c.283.402-.047.657-.153.698l-.947.37c.037.125.035.319-.217.414l-.736.287c-.229.09-.398-.059-.42-.2l-.025-.125c-4.427 1.784-7.94 1.685-10.696.647-1.981-.745-3.576-1.983-4.846-3.379l6.948-3.54c.721 1.431 1.586 2.454 2.509 3.178 2.086 1.638 4.415 1.712 5.793 1.563l-.047-.233c-.015-.077.007-.135.086-.165l.734-.288a.302.302 0 0 1 .342.086l.748-.288a.306.306 0 0 1 .341.086l.583.89Z"/></g></g></g>
+  <g class="float"><g class="spin"><g transform="translate(26 26) scale(1.8333)" fill="#FFFFFF"><path d="M10.773 2.878c-.013 1.434.322 4.624.445 5.734l-8.558 3.83c-.56-.959-.98-2.304-1.237-3.38l-.06.027c-.205.09-.406.053-.494-.088l-.011-.018-.82-1.506c-.058-.105-.05-.252.024-.392a.78.78 0 0 1 .358-.331l9.824-4.207c.146-.064.299-.063.4.004.106.062.127.128.13.327Zm.68 7c.523 1.97.675 2.412.832 2.818l-7.263 3.7a19.35 19.35 0 0 1-1.81-2.83l8.24-3.689Zm12.432 8.786h.003c.283.402-.047.657-.153.698l-.947.37c.037.125.035.319-.217.414l-.736.287c-.229.09-.398-.059-.42-.2l-.025-.125c-4.427 1.784-7.94 1.685-10.696.647-1.981-.745-3.576-1.983-4.846-3.379l6.948-3.54c.721 1.431 1.586 2.454 2.509 3.178 2.086 1.638 4.415 1.712 5.793 1.563l-.047-.233c-.015-.077.007-.135.086-.165l.734-.288a.302.302 0 0 1 .342.086l.748-.288a.306.306 0 0 1 .341.086l.583.89Z"/></g></g></g>
 </g>
 <rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="none" stroke="#eaf3ff" stroke-opacity=".07"/>
 <text x="48" y="112" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="11.5" fill="#9aa4b4">Flask</text>

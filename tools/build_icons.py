@@ -24,7 +24,7 @@ ROOT = Path(__file__).resolve().parent.parent
 TECH_DIR = ROOT / "assets" / "tech"
 REPO_DIR = ROOT / "assets" / "repos"
 CACHE = Path(__file__).resolve().parent / ".icons"
-TILE_VERSION = "t7"
+TILE_VERSION = "t8"
 CARD_VERSION = "c4"
 
 FONT = "Segoe UI,Helvetica,Arial,sans-serif"
@@ -104,16 +104,16 @@ TILE = """<svg xmlns="http://www.w3.org/2000/svg" width="96" height="118" viewBo
 <!-- {version} -->
 <style>
   .float {{ animation: float 6.4s ease-in-out infinite; animation-delay: {delay:.2f}s; }}
-  .spin {{ transform-box: fill-box; transform-origin: 50% 50%; animation: spin 10s linear infinite; animation-delay: {delay:.2f}s; }}
-  .gleam {{ animation: gleam 10s ease-in-out infinite; animation-delay: {delay:.2f}s; }}
+  .spin {{ transform-box: fill-box; transform-origin: 50% 50%; animation: spin 12s linear infinite; animation-delay: {delay:.2f}s; }}
+  .gleam {{ animation: gleam 12s ease-in-out infinite; animation-delay: {delay:.2f}s; }}
   @keyframes float {{ 0%, 100% {{ transform: translateY(0); }} 50% {{ transform: translateY(-1.5px); }} }}
   @keyframes spin {{
-    0%, 58% {{ transform: perspective(190px) rotateY(0deg); opacity: 1; }}
-    61% {{ transform: perspective(190px) rotateY(45deg); opacity: .8; }}
-    62.5% {{ transform: perspective(190px) rotateY(90deg); opacity: 0; }}
-    64% {{ transform: perspective(190px) rotateY(270deg); opacity: 0; }}
-    66% {{ transform: perspective(190px) rotateY(315deg); opacity: .7; }}
-    69%, 100% {{ transform: perspective(190px) rotateY(360deg); opacity: 1; }}
+    0%, 50% {{ transform: perspective(190px) rotateY(0deg); opacity: 1; }}
+    56% {{ transform: perspective(190px) rotateY(45deg); opacity: .85; }}
+    59% {{ transform: perspective(190px) rotateY(90deg); opacity: 0; }}
+    60.5% {{ transform: perspective(190px) rotateY(270deg); opacity: 0; }}
+    66% {{ transform: perspective(190px) rotateY(315deg); opacity: .75; }}
+    70%, 100% {{ transform: perspective(190px) rotateY(360deg); opacity: 1; }}
   }}
   @keyframes gleam {{ 0%, 34% {{ transform: translateX(-70px); }} 58%, 100% {{ transform: translateX(130px); }} }}
 </style>
@@ -201,14 +201,14 @@ def tile_svg(label, slug, color, index):
     if len(label) * 6.0 > 84:
         fit = ' textLength="84" lengthAdjust="spacingAndGlyphs"'
     if slug:
-        art = (f'<g transform="translate(22 22) scale(2.1667)" fill="{color}">'
+        art = (f'<g transform="translate(26 26) scale(1.8333)" fill="{color}">'
                f"{icon_paths(fetch_icon(slug))}</g>")
     else:
         art = (f'<text x="48" y="48" text-anchor="middle" dominant-baseline="central" '
-               f'font-family="{FONT}" font-size="30" font-weight="700" '
+               f'font-family="{FONT}" font-size="26" font-weight="700" '
                f'fill="{color}" letter-spacing="1">{html.escape(monogram(label))}</text>')
     return TILE.format(label=label_esc, art=art, font=FONT, fit=fit,
-                       delay=-(index * 1.9 % 10.0), version=TILE_VERSION)
+                       delay=-(index * 1.9 % 12.0), version=TILE_VERSION)
 
 
 def card_svg(repo, desc, stars, forks, language, index):
