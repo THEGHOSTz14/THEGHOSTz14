@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="118" viewBox="0 0 96 118" role="img" aria-label="Ubuntu">
+<!-- t4 -->
+<style>
+  .bob { animation: bob 5.6s ease-in-out infinite; animation-delay: 4.61s; }
+  .flip { transform-box: fill-box; transform-origin: 50% 50%; animation: flip 7.2s cubic-bezier(.45,.05,.3,1) infinite; animation-delay: 4.61s; }
+  .gleam { animation: gleam 7.2s ease-in-out infinite; animation-delay: 4.61s; }
+  @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-2.5px); } }
+  @keyframes flip { 0%, 60% { transform: scaleX(1); } 72% { transform: scaleX(.06); } 84%, 100% { transform: scaleX(1); } }
+  @keyframes gleam { 0%, 55% { transform: translateX(-70px); } 80%, 100% { transform: translateX(130px); } }
+</style>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#25261d"/><stop offset="1" stop-color="#0d0e09"/>
+  </linearGradient>
+  <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ffffff" stop-opacity=".16"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+  </linearGradient>
+  <clipPath id="clip"><rect x="0" y="0" width="96" height="96" rx="22"/></clipPath>
+</defs>
+<g class="bob"><g class="flip">
+  <rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="url(#bg)" stroke="#34352a"/>
+  <g clip-path="url(#clip)">
+    <rect x="1" y="1" width="94" height="46" rx="20" fill="url(#sheen)"/>
+    <rect x="1" y="52" width="94" height="43" rx="18" fill="#000000" opacity=".22"/>
+    <g transform="rotate(16 48 48)"><rect class="gleam" x="-46" y="-40" width="18" height="180" fill="#ffffff" opacity=".09"/></g>
+    <g transform="translate(22 22) scale(2.1667)" fill="#E95420"><path d="M17.61.455a3.41 3.41 0 0 0-3.41 3.41 3.41 3.41 0 0 0 3.41 3.41 3.41 3.41 0 0 0 3.41-3.41 3.41 3.41 0 0 0-3.41-3.41zM12.92.8C8.923.777 5.137 2.941 3.148 6.451a4.5 4.5 0 0 1 .26-.007 4.92 4.92 0 0 1 2.585.737A8.316 8.316 0 0 1 12.688 3.6 4.944 4.944 0 0 1 13.723.834 11.008 11.008 0 0 0 12.92.8zm9.226 4.994a4.915 4.915 0 0 1-1.918 2.246 8.36 8.36 0 0 1-.273 8.303 4.89 4.89 0 0 1 1.632 2.54 11.156 11.156 0 0 0 .559-13.089zM3.41 7.932A3.41 3.41 0 0 0 0 11.342a3.41 3.41 0 0 0 3.41 3.409 3.41 3.41 0 0 0 3.41-3.41 3.41 3.41 0 0 0-3.41-3.41zm2.027 7.866a4.908 4.908 0 0 1-2.915.358 11.1 11.1 0 0 0 7.991 6.698 11.234 11.234 0 0 0 2.422.249 4.879 4.879 0 0 1-.999-2.85 8.484 8.484 0 0 1-.836-.136 8.304 8.304 0 0 1-5.663-4.32zm11.405.928a3.41 3.41 0 0 0-3.41 3.41 3.41 3.41 0 0 0 3.41 3.41 3.41 3.41 0 0 0 3.41-3.41 3.41 3.41 0 0 0-3.41-3.41z"/></g>
+  </g>
+  <rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="none" stroke="#eaf3ff" stroke-opacity=".07"/>
+</g></g>
+<text x="48" y="112" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="11.5" fill="#9aa4b4">Ubuntu</text>
+</svg>

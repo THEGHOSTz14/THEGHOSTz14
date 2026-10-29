@@ -26,6 +26,19 @@ def main():
     text = (ROOT / "README.md").read_text(encoding="utf-8")
     urls = sorted(set(re.findall(r'(?:src|srcset)="(https?://[^"]+)"', text)))
     problems = []
+    # the tech tiles and repo cards are generated files - a missing one is a broken
+    # image on the profile, so it has to fail here rather than at render time
+    for rel in sorted(set(re.findall(r'(?:src|srcset)="(?!https?://)([^"]+)"', text))):
+        path = ROOT / rel.split("?")[0]
+        if not path.is_file():
+            problems.append(f"missing local asset  {rel}")
+        elif path.suffix == ".svg" and "<svg" not in path.read_text(encoding="utf-8")[:200]:
+            problems.append(f"not an svg  {rel}")
+    if problems:
+        print("FAILED:", file=sys.stderr)
+        for p in problems:
+            print("  " + p, file=sys.stderr)
+        sys.exit(1)
     with ThreadPoolExecutor(max_workers=12) as ex:
         results = dict(zip(urls, ex.map(lambda u: fetch(u), urls)))
     for url, (code, body) in results.items():

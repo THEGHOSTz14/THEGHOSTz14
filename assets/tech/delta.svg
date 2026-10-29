@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="118" viewBox="0 0 96 118" role="img" aria-label="Delta">
+<!-- t4 -->
+<style>
+  .bob { animation: bob 5.6s ease-in-out infinite; animation-delay: 1.39s; }
+  .flip { transform-box: fill-box; transform-origin: 50% 50%; animation: flip 7.2s cubic-bezier(.45,.05,.3,1) infinite; animation-delay: 1.39s; }
+  .gleam { animation: gleam 7.2s ease-in-out infinite; animation-delay: 1.39s; }
+  @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-2.5px); } }
+  @keyframes flip { 0%, 60% { transform: scaleX(1); } 72% { transform: scaleX(.06); } 84%, 100% { transform: scaleX(1); } }
+  @keyframes gleam { 0%, 55% { transform: translateX(-70px); } 80%, 100% { transform: translateX(130px); } }
+</style>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#25261d"/><stop offset="1" stop-color="#0d0e09"/>
+  </linearGradient>
+  <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ffffff" stop-opacity=".16"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+  </linearGradient>
+  <clipPath id="clip"><rect x="0" y="0" width="96" height="96" rx="22"/></clipPath>
+</defs>
+<g class="bob"><g class="flip">
+  <rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="url(#bg)" stroke="#34352a"/>
+  <g clip-path="url(#clip)">
+    <rect x="1" y="1" width="94" height="46" rx="20" fill="url(#sheen)"/>
+    <rect x="1" y="52" width="94" height="43" rx="18" fill="#000000" opacity=".22"/>
+    <g transform="rotate(16 48 48)"><rect class="gleam" x="-46" y="-40" width="18" height="180" fill="#ffffff" opacity=".09"/></g>
+    <g transform="translate(22 22) scale(2.1667)" fill="#FF6000"><path d="M24 13.455h-.689l-.288-.739h-1.2l-.289.739h-.644l1.233-2.96h.666zm-1.16-1.233l-.411-1.044-.411 1.044zm-4.315 1.233h.66v-2.438h.995v-.51h-2.644v.51h.989zm-3.826 0h1.927v-.511H15.36v-2.438h-.661zm-3.282-2.438h1.416v-.51h-2.077v2.948h2.121v-.511h-1.46v-.766h1.25v-.511h-1.25zm-4.981 2.438h1.038c1.072 0 1.71-.555 1.71-1.472 0-.916-.638-1.471-1.71-1.471H6.436zm.655-2.438h.383c.694 0 1.044.344 1.044.96 0 .617-.344.961-1.044.961h-.383zm-2.277 2.155a.15.15 0 0 1 .15.15.15.15 0 0 1-.15.15.15.15 0 0 1-.15-.15.15.15 0 0 1 .15-.15m0 .277a.13.13 0 0 0 .134-.127c0-.073-.056-.128-.134-.128a.126.126 0 0 0-.127.128c0 .072.055.127.127.127m-.033-.039H4.76v-.177h.067c.038 0 .055.016.055.05 0 .033-.022.044-.044.05l.055.077h-.028l-.05-.077h-.033zm0-.1h.028c.022 0 .05 0 .05-.027 0-.022-.022-.028-.039-.028h-.039zM0 13.85h4.626l-2.31-.978zm.172-.395l2.144-1.033 2.143 1.033-2.143-3.304Z"/></g>
+  </g>
+  <rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="none" stroke="#eaf3ff" stroke-opacity=".07"/>
+</g></g>
+<text x="48" y="112" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="11.5" fill="#9aa4b4">Delta</text>
+</svg>

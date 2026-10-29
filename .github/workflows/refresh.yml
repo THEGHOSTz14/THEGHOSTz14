@@ -54,10 +54,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet -- README.md assets/profile-card.png; then
+          if git diff --quiet -- README.md assets; then
             echo "nothing changed"
           else
-            git add README.md assets/profile-card.png
+            git add README.md assets/
             git commit -m "Refresh profile stats [skip ci]"
             git push
           fi

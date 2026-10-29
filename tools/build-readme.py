@@ -17,6 +17,7 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import build_icons
 import gh
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -347,21 +348,30 @@ def build():
     ]))
     a("## ⚡ Tech stack")
     a("")
+    # tiles are generated from TECH by tools/build-icons.py, so a new entry gets a
+    # tile (and its animation) without touching this file again
+    tile_names = build_icons.build_tiles(TECH)
     for title, items in TECH.items():
         a(f"**{title}**")
         a("")
-        tiles = " ".join(img(pill(label, logo, color), label) for label, logo, color in items)
-        p.extend(centered([f"    {tiles}"]))
+        tiles = " ".join(
+            f'<img src="assets/tech/{tile_names[label]}.svg?v={build_icons.TILE_VERSION}"'
+            f' alt="{label}" width="88">'
+            for label, _logo, _color in items
+        )
+        p.extend(centered([tiles]))
     a("## 🚀 Things I have shipped")
     a("")
     shown = [row for row in PROJECTS if row[0] in visible]
     hidden = [row for row in PROJECTS if row[0] not in visible]
+    build_icons.build_repo_cards(PROJECTS, rows)
+    card_v = f"{date.today():%Y%m%d}"
     for repo, pitch, _logo in shown:
+        # the card carries the pitch, the language and the live star/fork counts,
+        # and the whole thing is the link - no third-party preview service
         p.extend(centered([
-            # locale is a no-op visually but changes the URL, which forces GitHub's
-            # camo proxy to re-fetch instead of serving a stale cached card
-            "  " + img(f"https://github-readme-stats.vercel.app/api/pin/?username={USERNAME}"
-                       f"&repo={repo}&card_width=360&locale=en{BUST}&{THEME}", repo),
+            f'  <a href="https://github.com/{USERNAME}/{repo}">'
+            f'<img src="assets/repos/{repo}.svg?v={card_v}" alt="{repo}" width="480"></a>',
         ]))
         demo = DEMOS.get(repo)
         if demo:
@@ -370,19 +380,17 @@ def build():
                            f"&labelColor=181712&color=181712&logo=googlechrome&logoColor=4FC1E9",
                            "launch demo").replace('<img ', '<a href="' + demo + '"><img ', 1) + "</a>",
             ]))
-        if live_desc.get(repo, "") != pitch:
-            # the pin card prints the repo's own About text; if that is missing or
-            # casual, the curated pitch has to appear here or it is lost entirely
-            a(f'<p align="center"><sub>{pitch}</sub></p>')
-            a("")
     for repo, pitch, _logo in hidden:
         a(f"- **{repo}** — {pitch} _(private, ask me for a look)_")
         a("")
 
     a("## 📊 Activity")
     a("")
+    # drawing the card ourselves keeps the section alive when the public
+    # github-readme-stats deployment is paused, which it is periodically
+    build_icons.build_languages(sorted(visible))
     p.extend(centered([
-        "    " + img(f"{STATS}/top-langs/?username={USERNAME}&layout=compact&card_width=340{BUST}&{THEME}", "Top languages"),
+        "  " + img(f"assets/languages.svg?v={date.today():%Y%m%d}", "Most used languages", "340"),
     ]))
 
     a("<!-- github-snake.svg is regenerated nightly by .github/workflows/snake.yml -->")
