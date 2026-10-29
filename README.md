@@ -107,25 +107,25 @@
 
 <p align="center">
 
-<a href="https://github.com/THEGHOSTz14/GHOST_WEB_GAME-"><img src="assets/repos/GHOST_WEB_GAME-.svg?v=20261029" alt="GHOST_WEB_GAME-" width="480"></a>
+<a href="https://github.com/THEGHOSTz14/GHOST_WEB_GAME-"><img src="assets/repos/GHOST_WEB_GAME-.svg?v=20261029c4" alt="GHOST_WEB_GAME-" width="480"></a>
 
 </p>
 
 <p align="center">
 
-<a href="https://github.com/THEGHOSTz14/YOLO-BASIC-MODEL"><img src="assets/repos/YOLO-BASIC-MODEL.svg?v=20261029" alt="YOLO-BASIC-MODEL" width="480"></a>
+<a href="https://github.com/THEGHOSTz14/YOLO-BASIC-MODEL"><img src="assets/repos/YOLO-BASIC-MODEL.svg?v=20261029c4" alt="YOLO-BASIC-MODEL" width="480"></a>
 
 </p>
 
 <p align="center">
 
-<a href="https://github.com/THEGHOSTz14/C-"><img src="assets/repos/C-.svg?v=20261029" alt="C-" width="480"></a>
+<a href="https://github.com/THEGHOSTz14/C-"><img src="assets/repos/C-.svg?v=20261029c4" alt="C-" width="480"></a>
 
 </p>
 
 <p align="center">
 
-<a href="https://github.com/THEGHOSTz14/PROFICADDD"><img src="assets/repos/PROFICADDD.svg?v=20261029" alt="PROFICADDD" width="480"></a>
+<a href="https://github.com/THEGHOSTz14/PROFICADDD"><img src="assets/repos/PROFICADDD.svg?v=20261029c4" alt="PROFICADDD" width="480"></a>
 
 </p>
 
@@ -139,7 +139,7 @@
 
 <p align="center">
 
-<img src="assets/languages.svg?v=20261029" alt="Most used languages" width="340">
+<img src="assets/languages.svg?v=20261029c4" alt="Most used languages" width="340">
 
 </p>
 

@@ -20,7 +20,7 @@ TECH_DIR = ROOT / "assets" / "tech"
 REPO_DIR = ROOT / "assets" / "repos"
 CACHE = Path(__file__).resolve().parent / ".icons"
 TILE_VERSION = "t4"
-CARD_VERSION = "c3"
+CARD_VERSION = "c4"
 
 FONT = "Segoe UI,Helvetica,Arial,sans-serif"
 
@@ -273,8 +273,8 @@ LANG_FALLBACK = ["#4FC1E9", "#7C9AC4", "#A371F7", "#F0883E", "#3FB950", "#DB61A2
 LANGS = """<svg xmlns="http://www.w3.org/2000/svg" width="340" height="150" viewBox="0 0 340 150" role="img" aria-label="Most used languages">
 <!-- {version} -->
 <style>
-  .glow {{ animation: glow 4.6s ease-in-out infinite; }}
-  @keyframes glow {{ 0%, 100% {{ opacity: .45; }} 50% {{ opacity: 1; }} }}
+  .glow {{ animation: sweep 4.6s linear infinite; }}
+  @keyframes sweep {{ 0% {{ transform: translateX(-80px); }} 100% {{ transform: translateX(360px); }} }}
 </style>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
@@ -287,7 +287,7 @@ LANGS = """<svg xmlns="http://www.w3.org/2000/svg" width="340" height="150" view
 <rect x="20" y="42" width="300" height="10" rx="5" fill="#20211a"/>
 <g clip-path="url(#bar)">
 {segments}
-  <rect class="glow" x="0" y="42" width="340" height="10" fill="#ffffff" opacity=".12"/>
+  <rect class="glow" x="20" y="42" width="44" height="10" fill="#ffffff" opacity=".22"/>
 </g>
 {legend}
 </svg>
@@ -320,7 +320,7 @@ def build_languages(repo_names):
     for i, (lang, size) in enumerate(top):
         width = 300 * size / total
         color = LANG_COLORS.get(lang) or LANG_FALLBACK[i % len(LANG_FALLBACK)]
-        segs.append(f'<rect x="{x:.1f}" y="42" width="{width:.1f}" height="10" fill="{color}"/>')
+        segs.append(f'<rect x="{x:.1f}" y="42" width="{width:.1f}" height="10" fill="{color}" stroke="#0b0c07" stroke-width="1"/>')
         col, row = divmod(i, 3)
         lx, ly = 20 + col * 160, 78 + row * 24
         name = lang if len(lang) <= 14 else lang[:13] + "…"

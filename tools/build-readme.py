@@ -371,7 +371,7 @@ def build():
         # and the whole thing is the link - no third-party preview service
         p.extend(centered([
             f'  <a href="https://github.com/{USERNAME}/{repo}">'
-            f'<img src="assets/repos/{repo}.svg?v={card_v}" alt="{repo}" width="480"></a>',
+            f'<img src="assets/repos/{repo}.svg?v={card_v}{build_icons.CARD_VERSION}" alt="{repo}" width="480"></a>',
         ]))
         demo = DEMOS.get(repo)
         if demo:
@@ -390,7 +390,7 @@ def build():
     # github-readme-stats deployment is paused, which it is periodically
     build_icons.build_languages(sorted(visible))
     p.extend(centered([
-        "  " + img(f"assets/languages.svg?v={date.today():%Y%m%d}", "Most used languages", "340"),
+        "  " + img(f"assets/languages.svg?v={date.today():%Y%m%d}{build_icons.CARD_VERSION}", "Most used languages", "340"),
     ]))
 
     a("<!-- github-snake.svg is regenerated nightly by .github/workflows/snake.yml -->")
