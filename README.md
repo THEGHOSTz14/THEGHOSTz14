@@ -135,15 +135,21 @@
 
 </p>
 
-## 🏙️ Contribution skyline
+## 📊 Activity
 
-<!-- profile-3d-contrib/*.svg is regenerated nightly by .github/workflows/3d-contrib.yml -->
+<p align="center">
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=THEGHOSTz14&layout=compact&card_width=340&v=efa5d06beb&theme=tokyonight&bg_color=0d1117&border_color=181712&title_color=7C9AC4&icon_color=4FC1E9&text_color=C9D1D9&hide_border=true" alt="Top languages">
+
+</p>
+
+<!-- github-snake.svg is regenerated nightly by .github/workflows/snake.yml -->
 <p align="center">
 
 <picture>
-<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/THEGHOSTz14/THEGHOSTz14/main/profile-3d-contrib/skyline-night.svg" />
-<source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/THEGHOSTz14/THEGHOSTz14/main/profile-3d-contrib/skyline-green.svg" />
-<img alt="3D skyline of my last year - one building per day, taller on busier days" src="https://raw.githubusercontent.com/THEGHOSTz14/THEGHOSTz14/main/profile-3d-contrib/skyline-night.svg" width="100%" />
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/THEGHOSTz14/THEGHOSTz14/github-snake/github-snake-dark.svg" />
+<source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/THEGHOSTz14/THEGHOSTz14/github-snake/github-snake.svg" />
+<img alt="snake eating my contributions" src="https://raw.githubusercontent.com/THEGHOSTz14/THEGHOSTz14/github-snake/github-snake.svg" width="100%" />
 </picture>
 
 </p>

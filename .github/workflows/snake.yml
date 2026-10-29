@@ -1,9 +1,11 @@
 name: github snake
 
-# The README now shows the 3D skyline instead of the snake, so this is no longer
-# scheduled - it stays here, runnable by hand, if the snake ever comes back.
 on:
+  schedule:
+    - cron: "24 6 * * *"
   workflow_dispatch:
+  push:
+    branches: [main]
 
 concurrency:
   group: snake
