@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="96" height="118" viewBox="0 0 96 118" role="img" aria-label="LTspice">
-<!-- t8 -->
+<!-- t9 -->
 <style>
   .float { animation: float 6.4s ease-in-out infinite; animation-delay: -3.50s; }
   .spin { transform-box: fill-box; transform-origin: 50% 50%; animation: spin 12s linear infinite; animation-delay: -3.50s; }
@@ -17,20 +17,20 @@
 </style>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#25261d"/><stop offset="1" stop-color="#0d0e09"/>
+    <stop offset="0" stop-color="#201617"/><stop offset="1" stop-color="#0a0707"/>
   </linearGradient>
   <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
     <stop offset="0" stop-color="#ffffff" stop-opacity=".16"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
   </linearGradient>
   <clipPath id="clip"><rect x="0" y="0" width="96" height="96" rx="22"/></clipPath>
 </defs>
-<rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="url(#bg)" stroke="#34352a"/>
+<rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="url(#bg)" stroke="#3a2a28"/>
 <g clip-path="url(#clip)">
   <rect x="1" y="1" width="94" height="46" rx="20" fill="url(#sheen)"/>
   <rect x="1" y="52" width="94" height="43" rx="18" fill="#000000" opacity=".22"/>
   <g transform="rotate(16 48 48)"><rect class="gleam" x="-46" y="-40" width="18" height="180" fill="#ffffff" opacity=".09"/></g>
   <g class="float"><g class="spin"><g transform="translate(26 26) scale(1.8333)" fill="#D6D6D6"><path d="M9.3267 3.4848c-.7965.627-.9744 1.6212-1.1644 3.3173-.3653 3.257-.641 5.1982-1.0473 8.658-.199 1.7013.9756 1.9015 2.3646 1.8861h2.8841c.2604.002.3525.1229.3193.3807-.1241.9654-.2579 2.7882-1.19 2.7882L0 20.4933s2.8304-1.032 3.165-3.3723L4.5047 6.234c.2086-1.357 1.2885-2.7492 2.634-2.7492h2.188zm5.5567 17.0306c1.3454 0 2.4254-1.3922 2.634-2.7491L18.857 6.8792c.3346-2.3404 3.165-3.3723 3.165-3.3723L10.529 3.485c-.9321 0-1.0658 1.8228-1.19 2.7882-.0332.2578.0589.3787.3193.3806h2.8841c1.389-.0153 2.5636.185 2.3646 1.8861-.4062 3.46-.682 5.401-1.0473 8.6581-.19 1.696-.3679 2.6903-1.1644 3.3173h2.188zM23.202 6.6528c.259.0006.4964-.2092.5284-.4658l.2662-2.2309c.0313-.2565-.1549-.4715-.4133-.4715h-.8797c-1.0883 0-2.2022 1.7952-2.2559 2.696-.0339.2585.151.4696.4114.4722h2.3429z"/></g></g></g>
 </g>
-<rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="none" stroke="#eaf3ff" stroke-opacity=".07"/>
-<text x="48" y="112" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="11.5" fill="#9aa4b4">LTspice</text>
+<rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="none" stroke="#f2e8dd" stroke-opacity=".07"/>
+<text x="48" y="112" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="11.5" fill="#96897f">LTspice</text>
 </svg>

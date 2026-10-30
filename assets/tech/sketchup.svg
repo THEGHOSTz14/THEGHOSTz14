@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="96" height="118" viewBox="0 0 96 118" role="img" aria-label="SketchUp">
-<!-- t8 -->
+<!-- t9 -->
 <style>
   .float { animation: float 6.4s ease-in-out infinite; animation-delay: -4.00s; }
   .spin { transform-box: fill-box; transform-origin: 50% 50%; animation: spin 12s linear infinite; animation-delay: -4.00s; }
@@ -17,20 +17,20 @@
 </style>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#25261d"/><stop offset="1" stop-color="#0d0e09"/>
+    <stop offset="0" stop-color="#201617"/><stop offset="1" stop-color="#0a0707"/>
   </linearGradient>
   <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
     <stop offset="0" stop-color="#ffffff" stop-opacity=".16"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
   </linearGradient>
   <clipPath id="clip"><rect x="0" y="0" width="96" height="96" rx="22"/></clipPath>
 </defs>
-<rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="url(#bg)" stroke="#34352a"/>
+<rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="url(#bg)" stroke="#3a2a28"/>
 <g clip-path="url(#clip)">
   <rect x="1" y="1" width="94" height="46" rx="20" fill="url(#sheen)"/>
   <rect x="1" y="52" width="94" height="43" rx="18" fill="#000000" opacity=".22"/>
   <g transform="rotate(16 48 48)"><rect class="gleam" x="-46" y="-40" width="18" height="180" fill="#ffffff" opacity=".09"/></g>
   <g class="float"><g class="spin"><g transform="translate(26 26) scale(1.8333)" fill="#6FA5C8"><path d="M.968 9.027l7.717 4.428-.006 1.32-4.39-2.518-2.763 1.57 7.148 4.12.005 1.27-7.658-4.405c.02.516.488 2.106 1.383 3.337.91 1.247 1.946 1.776 1.946 1.776L11.428 24V11.849L.975 5.846zm22.064-3.8L15.22.723S13.982 0 12.008 0C9.952 0 8.76.746 8.76.746l-7.236 4.14 11.009 6.328V24l7.245-4.136s1.295-.715 2.279-2.414c.867-1.496.975-2.943.975-2.943zM11.251 7.308s1.615-.298 2.98.49l2.171 1.25s.003 1.097.003 2.736c0 1.313-1.112 2.674-1.112 2.674l.002-4.816zm6.402 10.562l-2.358 1.353v-1.269l1.835-1.05c1.748-1.26 2.037-3.117 2.037-3.761l-.007-5.705-5.006-2.881s-.76-.499-2.129-.499c-1.367 0-2.113.461-2.113.461L8.154 5.53l-1.11-.641L9.473 3.5s.95-.527 2.544-.527c1.462 0 2.6.571 2.6.571L20.27 6.81l-.007 6.226c.04.957-.406 3.296-2.61 4.835z"/></g></g></g>
 </g>
-<rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="none" stroke="#eaf3ff" stroke-opacity=".07"/>
-<text x="48" y="112" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="11.5" fill="#9aa4b4">SketchUp</text>
+<rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="none" stroke="#f2e8dd" stroke-opacity=".07"/>
+<text x="48" y="112" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="11.5" fill="#96897f">SketchUp</text>
 </svg>

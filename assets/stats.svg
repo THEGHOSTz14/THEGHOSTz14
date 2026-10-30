@@ -1,29 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="360" height="150" viewBox="0 0 360 150" role="img" aria-label="GitHub stats">
-<!-- s1 -->
+<!-- s2 -->
 <style>
   .sweep { animation: sweep 5.4s linear infinite; }
   @keyframes sweep { 0% { transform: translateX(-70px); } 100% { transform: translateX(380px); } }
 </style>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#14150f"/><stop offset="1" stop-color="#0a0b07"/>
+    <stop offset="0" stop-color="#1a1111"/><stop offset="1" stop-color="#0a0707"/>
   </linearGradient>
   <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0" stop-color="#4FC1E9" stop-opacity=".1"/><stop offset=".5" stop-color="#4FC1E9" stop-opacity=".85"/><stop offset="1" stop-color="#4FC1E9" stop-opacity=".1"/>
+    <stop offset="0" stop-color="#b31217" stop-opacity=".1"/><stop offset=".5" stop-color="#b31217" stop-opacity=".85"/><stop offset="1" stop-color="#b31217" stop-opacity=".1"/>
   </linearGradient>
   <clipPath id="card"><rect x="0.5" y="0.5" width="359" height="149" rx="14"/></clipPath>
 </defs>
-<rect x="0.5" y="0.5" width="359" height="149" rx="14" fill="url(#bg)" stroke="#2a2b21"/>
+<rect x="0.5" y="0.5" width="359" height="149" rx="14" fill="url(#bg)" stroke="#3a2a28"/>
 <rect x="0.5" y="0.5" width="359" height="2.5" rx="1" fill="url(#edge)"/>
 <g clip-path="url(#card)">
   <rect class="sweep" x="0" y="0" width="38" height="150" fill="#ffffff" opacity=".045"/>
 </g>
-<text x="32" y="58" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="24" font-weight="700" fill="#e6edf3">105</text>
-<text x="32" y="76" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="10.5" fill="#8b949e" letter-spacing=".4">Contributions</text>
-<text x="200" y="58" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="24" font-weight="700" fill="#e6edf3">88</text>
-<text x="200" y="76" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="10.5" fill="#8b949e" letter-spacing=".4">Commits</text>
-<text x="32" y="112" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="24" font-weight="700" fill="#e6edf3">6</text>
-<text x="32" y="130" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="10.5" fill="#8b949e" letter-spacing=".4">Public repos</text>
-<text x="200" y="112" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="24" font-weight="700" fill="#e6edf3">6</text>
-<text x="200" y="130" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="10.5" fill="#8b949e" letter-spacing=".4">Stars</text>
+<text x="32" y="58" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="24" font-weight="700" fill="#e8e1d5">109</text>
+<text x="32" y="76" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="10.5" fill="#96897f" letter-spacing=".4">Contributions</text>
+<text x="200" y="58" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="24" font-weight="700" fill="#e8e1d5">99</text>
+<text x="200" y="76" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="10.5" fill="#96897f" letter-spacing=".4">Commits</text>
+<text x="32" y="112" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="24" font-weight="700" fill="#e8e1d5">6</text>
+<text x="32" y="130" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="10.5" fill="#96897f" letter-spacing=".4">Public repos</text>
+<text x="200" y="112" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="24" font-weight="700" fill="#e8e1d5">6</text>
+<text x="200" y="130" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="10.5" fill="#96897f" letter-spacing=".4">Stars</text>
 </svg>

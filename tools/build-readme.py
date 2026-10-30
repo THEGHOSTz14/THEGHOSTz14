@@ -21,7 +21,7 @@ import build_icons
 import gh
 
 ROOT = Path(__file__).resolve().parent.parent
-PILL = "181712"
+PILL = "140e0e"
 USERNAME = "THEGHOSTz14"
 
 # (label, simple-icons slug or "" for a text-only tile, logo colour)
@@ -290,12 +290,23 @@ def build():
     banner = ROOT / "assets" / "banner.jpg"
     banner_v = hashlib.sha1(banner.read_bytes()).hexdigest()[:8] if banner.exists() else "0"
     a("  " + img(f"assets/banner.jpg?v={banner_v}", "Profile banner", "72%"))
+    rule = ROOT / "assets" / "rule.svg"
+    rule_v = hashlib.sha1(rule.read_bytes()).hexdigest()[:8] if rule.exists() else "0"
     a("")
-    a("  # 👻 Rohan · `THEGHOSTz14`")
+    a("  " + img(f"assets/rule.svg?v={rule_v}", "divider", "62%"))
+    brand = ROOT / "assets" / "brand.png"
+    brand_v = hashlib.sha1(brand.read_bytes()).hexdigest()[:8] if brand.exists() else "0"
+    a("")
+    a("  " + img(f"assets/brand.png?v={brand_v}", "Brand of Sacrifice", "44"))
+    a("")
+    a("  # Rohan · `THEGHOSTz14`")
     a("")
     a("  ### Industrial Electrical & PLC Engineer · Godot game dev · automating the boring parts")
     a("")
     a("  Gurgaon, India · *Cosmo Instruments* · I write code that either runs a plant or runs in a browser")
+    a("")
+    a("  <em>“Struggle, endure, contend. For that alone is the sword of one who defies death.”</em>"
+      " — <sub>Berserk</sub>")
     a("")
     # teal on dark, GitHub blue on light - the same widget would be unreadable
     # in one of the two themes without this
@@ -307,9 +318,9 @@ def build():
                             "Godot%204%20%2B%20GDScript",
                             "Automating%20the%20boring%20parts"]))
     a("  <picture>")
-    a(f'    <source media="(prefers-color-scheme: dark)" srcset="{typing("4FC1E9")}" />')
-    a(f'    <source media="(prefers-color-scheme: light)" srcset="{typing("0969DA")}" />')
-    a(f'    <img alt="typewriter intro" src="{typing("4FC1E9")}" width="360" />')
+    a(f'    <source media="(prefers-color-scheme: dark)" srcset="{typing("e0533d")}" />')
+    a(f'    <source media="(prefers-color-scheme: light)" srcset="{typing("8b1a1a")}" />')
+    a(f'    <img alt="typewriter intro" src="{typing("e0533d")}" width="360" />')
     a("  </picture>")
     a("")
     a("  " + img(
@@ -327,7 +338,7 @@ def build():
     a("</div>")
     a("")
 
-    a("### 🧾 About me")
+    a("### 🩸 About me")
     a("")
     a("- 🔭 **Building** → *Drone vs Droids* (repo `GHOST_WEB_GAME-`) — a Godot 4.7 arcade game exported to WASM for the y8 browser portal")
     a("- 🏭 **Day job** → panel design, PLC programming, VFD & servo commissioning, plant troubleshooting")
@@ -337,18 +348,18 @@ def build():
     a("")
     # the card's own title is built from the account name, which carries a trailing
     # space, so it renders "Rohan 's GitHub Stats" - hide it and label it here
-    a("### 📈 GitHub stats")
+    a("### ⚔️ GitHub stats")
     a("")
     build_icons.build_stats_card()
     p.extend(centered([
         "  " + img(f"assets/stats.svg?v={date.today():%Y%m%d}{build_icons.STATS_VERSION}", "GitHub stats", "360"),
         "  " + img(
             "https://github-readme-streak-stats.herokuapp.com/?user=" + USERNAME + BUST
-            + "&theme=tokyonight&background=0d1117&border=181712&ring=4FC1E9&fire=FF6F00"
-            "&currStreakLabel=7C9AC4&sideLabels=C9D1D9&dates=8B949E&hide_border=true&card_width=360",
+            + "&theme=tokyonight&background=0d1117&border=3a2a28&ring=b31217&fire=e0533d"
+            "&currStreakLabel=c9a227&sideLabels=e8e1d5&dates=96897f&hide_border=true&card_width=360",
             "Contribution streak"),
     ]))
-    a("## ⚡ Tech stack")
+    a("## 🗡️ Tech stack")
     a("")
     # tiles are generated from TECH by tools/build-icons.py, so a new entry gets a
     # tile (and its animation) without touching this file again
@@ -362,7 +373,7 @@ def build():
             for label, _logo, _color in items
         )
         p.extend(centered([tiles]))
-    a("## 🚀 Things I have shipped")
+    a("## 🏹 Things I have shipped")
     a("")
     shown = [row for row in PROJECTS if row[0] in visible]
     hidden = [row for row in PROJECTS if row[0] not in visible]
@@ -378,15 +389,15 @@ def build():
         demo = DEMOS.get(repo)
         if demo:
             p.extend(centered([
-                "  " + img(f"https://img.shields.io/badge/-Launch%20demo-181712?style=flat"
-                           f"&labelColor=181712&color=181712&logo=googlechrome&logoColor=4FC1E9",
+                "  " + img(f"https://img.shields.io/badge/-Launch%20demo-140e0e?style=flat"
+                           f"&labelColor=140e0e&color=140e0e&logo=googlechrome&logoColor=e0533d",
                            "launch demo").replace('<img ', '<a href="' + demo + '"><img ', 1) + "</a>",
             ]))
     for repo, pitch, _logo in hidden:
         a(f"- **{repo}** — {pitch} _(private, ask me for a look)_")
         a("")
 
-    a("## 📊 Activity")
+    a("## 🔥 Activity")
     a("")
     # drawing the card ourselves keeps the section alive when the public
     # github-readme-stats deployment is paused, which it is periodically

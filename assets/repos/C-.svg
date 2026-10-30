@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="480" height="132" viewBox="0 0 480 132" role="img" aria-label="C-">
-<!-- c4 -->
+<!-- c5 -->
 <style>
   .sweep { animation: sweep 6.8s ease-in-out infinite; animation-delay: 5.20s; }
   .arrow { transform-box: fill-box; transform-origin: center; animation: arrow 3.2s ease-in-out infinite; }
@@ -8,30 +8,30 @@
 </style>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#14150f"/><stop offset="1" stop-color="#0a0b07"/>
+    <stop offset="0" stop-color="#1a1111"/><stop offset="1" stop-color="#0a0707"/>
   </linearGradient>
   <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0" stop-color="#4FC1E9"/><stop offset="1" stop-color="#7C9AC4"/>
+    <stop offset="0" stop-color="#b31217"/><stop offset="1" stop-color="#e0533d"/>
   </linearGradient>
   <clipPath id="clip"><rect x="1" y="1" width="478" height="130" rx="16"/></clipPath>
 </defs>
-<rect x="0.5" y="0.5" width="479" height="131" rx="16" fill="url(#bg)" stroke="#2a2b21"/>
+<rect x="0.5" y="0.5" width="479" height="131" rx="16" fill="url(#bg)" stroke="#3a2a28"/>
 <g clip-path="url(#clip)">
-  <rect class="sweep" x="0" y="-20" width="110" height="180" fill="#4FC1E9" opacity=".05" transform="skewX(-14)"/>
+  <rect class="sweep" x="0" y="-20" width="110" height="180" fill="#b31217" opacity=".05" transform="skewX(-14)"/>
 </g>
 <rect x="0.5" y="0.5" width="479" height="2.5" rx="1" fill="url(#edge)" opacity=".85"/>
-<text x="24" y="40" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="19" font-weight="700" fill="#e6edf3">C-</text>
+<text x="24" y="40" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="19" font-weight="700" fill="#e8e1d5">C-</text>
 <g class="arrow">
-  <path d="M448 30 L458 20 M450 20 H458 V28" fill="none" stroke="#4FC1E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M448 30 L458 20 M450 20 H458 V28" fill="none" stroke="#b31217" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<text x="24" y="66" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="13" fill="#8b949e">C# fundamentals exercises - syntax, input, math,</text>
-<text x="24" y="85" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="13" fill="#8b949e">booleans, branching - on .NET 10</text>
+<text x="24" y="66" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="13" fill="#96897f">C# fundamentals exercises - syntax, input, math,</text>
+<text x="24" y="85" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="13" fill="#96897f">booleans, branching - on .NET 10</text>
 <circle cx="29" cy="113" r="5" fill="#178600"/>
-<text x="41" y="117" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#a6afbd">C#</text>
+<text x="41" y="117" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#96897f">C#</text>
 <g font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="12">
-  <g transform="translate(330 104) scale(.78)"><path fill="#e3b341" d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"/></g>
-  <text x="344" y="116" fill="#a6afbd">1</text>
-  <g transform="translate(388 104) scale(.78)"><path fill="#a6afbd" d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"/></g>
-  <text x="402" y="116" fill="#a6afbd">0</text>
+  <g transform="translate(330 104) scale(.78)"><path fill="#c9a227" d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"/></g>
+  <text x="344" y="116" fill="#96897f">1</text>
+  <g transform="translate(388 104) scale(.78)"><path fill="#96897f" d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"/></g>
+  <text x="402" y="116" fill="#96897f">0</text>
 </g>
 </svg>

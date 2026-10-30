@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="96" height="118" viewBox="0 0 96 118" role="img" aria-label="Unity">
-<!-- t8 -->
+<!-- t9 -->
 <style>
   .float { animation: float 6.4s ease-in-out infinite; animation-delay: -4.60s; }
   .spin { transform-box: fill-box; transform-origin: 50% 50%; animation: spin 12s linear infinite; animation-delay: -4.60s; }
@@ -17,20 +17,20 @@
 </style>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#25261d"/><stop offset="1" stop-color="#0d0e09"/>
+    <stop offset="0" stop-color="#201617"/><stop offset="1" stop-color="#0a0707"/>
   </linearGradient>
   <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
     <stop offset="0" stop-color="#ffffff" stop-opacity=".16"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
   </linearGradient>
   <clipPath id="clip"><rect x="0" y="0" width="96" height="96" rx="22"/></clipPath>
 </defs>
-<rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="url(#bg)" stroke="#34352a"/>
+<rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="url(#bg)" stroke="#3a2a28"/>
 <g clip-path="url(#clip)">
   <rect x="1" y="1" width="94" height="46" rx="20" fill="url(#sheen)"/>
   <rect x="1" y="52" width="94" height="43" rx="18" fill="#000000" opacity=".22"/>
   <g transform="rotate(16 48 48)"><rect class="gleam" x="-46" y="-40" width="18" height="180" fill="#ffffff" opacity=".09"/></g>
   <g class="float"><g class="spin"><g transform="translate(26 26) scale(1.8333)" fill="#FFFFFF"><path d="m12.9288 4.2939 3.7997 2.1929c.1366.077.1415.2905 0 .3675l-4.515 2.6076a.4192.4192 0 0 1-.4246 0L7.274 6.8543c-.139-.0745-.1415-.293 0-.3675l3.7972-2.193V0L1.3758 5.5977V16.793l3.7177-2.1456v-4.3858c-.0025-.1565.1813-.2682.318-.1838l4.5148 2.6076a.4252.4252 0 0 1 .2136.3676v5.2127c.0025.1565-.1813.2682-.3179.1838l-3.7996-2.1929-3.7178 2.1457L12 24l9.6954-5.5977-3.7178-2.1457-3.7996 2.1929c-.1341.082-.3229-.0248-.3179-.1838V13.053c0-.1565.087-.2956.2136-.3676l4.5149-2.6076c.134-.082.3228.0224.3179.1838v4.3858l3.7177 2.1456V5.5977L12.9288 0Z"/></g></g></g>
 </g>
-<rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="none" stroke="#eaf3ff" stroke-opacity=".07"/>
-<text x="48" y="112" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="11.5" fill="#9aa4b4">Unity</text>
+<rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="none" stroke="#f2e8dd" stroke-opacity=".07"/>
+<text x="48" y="112" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="11.5" fill="#96897f">Unity</text>
 </svg>
