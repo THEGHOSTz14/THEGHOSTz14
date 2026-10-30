@@ -290,24 +290,15 @@ def build():
     banner = ROOT / "assets" / "banner.jpg"
     banner_v = hashlib.sha1(banner.read_bytes()).hexdigest()[:8] if banner.exists() else "0"
     # GitHub throws away <video>, so the live wallpaper ships as an animated webp
-    # with the still as the fallback
+    # with the still as the fallback; the sigil and the name are baked into the art
     webp = ROOT / "assets" / "banner.webp"
     webp_v = hashlib.sha1(webp.read_bytes()).hexdigest()[:8] if webp.exists() else banner_v
-    a("  <picture>")
-    a(f'    <source type="image/webp" srcset="assets/banner.webp?v={webp_v}">')
-    a(f'    <img src="assets/banner.jpg?v={banner_v}" alt="Profile banner" width="72%">')
-    a("  </picture>")
-    rule = ROOT / "assets" / "rule.svg"
-    rule_v = hashlib.sha1(rule.read_bytes()).hexdigest()[:8] if rule.exists() else "0"
-    a("")
-    a("  " + img(f"assets/rule.svg?v={rule_v}", "divider", "62%"))
-    a("  <br>")
-    brand = ROOT / "assets" / "brand.png"
-    brand_v = hashlib.sha1(brand.read_bytes()).hexdigest()[:8] if brand.exists() else "0"
-    a("")
-    a("  " + img(f"assets/brand.png?v={brand_v}", "Brand of Sacrifice", "52"))
-    a("")
-    a("  # Rohan · `THEGHOSTz14`")
+    a("  <h1>")
+    a("    <picture>")
+    a(f'      <source type="image/webp" srcset="assets/banner.webp?v={webp_v}">')
+    a(f'      <img src="assets/banner.jpg?v={banner_v}" alt="Rohan - THEGHOSTz14" width="100%">')
+    a("    </picture>")
+    a("  </h1>")
     a("")
     a("  ### Industrial Electrical & PLC Engineer · Godot game dev · automating the boring parts")
     a("")

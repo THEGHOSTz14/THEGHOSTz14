@@ -14,10 +14,10 @@
 <text x="20" y="26" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="13" font-weight="700" fill="#e8e1d5">Most used languages</text>
 <rect x="20" y="42" width="300" height="10" rx="5" fill="#241a19"/>
 <g clip-path="url(#bar)">
-<rect x="20.0" y="42" width="117.7" height="10" fill="#355570" stroke="#0a0707" stroke-width="1"/>
-<rect x="137.7" y="42" width="90.5" height="10" fill="#3178C6" stroke="#0a0707" stroke-width="1"/>
-<rect x="228.1" y="42" width="56.0" height="10" fill="#3572A5" stroke="#0a0707" stroke-width="1"/>
-<rect x="284.1" y="42" width="20.0" height="10" fill="#178600" stroke="#0a0707" stroke-width="1"/>
+<rect x="20.0" y="42" width="117.6" height="10" fill="#355570" stroke="#0a0707" stroke-width="1"/>
+<rect x="137.6" y="42" width="90.4" height="10" fill="#3178C6" stroke="#0a0707" stroke-width="1"/>
+<rect x="228.0" y="42" width="56.2" height="10" fill="#3572A5" stroke="#0a0707" stroke-width="1"/>
+<rect x="284.2" y="42" width="20.0" height="10" fill="#178600" stroke="#0a0707" stroke-width="1"/>
 <rect x="304.2" y="42" width="6.2" height="10" fill="#E34C26" stroke="#0a0707" stroke-width="1"/>
 <rect x="310.4" y="42" width="9.6" height="10" fill="#DB61A2" stroke="#0a0707" stroke-width="1"/>
   <rect class="glow" x="20" y="42" width="44" height="10" fill="#ffffff" opacity=".22"/>

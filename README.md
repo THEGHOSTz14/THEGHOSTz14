@@ -1,16 +1,11 @@
 <div align="center">
 
-  <picture>
-    <source type="image/webp" srcset="assets/banner.webp?v=a5c25f4f">
-    <img src="assets/banner.jpg?v=6a2b4e9d" alt="Profile banner" width="72%">
-  </picture>
-
-  <img src="assets/rule.svg?v=c7f2394e" alt="divider" width="62%">
-  <br>
-
-  <img src="assets/brand.png?v=415e73a2" alt="Brand of Sacrifice" width="52">
-
-  # Rohan · `THEGHOSTz14`
+  <h1>
+    <picture>
+      <source type="image/webp" srcset="assets/banner.webp?v=eff912d6">
+      <img src="assets/banner.jpg?v=74f41728" alt="Rohan - THEGHOSTz14" width="100%">
+    </picture>
+  </h1>
 
   ### Industrial Electrical & PLC Engineer · Godot game dev · automating the boring parts
 
