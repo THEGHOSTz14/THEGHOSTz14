@@ -294,10 +294,11 @@ def build():
     rule_v = hashlib.sha1(rule.read_bytes()).hexdigest()[:8] if rule.exists() else "0"
     a("")
     a("  " + img(f"assets/rule.svg?v={rule_v}", "divider", "62%"))
+    a("  <br>")
     brand = ROOT / "assets" / "brand.png"
     brand_v = hashlib.sha1(brand.read_bytes()).hexdigest()[:8] if brand.exists() else "0"
     a("")
-    a("  " + img(f"assets/brand.png?v={brand_v}", "Brand of Sacrifice", "44"))
+    a("  " + img(f"assets/brand.png?v={brand_v}", "Brand of Sacrifice", "52"))
     a("")
     a("  # Rohan · `THEGHOSTz14`")
     a("")

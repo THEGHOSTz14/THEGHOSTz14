@@ -14,17 +14,17 @@
 <text x="20" y="26" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="13" font-weight="700" fill="#e8e1d5">Most used languages</text>
 <rect x="20" y="42" width="300" height="10" rx="5" fill="#241a19"/>
 <g clip-path="url(#bar)">
-<rect x="20.0" y="42" width="117.8" height="10" fill="#355570" stroke="#0a0707" stroke-width="1"/>
-<rect x="137.8" y="42" width="90.6" height="10" fill="#3178C6" stroke="#0a0707" stroke-width="1"/>
-<rect x="228.4" y="42" width="55.8" height="10" fill="#3572A5" stroke="#0a0707" stroke-width="1"/>
-<rect x="284.1" y="42" width="20.0" height="10" fill="#178600" stroke="#0a0707" stroke-width="1"/>
-<rect x="304.1" y="42" width="6.2" height="10" fill="#E34C26" stroke="#0a0707" stroke-width="1"/>
-<rect x="310.4" y="42" width="9.6" height="10" fill="#DB61A2" stroke="#0a0707" stroke-width="1"/>
+<rect x="20.0" y="42" width="130.6" height="10" fill="#355570" stroke="#0a0707" stroke-width="1"/>
+<rect x="150.6" y="42" width="100.4" height="10" fill="#3178C6" stroke="#0a0707" stroke-width="1"/>
+<rect x="251.1" y="42" width="29.7" height="10" fill="#3572A5" stroke="#0a0707" stroke-width="1"/>
+<rect x="280.8" y="42" width="22.2" height="10" fill="#178600" stroke="#0a0707" stroke-width="1"/>
+<rect x="303.0" y="42" width="6.9" height="10" fill="#E34C26" stroke="#0a0707" stroke-width="1"/>
+<rect x="309.9" y="42" width="10.1" height="10" fill="#DB61A2" stroke="#0a0707" stroke-width="1"/>
   <rect class="glow" x="20" y="42" width="44" height="10" fill="#ffffff" opacity=".22"/>
 </g>
-<circle cx="24" cy="74" r="4" fill="#355570"/><text x="34" y="78" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="11.5" fill="#96897f">GDScript <tspan fill="#7d6f65">39%</tspan></text>
-<circle cx="24" cy="98" r="4" fill="#3178C6"/><text x="34" y="102" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="11.5" fill="#96897f">TypeScript <tspan fill="#7d6f65">30%</tspan></text>
-<circle cx="24" cy="122" r="4" fill="#3572A5"/><text x="34" y="126" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="11.5" fill="#96897f">Python <tspan fill="#7d6f65">19%</tspan></text>
+<circle cx="24" cy="74" r="4" fill="#355570"/><text x="34" y="78" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="11.5" fill="#96897f">GDScript <tspan fill="#7d6f65">44%</tspan></text>
+<circle cx="24" cy="98" r="4" fill="#3178C6"/><text x="34" y="102" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="11.5" fill="#96897f">TypeScript <tspan fill="#7d6f65">33%</tspan></text>
+<circle cx="24" cy="122" r="4" fill="#3572A5"/><text x="34" y="126" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="11.5" fill="#96897f">Python <tspan fill="#7d6f65">10%</tspan></text>
 <circle cx="184" cy="74" r="4" fill="#178600"/><text x="194" y="78" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="11.5" fill="#96897f">C# <tspan fill="#7d6f65">7%</tspan></text>
 <circle cx="184" cy="98" r="4" fill="#E34C26"/><text x="194" y="102" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="11.5" fill="#96897f">HTML <tspan fill="#7d6f65">2%</tspan></text>
 <circle cx="184" cy="122" r="4" fill="#DB61A2"/><text x="194" y="126" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="11.5" fill="#96897f">other <tspan fill="#7d6f65">3%</tspan></text>

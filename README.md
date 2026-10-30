@@ -3,8 +3,9 @@
   <img src="assets/banner.jpg?v=003aacf8" alt="Profile banner" width="72%">
 
   <img src="assets/rule.svg?v=c7f2394e" alt="divider" width="62%">
+  <br>
 
-  <img src="assets/brand.png?v=415e73a2" alt="Brand of Sacrifice" width="44">
+  <img src="assets/brand.png?v=415e73a2" alt="Brand of Sacrifice" width="52">
 
   # Rohan · `THEGHOSTz14`
 
