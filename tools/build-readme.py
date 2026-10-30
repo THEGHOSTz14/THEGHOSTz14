@@ -289,7 +289,14 @@ def build():
     a("")
     banner = ROOT / "assets" / "banner.jpg"
     banner_v = hashlib.sha1(banner.read_bytes()).hexdigest()[:8] if banner.exists() else "0"
-    a("  " + img(f"assets/banner.jpg?v={banner_v}", "Profile banner", "72%"))
+    # GitHub throws away <video>, so the live wallpaper ships as an animated webp
+    # with the still as the fallback
+    webp = ROOT / "assets" / "banner.webp"
+    webp_v = hashlib.sha1(webp.read_bytes()).hexdigest()[:8] if webp.exists() else banner_v
+    a("  <picture>")
+    a(f'    <source type="image/webp" srcset="assets/banner.webp?v={webp_v}">')
+    a(f'    <img src="assets/banner.jpg?v={banner_v}" alt="Profile banner" width="72%">')
+    a("  </picture>")
     rule = ROOT / "assets" / "rule.svg"
     rule_v = hashlib.sha1(rule.read_bytes()).hexdigest()[:8] if rule.exists() else "0"
     a("")

@@ -1,6 +1,9 @@
 <div align="center">
 
-  <img src="assets/banner.jpg?v=6a2b4e9d" alt="Profile banner" width="72%">
+  <picture>
+    <source type="image/webp" srcset="assets/banner.webp?v=a5c25f4f">
+    <img src="assets/banner.jpg?v=6a2b4e9d" alt="Profile banner" width="72%">
+  </picture>
 
   <img src="assets/rule.svg?v=c7f2394e" alt="divider" width="62%">
   <br>
