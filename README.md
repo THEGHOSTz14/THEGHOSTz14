@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="assets/banner.jpg?v=003aacf8" alt="Profile banner" width="72%">
+  <img src="assets/banner.jpg?v=6a2b4e9d" alt="Profile banner" width="72%">
 
   <img src="assets/rule.svg?v=c7f2394e" alt="divider" width="62%">
   <br>
