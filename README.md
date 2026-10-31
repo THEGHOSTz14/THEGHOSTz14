@@ -38,7 +38,7 @@
 <p align="center">
 
 <img src="assets/stats.svg?v=20261031s2" alt="GitHub stats" width="360">
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=THEGHOSTz14&v=9af387f283&theme=tokyonight&background=140e0e&border=3a2a28&ring=b31217&fire=e0533d&currStreakLabel=c9a227&sideLabels=e8e1d5&dates=96897f&sideNums=e8e1d5&currStreakNum=e8e1d5&stroke=3a2a28&hide_border=true&card_width=360&card_height=150" alt="Contribution streak">
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=THEGHOSTz14&v=9af387f283&theme=tokyonight&background=140e0e&border=3a2a28&ring=b31217&fire=e0533d&currStreakLabel=c9a227&sideLabels=e8e1d5&dates=96897f&sideNums=e8e1d5&currStreakNum=e8e1d5&stroke=3a2a28&hide_border=false&card_width=360&card_height=150" alt="Contribution streak">
 
 </p>
 
