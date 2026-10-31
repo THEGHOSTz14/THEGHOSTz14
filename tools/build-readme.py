@@ -354,8 +354,8 @@ def build():
         "  " + img(f"assets/stats.svg?v={date.today():%Y%m%d}{build_icons.STATS_VERSION}", "GitHub stats", "360"),
         "  " + img(
             "https://github-readme-streak-stats.herokuapp.com/?user=" + USERNAME + BUST
-            + "&theme=tokyonight&background=0d1117&border=3a2a28&ring=b31217&fire=e0533d"
-            "&currStreakLabel=c9a227&sideLabels=e8e1d5&dates=96897f&hide_border=true&card_width=360",
+            + "&theme=tokyonight&background=140e0e&border=3a2a28&ring=b31217&fire=e0533d"
+            "&currStreakLabel=c9a227&sideLabels=e8e1d5&dates=96897f&sideNums=e8e1d5&currStreakNum=e8e1d5&stroke=3a2a28&hide_border=true&card_width=360",
             "Contribution streak"),
     ]))
     a("## 🗡️ Tech stack")
