@@ -446,7 +446,10 @@ def build():
     a("")
     a("<div align=\"center\">")
     a("")
-    a("> `while (alive) { learn(); build(); ship(); }`")
+    motto = build_icons.build_motto()
+    motto_v = hashlib.sha1(motto.read_bytes()).hexdigest()[:8]
+    a("  " + img(f"assets/motto.svg?v={motto_v}",
+                 "while (alive) { learn(); build(); ship(); }", "414"))
     a("")
     a("  " + img("https://capsule-render.vercel.app/api?type=waving&color=0:b31217,100:0b0707"
                  "&height=130&section=footer&text=struggle%20%C2%B7%20endure%20%C2%B7%20contend"

@@ -399,6 +399,42 @@ LANGS = """<svg xmlns="http://www.w3.org/2000/svg" width="340" height="150" view
 """
 
 
+MOTTO = """<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="46" viewBox="0 0 {w} 46" role="img" aria-label="{label}">
+<!-- {version} -->
+<style>
+  .glow {{ animation: pulse 4.6s ease-in-out infinite; }}
+  @keyframes pulse {{ 0%, 100% {{ stroke-opacity: .25; }} 50% {{ stroke-opacity: .85; }} }}
+</style>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#1a1111"/><stop offset="1" stop-color="#0a0707"/>
+  </linearGradient>
+</defs>
+<rect x="0.5" y="0.5" width="{w1}" height="45" rx="12" fill="url(#bg)" stroke="#3a2a28"/>
+<rect class="glow" x="0.5" y="0.5" width="{w1}" height="45" rx="12" fill="none" stroke="#b31217" stroke-width="1.4"/>
+<rect x="1" y="7" width="3" height="32" rx="1.5" fill="#b31217"/>
+<text x="20" y="29" font-family="Cascadia Mono,Consolas,DejaVu Sans Mono,monospace" font-size="15">
+  <tspan fill="#e0533d">while</tspan><tspan fill="#96897f"> (</tspan><tspan fill="#c9a227">alive</tspan><tspan fill="#96897f">) {{</tspan>
+  <tspan fill="#e8e1d5"> learn</tspan><tspan fill="#96897f">();</tspan><tspan fill="#e8e1d5"> build</tspan><tspan fill="#96897f">();</tspan><tspan fill="#e8e1d5"> ship</tspan><tspan fill="#96897f">(); }}</tspan>
+</text>
+</svg>
+"""
+MOTTO_VERSION = "m1"
+
+
+def build_motto():
+    """Draw the closing motto as a themed pill - inline code cannot be recoloured."""
+    text = "while (alive) { learn(); build(); ship(); }"
+    w = int(8.45 * len(text) + 42)
+    svg = MOTTO.format(w=w, w1=w - 1, label=html.escape(text), version=MOTTO_VERSION)
+    path = ROOT / "assets" / "motto.svg"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if not path.exists() or path.read_text(encoding="utf-8") != svg:
+        path.write_text(svg, encoding="utf-8", newline="\n")
+        print("motto pill: rewritten")
+    return path
+
+
 def build_languages(repo_names):
     """Sum the per-repo language bytes and draw one rounded stacked bar."""
     import gh
