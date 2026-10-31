@@ -177,7 +177,7 @@
 
 <div align="center">
 
-  <img src="assets/motto.svg?v=ece1895c" alt="while (alive) { learn(); build(); ship(); }" width="414">
+  <img src="assets/motto.svg?v=933b441b" alt="while (alive) { learn(); build(); ship(); }" width="414">
 
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:b31217,100:0b0707&height=130&section=footer&text=struggle%20%C2%B7%20endure%20%C2%B7%20contend&fontSize=23&fontColor=e8e1d5&fontAlignY=82" alt="footer wave" width="100%">
 
