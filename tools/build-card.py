@@ -18,13 +18,13 @@ USERNAME = "THEGHOSTz14"
 SCALE = 2
 W, H = 620 * SCALE, 168 * SCALE
 
-BG = (13, 17, 23)
-BG2 = (19, 28, 40)
-BORDER = (48, 54, 61)
-TEAL = (79, 193, 233)
-VIOLET = (146, 124, 233)
-TEXT = (230, 237, 243)
-MUTED = (139, 148, 158)
+BG = (12, 7, 8)
+BG2 = (28, 14, 15)
+BORDER = (58, 42, 40)
+TEAL = (224, 83, 61)
+VIOLET = (201, 162, 39)
+TEXT = (232, 225, 213)
+MUTED = (150, 137, 127)
 
 
 def api(path):
@@ -65,17 +65,17 @@ def main():
         t = y / H
         d.line([(0, y), (W, y)], fill=tuple(int(BG[i] + (BG2[i] - BG[i]) * t) for i in range(3)))
     d.rounded_rectangle([0, 0, W - 1, H - 1], radius=26 * SCALE, outline=BORDER, width=2 * SCALE)
-    for i, c in enumerate((TEAL, VIOLET)):  # accent bar on the left edge
+    for i, c in enumerate(((179, 18, 23), TEAL)):  # accent bar on the left edge
         d.rectangle([4 * SCALE, 34 * SCALE + i * 44 * SCALE, 9 * SCALE, 70 * SCALE + i * 44 * SCALE], fill=c)
 
-    av = Image.open(ROOT / "assets" / "avatar-ghost.png").convert("RGB")
+    av = Image.open(ROOT / "assets" / "avatar-guts.png").convert("RGB")
     side = min(av.size)
     av = av.crop(((av.width - side) // 2, (av.height - side) // 2,
                   (av.width + side) // 2, (av.height + side) // 2)).resize((112 * SCALE, 112 * SCALE), Image.LANCZOS)
     mask = Image.new("L", av.size, 0)
     ImageDraw.Draw(mask).ellipse([0, 0, av.size[0] - 1, av.size[1] - 1], fill=255)
     img.paste(av, (26 * SCALE, 28 * SCALE), mask)
-    d.ellipse([24 * SCALE, 26 * SCALE, 140 * SCALE, 142 * SCALE], outline=TEAL, width=2 * SCALE)
+    d.ellipse([24 * SCALE, 26 * SCALE, 140 * SCALE, 142 * SCALE], outline=(179, 18, 23), width=2 * SCALE)
 
     x = 164 * SCALE
     f_name = font("C:/Windows/Fonts/consolab.ttf", 25)
@@ -103,7 +103,7 @@ def main():
         d.text((cx + vw + 5 * SCALE, 98 * SCALE), label, font=f_sub, fill=MUTED)
         cx += vw + 5 * SCALE + d.textlength(label, font=f_sub) + 18 * SCALE
 
-    d.text((x, 126 * SCALE), f"github.com/{USERNAME}", font=f_url, fill=(102, 153, 204))
+    d.text((x, 126 * SCALE), f"github.com/{USERNAME}", font=f_url, fill=(150, 120, 110))
 
     alpha = Image.new("L", (W, H), 0)
     ImageDraw.Draw(alpha).rounded_rectangle([0, 0, W - 1, H - 1], radius=26 * SCALE, fill=255)

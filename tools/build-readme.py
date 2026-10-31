@@ -448,9 +448,9 @@ def build():
     a("")
     a("> `while (alive) { learn(); build(); ship(); }`")
     a("")
-    a("  " + img("https://capsule-render.vercel.app/api?type=waving&color=0:1f6feb,100:0d1117"
-                 "&height=130&section=footer&text=stay%20haunting&fontSize=26&fontColor=c9d1d9"
-                 "&fontAlignY=82", "footer wave", "100%"))
+    a("  " + img("https://capsule-render.vercel.app/api?type=waving&color=0:b31217,100:0b0707"
+                 "&height=130&section=footer&text=struggle%20%C2%B7%20endure%20%C2%B7%20contend"
+                 "&fontSize=23&fontColor=e8e1d5&fontAlignY=82", "footer wave", "100%"))
     a("")
     a("</div>")
     a("")

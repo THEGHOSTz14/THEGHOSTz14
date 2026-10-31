@@ -37,8 +37,8 @@
 
 <p align="center">
 
-<img src="assets/stats.svg?v=20261030s2" alt="GitHub stats" width="360">
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=THEGHOSTz14&v=b6a8cc66d2&theme=tokyonight&background=0d1117&border=3a2a28&ring=b31217&fire=e0533d&currStreakLabel=c9a227&sideLabels=e8e1d5&dates=96897f&hide_border=true&card_width=360" alt="Contribution streak">
+<img src="assets/stats.svg?v=20261031s2" alt="GitHub stats" width="360">
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=THEGHOSTz14&v=9af387f283&theme=tokyonight&background=0d1117&border=3a2a28&ring=b31217&fire=e0533d&currStreakLabel=c9a227&sideLabels=e8e1d5&dates=96897f&hide_border=true&card_width=360" alt="Contribution streak">
 
 </p>
 
@@ -112,25 +112,25 @@
 
 <p align="center">
 
-<a href="https://github.com/THEGHOSTz14/GHOST_WEB_GAME-"><img src="assets/repos/GHOST_WEB_GAME-.svg?v=20261030c5" alt="GHOST_WEB_GAME-" width="480"></a>
+<a href="https://github.com/THEGHOSTz14/GHOST_WEB_GAME-"><img src="assets/repos/GHOST_WEB_GAME-.svg?v=20261031c5" alt="GHOST_WEB_GAME-" width="480"></a>
 
 </p>
 
 <p align="center">
 
-<a href="https://github.com/THEGHOSTz14/YOLO-BASIC-MODEL"><img src="assets/repos/YOLO-BASIC-MODEL.svg?v=20261030c5" alt="YOLO-BASIC-MODEL" width="480"></a>
+<a href="https://github.com/THEGHOSTz14/YOLO-BASIC-MODEL"><img src="assets/repos/YOLO-BASIC-MODEL.svg?v=20261031c5" alt="YOLO-BASIC-MODEL" width="480"></a>
 
 </p>
 
 <p align="center">
 
-<a href="https://github.com/THEGHOSTz14/C-"><img src="assets/repos/C-.svg?v=20261030c5" alt="C-" width="480"></a>
+<a href="https://github.com/THEGHOSTz14/C-"><img src="assets/repos/C-.svg?v=20261031c5" alt="C-" width="480"></a>
 
 </p>
 
 <p align="center">
 
-<a href="https://github.com/THEGHOSTz14/PROFICADDD"><img src="assets/repos/PROFICADDD.svg?v=20261030c5" alt="PROFICADDD" width="480"></a>
+<a href="https://github.com/THEGHOSTz14/PROFICADDD"><img src="assets/repos/PROFICADDD.svg?v=20261031c5" alt="PROFICADDD" width="480"></a>
 
 </p>
 
@@ -144,7 +144,7 @@
 
 <p align="center">
 
-<img src="assets/languages.svg?v=20261030c5" alt="Most used languages" width="340">
+<img src="assets/languages.svg?v=20261031c5" alt="Most used languages" width="340">
 
 </p>
 
@@ -179,6 +179,6 @@
 
 > `while (alive) { learn(); build(); ship(); }`
 
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1f6feb,100:0d1117&height=130&section=footer&text=stay%20haunting&fontSize=26&fontColor=c9d1d9&fontAlignY=82" alt="footer wave" width="100%">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:b31217,100:0b0707&height=130&section=footer&text=struggle%20%C2%B7%20endure%20%C2%B7%20contend&fontSize=23&fontColor=e8e1d5&fontAlignY=82" alt="footer wave" width="100%">
 
 </div>
