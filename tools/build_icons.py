@@ -17,7 +17,7 @@ import re
 import sys
 import urllib.error
 import urllib.request
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -361,12 +361,147 @@ def build_stats_card():
     return path
 
 
+STREAK_VERSION = "k1"
+
+## Same geometry, palette and sweep as STATS above: the two cards sit side by
+## side, so a different shape would read as a mistake rather than as a second card.
+STREAK = """<svg xmlns="http://www.w3.org/2000/svg" width="360" height="150" viewBox="0 0 360 150" role="img" aria-label="Contribution streak">
+<!-- {version} -->
+<style>
+  .sweep {{ animation: sweep 5.4s linear infinite; }}
+  @keyframes sweep {{ 0% {{ transform: translateX(-70px); }} 100% {{ transform: translateX(380px); }} }}
+</style>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#141414"/><stop offset="1" stop-color="#0a0a0a"/>
+  </linearGradient>
+  <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#dcdcdc" stop-opacity=".1"/><stop offset=".5" stop-color="#dcdcdc" stop-opacity=".85"/><stop offset="1" stop-color="#dcdcdc" stop-opacity=".1"/>
+  </linearGradient>
+  <clipPath id="card"><rect x="0.5" y="0.5" width="359" height="149" rx="14"/></clipPath>
+</defs>
+<rect x="0.5" y="0.5" width="359" height="149" rx="14" fill="url(#bg)" stroke="#3a3a3a"/>
+<rect x="0.5" y="0.5" width="359" height="2.5" rx="1" fill="url(#edge)"/>
+<g clip-path="url(#card)">
+  <rect class="sweep" x="0" y="0" width="38" height="150" fill="#ffffff" opacity=".045"/>
+</g>
+{metrics}
+</svg>
+"""
+
+
+def streak_counts():
+    """Current and longest run of consecutive days carrying any contribution.
+
+    ContributionsCollection has no streak field -- the hosted card computed it
+    server-side and that service is gone -- so the calendar is walked here. The
+    current run stays alive until the day after the last active one, because
+    "today" has not finished yet in the account's own timezone.
+    """
+    import gh
+
+    user = gh.get_json(f"https://api.github.com/users/{USERNAME_FOR_API}")
+    today = date.today()
+    query = """query($login:String!,$from:DateTime!,$to:DateTime!){user(login:$login){
+      contributionsCollection(from:$from,to:$to){
+        contributionCalendar{ totalContributions
+          weeks{ contributionDays{ date contributionCount } } } } } }"""
+    active = []
+    total = 0
+    for year in range(int(user["created_at"][:4]), today.year + 1):
+        body = {"query": query, "variables": {
+            "login": USERNAME_FOR_API,
+            "from": f"{year}-01-01T00:00:00Z", "to": f"{year}-12-31T23:59:59Z"}}
+        payload = json.loads(gh.post_json("https://api.github.com/graphql", body))
+        if "errors" in payload:
+            raise RuntimeError(payload["errors"][0].get("message", "graphql error"))
+        cal = payload["data"]["user"]["contributionsCollection"]["contributionCalendar"]
+        total += cal["totalContributions"]
+        for week in cal["weeks"]:
+            for day in week["contributionDays"]:
+                if day["contributionCount"] > 0:
+                    d = date.fromisoformat(day["date"])
+                    if d <= today:
+                        active.append(d)
+    active = sorted(set(active))
+    if not active:
+        raise RuntimeError("the contribution calendar came back empty")
+
+    best = cur = 1
+    best_start = cur_start = active[0]
+    for prev, nxt in zip(active, active[1:]):
+        if (nxt - prev).days == 1:
+            cur += 1
+        else:
+            cur, cur_start = 1, nxt
+        if cur > best:
+            best, best_start = cur, cur_start
+
+    current = 1
+    for i in range(len(active) - 1, 0, -1):
+        if (active[i] - active[i - 1]).days == 1:
+            current += 1
+        else:
+            break
+    if (today - active[-1]).days > 1:
+        current = 0
+
+    return {"total": total, "current": current, "longest": best,
+            "days": len(active), "first": active[0],
+            "current_start": active[-current] if current else None,
+            "current_end": active[-1], "longest_start": best_start,
+            "longest_end": best_start + timedelta(days=best - 1)}
+
+
+def build_streak_card():
+    """Draw the streak card locally: github-readme-streak-stats' host is retired."""
+    path = ROOT / "assets" / "streak.svg"
+    try:
+        s = streak_counts()
+    except Exception as exc:
+        print(f"streak card: kept the old one ({exc})", file=sys.stderr)
+        return path if path.exists() else None
+
+    def span(start, end):
+        if start is None or end is None:
+            return "no run yet"
+        if start == end:
+            return start.strftime("%d %b")
+        return f"{start:%d %b} - {end:%d %b}"
+
+    cells = [
+        (f'{s["current"]}', "day current streak", span(s["current_start"], s["current_end"])),
+        (f'{s["longest"]}', "day longest streak", span(s["longest_start"], s["longest_end"])),
+        (f'{s["total"]:,}', "contributions", "all time"),
+        (f'{s["days"]}', "active days", f'since {s["first"]:%d %b %Y}'),
+    ]
+    out = []
+    for index, (value, label, sub) in enumerate(cells):
+        col, row = index % 2, index // 2
+        x, y = 32 + col * 168, 58 + row * 54
+        out.append(
+            f'<text x="{x}" y="{y}" font-family="{FONT}" font-size="24" font-weight="700" '
+            f'fill="#f0f0f0">{value}</text>\n'
+            f'<text x="{x}" y="{y + 18}" font-family="{FONT}" font-size="10.5" '
+            f'fill="#9a9a9a" letter-spacing=".4">{label}</text>\n'
+            f'<text x="{x}" y="{y + 32}" font-family="{FONT}" font-size="9" '
+            f'fill="#737373">{sub}</text>'
+        )
+    svg = STREAK.format(metrics="\n".join(out), version=STREAK_VERSION)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if not path.exists() or path.read_text(encoding="utf-8") != svg:
+        path.write_text(svg, encoding="utf-8", newline="\n")
+        print("streak card: rewritten")
+    return path
+
+
 def main():
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     import build_readme
     build_tiles(build_readme.TECH)
     build_repo_cards(build_readme.PROJECTS, build_readme.repo_rows())
     build_stats_card()
+    build_streak_card()
 
 
 

@@ -7,7 +7,6 @@ Every logo slug is HEAD-checked against cdn.simpleicons.org before anything is
 written, so a typo fails the build instead of showing a broken tile on the profile.
 """
 import hashlib
-import json
 import re
 import sys
 import time
@@ -166,12 +165,11 @@ EXTRA_LINKS = []
 # Your TryHackMe username, to show the profile card from the reference design.
 THM_USER = ""
 
-# github-readme-stats has been serving 503 since its Vercel deploy was paused, so the
-# totals card is generated from the API instead (tools/build_icons.py).
-# GitHub proxies README images through camo, which caches per URL. Without this the
-# live-data widgets below keep showing weeks-old numbers even though the services
-# return fresh ones; the daily refresh job rewrites this date, so they re-fetch.
-BUST = f"&v={date.today():%Y%m%d}"  # rebuilt below with the repo descriptions
+# Both live-data cards are generated locally now: github-readme-stats has served 503
+# since its Vercel deploy was paused, and github-readme-streak-stats' Heroku host is
+# retired, so tools/build_icons.py draws stats.svg and streak.svg from the API. They
+# are repo assets, so camo caches them per URL like any other image - the date and
+# version in front of each one is what forces a re-fetch after a rebuild.
 
 
 def esc(s):
@@ -216,6 +214,20 @@ def img(url, alt, width=None):
     return f'<img src="{url}" alt="{alt}"{w}>'
 
 
+def art_hash(path, text=False):
+    """Content hash for a camo cache-bust.
+
+    `text=True` normalises line endings first: core.autocrlf hands a Windows
+    checkout CRLF bytes for a blob that was committed as LF, so a raw hash of an
+    SVG changes on every build here without the artwork changing at all. Binary
+    assets must never be normalised - 0x0d 0x0a is valid data inside a PNG.
+    """
+    raw = path.read_bytes()
+    if text:
+        raw = raw.replace(b"\r\n", b"\n")
+    return hashlib.sha1(raw).hexdigest()[:8]
+
+
 def centered(html_lines):
     # flush-left on purpose: a 4-space indent after a blank line is a code block in markdown
     return ["<p align=\"center\">", "", *[l.lstrip() for l in html_lines], "", "</p>", ""]
@@ -237,15 +249,8 @@ def repo_rows():
 
 
 def build():
-    global BUST
     rows = repo_rows()
     visible = {r["name"] for r in rows if not r.get("private")}
-    live_desc = {r["name"]: (r.get("description") or "").strip() for r in rows}
-    # camo caches per URL, so the bust has to move when the data behind a card moves -
-    # folding the About texts in makes a description edit show up on the next push
-    BUST = "&v=" + hashlib.sha1(
-        (f"{date.today():%Y%m%d}" + json.dumps(live_desc, sort_keys=True)).encode()
-    ).hexdigest()[:10]
     hidden = [name for name, _, _ in PROJECTS if name not in visible]
     if hidden:
         print("not public, rendered without links: " + ", ".join(hidden), file=sys.stderr)
@@ -288,11 +293,11 @@ def build():
     a("<div align=\"center\">")
     a("")
     banner = ROOT / "assets" / "banner.jpg"
-    banner_v = hashlib.sha1(banner.read_bytes()).hexdigest()[:8] if banner.exists() else "0"
+    banner_v = art_hash(banner) if banner.exists() else "0"
     # GitHub throws away <video>, so the live wallpaper ships as an animated webp
     # with the still as the fallback; the sigil and the name are baked into the art
     webp = ROOT / "assets" / "banner.webp"
-    webp_v = hashlib.sha1(webp.read_bytes()).hexdigest()[:8] if webp.exists() else banner_v
+    webp_v = art_hash(webp) if webp.exists() else banner_v
     a("  <h1>")
     a("    <picture>")
     a(f'      <source type="image/webp" srcset="assets/banner.webp?v={webp_v}">')
@@ -350,13 +355,11 @@ def build():
     a("### ⚔️ GitHub stats")
     a("")
     build_icons.build_stats_card()
+    build_icons.build_streak_card()
     p.extend(centered([
         "  " + img(f"assets/stats.svg?v={date.today():%Y%m%d}{build_icons.STATS_VERSION}", "GitHub stats", "360"),
-        "  " + img(
-            "https://github-readme-streak-stats.herokuapp.com/?user=" + USERNAME + BUST
-            + "&theme=highcontrast&background=141416&border=3a3a3a&ring=e8e8e8&fire=f0f0f0"
-            "&currStreakLabel=d0d0d0&sideLabels=f0f0f0&dates=9a9a9a&sideNums=f0f0f0&currStreakNum=f0f0f0&stroke=3a3a3a&hide_border=false&card_width=360&card_height=150",
-            "Contribution streak"),
+        "  " + img(f"assets/streak.svg?v={date.today():%Y%m%d}{build_icons.STREAK_VERSION}",
+                   "Contribution streak", "360"),
     ]))
     a("## 🗡️ Tech stack")
     a("")
@@ -440,14 +443,18 @@ def build():
     a("")
     a("<div align=\"center\">")
     a("")
-    a("  " + img("assets/profile-card.png", "Profile card", "100%"))
+    # camo caches per URL, and this was the one asset left without a bust - the
+    # card would keep serving the previous artwork no matter what was pushed
+    pcard = ROOT / "assets" / "profile-card.png"
+    pcard_v = art_hash(pcard) if pcard.exists() else "0"
+    a("  " + img(f"assets/profile-card.png?v={pcard_v}", "Profile card", "100%"))
     a("")
     a("</div>")
     a("")
     a("<div align=\"center\">")
     a("")
     motto = build_icons.build_motto()
-    motto_v = hashlib.sha1(motto.read_bytes()).hexdigest()[:8]
+    motto_v = art_hash(motto, text=True)
     a("  " + img(f"assets/motto.svg?v={motto_v}",
                  "while (alive) { learn(); build(); ship(); }", "414"))
     a("")
