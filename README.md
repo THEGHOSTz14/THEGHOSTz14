@@ -2,8 +2,8 @@
 
   <h1>
     <picture>
-      <source type="image/webp" srcset="assets/banner.webp?v=eff912d6">
-      <img src="assets/banner.jpg?v=74f41728" alt="Rohan - THEGHOSTz14" width="100%">
+      <source type="image/webp" srcset="assets/banner.webp?v=56127c13">
+      <img src="assets/banner.jpg?v=123f83a3" alt="Rohan - THEGHOSTz14" width="100%">
     </picture>
   </h1>
 
@@ -14,12 +14,12 @@
   <em>“Struggle, endure, contend. For that alone is the sword of one who defies death.”</em> — <sub>Berserk</sub>
 
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com/?font=Fira%20Code&center=true&width=360&height=44&color=e0533d&vCenter=true&size=19&pause=1000&lines=Rohan%20from%20Gurgaon;Industrial%20%26%20PLC%20engineer;Godot%204%20%2B%20GDScript;Automating%20the%20boring%20parts" />
-    <source media="(prefers-color-scheme: light)" srcset="https://readme-typing-svg.demolab.com/?font=Fira%20Code&center=true&width=360&height=44&color=8b1a1a&vCenter=true&size=19&pause=1000&lines=Rohan%20from%20Gurgaon;Industrial%20%26%20PLC%20engineer;Godot%204%20%2B%20GDScript;Automating%20the%20boring%20parts" />
-    <img alt="typewriter intro" src="https://readme-typing-svg.demolab.com/?font=Fira%20Code&center=true&width=360&height=44&color=e0533d&vCenter=true&size=19&pause=1000&lines=Rohan%20from%20Gurgaon;Industrial%20%26%20PLC%20engineer;Godot%204%20%2B%20GDScript;Automating%20the%20boring%20parts" width="360" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com/?font=Fira%20Code&center=true&width=360&height=44&color=e8e8e8&vCenter=true&size=19&pause=1000&lines=Rohan%20from%20Gurgaon;Industrial%20%26%20PLC%20engineer;Godot%204%20%2B%20GDScript;Automating%20the%20boring%20parts" />
+    <source media="(prefers-color-scheme: light)" srcset="https://readme-typing-svg.demolab.com/?font=Fira%20Code&center=true&width=360&height=44&color=3a3a3a&vCenter=true&size=19&pause=1000&lines=Rohan%20from%20Gurgaon;Industrial%20%26%20PLC%20engineer;Godot%204%20%2B%20GDScript;Automating%20the%20boring%20parts" />
+    <img alt="typewriter intro" src="https://readme-typing-svg.demolab.com/?font=Fira%20Code&center=true&width=360&height=44&color=e8e8e8&vCenter=true&size=19&pause=1000&lines=Rohan%20from%20Gurgaon;Industrial%20%26%20PLC%20engineer;Godot%204%20%2B%20GDScript;Automating%20the%20boring%20parts" width="360" />
   </picture>
 
-  <img src="https://komarev.com/ghpvc/?username=THEGHOSTz14&style=flat&labelColor=140e0e&color=140e0e&label=visitors" alt="profile views"> <img src="https://img.shields.io/github/followers/THEGHOSTz14?style=flat&labelColor=140e0e&color=140e0e&logo=github&logoColor=white&label=followers" alt="followers"> <img src="https://img.shields.io/github/stars/THEGHOSTz14?style=flat&labelColor=140e0e&color=140e0e&label=stars%20received" alt="stars received">
+  <img src="https://komarev.com/ghpvc/?username=THEGHOSTz14&style=flat&labelColor=141416&color=141416&label=visitors" alt="profile views"> <img src="https://img.shields.io/github/followers/THEGHOSTz14?style=flat&labelColor=141416&color=141416&logo=github&logoColor=white&label=followers" alt="followers"> <img src="https://img.shields.io/github/stars/THEGHOSTz14?style=flat&labelColor=141416&color=141416&label=stars%20received" alt="stars received">
 
   ---
 
@@ -37,8 +37,8 @@
 
 <p align="center">
 
-<img src="assets/stats.svg?v=20261102s2" alt="GitHub stats" width="360">
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=THEGHOSTz14&v=175841e5c9&theme=tokyonight&background=140e0e&border=3a2a28&ring=b31217&fire=e0533d&currStreakLabel=c9a227&sideLabels=e8e1d5&dates=96897f&sideNums=e8e1d5&currStreakNum=e8e1d5&stroke=3a2a28&hide_border=false&card_width=360&card_height=150" alt="Contribution streak">
+<img src="assets/stats.svg?v=20261102s3" alt="GitHub stats" width="360">
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=THEGHOSTz14&v=175841e5c9&theme=highcontrast&background=141416&border=3a3a3a&ring=e8e8e8&fire=f0f0f0&currStreakLabel=d0d0d0&sideLabels=f0f0f0&dates=9a9a9a&sideNums=f0f0f0&currStreakNum=f0f0f0&stroke=3a3a3a&hide_border=false&card_width=360&card_height=150" alt="Contribution streak">
 
 </p>
 
@@ -48,7 +48,7 @@
 
 <p align="center">
 
-<img src="assets/tech/python.svg?v=t9" alt="Python" width="88"> <img src="assets/tech/c.svg?v=t9" alt="C" width="88"> <img src="assets/tech/cplusplus.svg?v=t9" alt="C++" width="88"> <img src="assets/tech/csharp.svg?v=t9" alt="C#" width="88"> <img src="assets/tech/gdscript.svg?v=t9" alt="GDScript" width="88"> <img src="assets/tech/javascript.svg?v=t9" alt="JavaScript" width="88"> <img src="assets/tech/typescript.svg?v=t9" alt="TypeScript" width="88"> <img src="assets/tech/sql.svg?v=t9" alt="SQL" width="88"> <img src="assets/tech/bash.svg?v=t9" alt="Bash" width="88"> <img src="assets/tech/matlab.svg?v=t9" alt="MATLAB" width="88">
+<img src="assets/tech/python.svg?v=t10" alt="Python" width="88"> <img src="assets/tech/c.svg?v=t10" alt="C" width="88"> <img src="assets/tech/cplusplus.svg?v=t10" alt="C++" width="88"> <img src="assets/tech/csharp.svg?v=t10" alt="C#" width="88"> <img src="assets/tech/gdscript.svg?v=t10" alt="GDScript" width="88"> <img src="assets/tech/javascript.svg?v=t10" alt="JavaScript" width="88"> <img src="assets/tech/typescript.svg?v=t10" alt="TypeScript" width="88"> <img src="assets/tech/sql.svg?v=t10" alt="SQL" width="88"> <img src="assets/tech/bash.svg?v=t10" alt="Bash" width="88"> <img src="assets/tech/matlab.svg?v=t10" alt="MATLAB" width="88">
 
 </p>
 
@@ -56,7 +56,7 @@
 
 <p align="center">
 
-<img src="assets/tech/html5.svg?v=t9" alt="HTML5" width="88"> <img src="assets/tech/css3.svg?v=t9" alt="CSS3" width="88"> <img src="assets/tech/react.svg?v=t9" alt="React" width="88"> <img src="assets/tech/vite.svg?v=t9" alt="Vite" width="88"> <img src="assets/tech/node-js.svg?v=t9" alt="Node.js" width="88"> <img src="assets/tech/express.svg?v=t9" alt="Express" width="88"> <img src="assets/tech/tailwind-css.svg?v=t9" alt="Tailwind CSS" width="88"> <img src="assets/tech/nginx.svg?v=t9" alt="Nginx" width="88"> <img src="assets/tech/flask.svg?v=t9" alt="Flask" width="88"> <img src="assets/tech/fastapi.svg?v=t9" alt="FastAPI" width="88"> <img src="assets/tech/gh-pages.svg?v=t9" alt="GH Pages" width="88">
+<img src="assets/tech/html5.svg?v=t10" alt="HTML5" width="88"> <img src="assets/tech/css3.svg?v=t10" alt="CSS3" width="88"> <img src="assets/tech/react.svg?v=t10" alt="React" width="88"> <img src="assets/tech/vite.svg?v=t10" alt="Vite" width="88"> <img src="assets/tech/node-js.svg?v=t10" alt="Node.js" width="88"> <img src="assets/tech/express.svg?v=t10" alt="Express" width="88"> <img src="assets/tech/tailwind-css.svg?v=t10" alt="Tailwind CSS" width="88"> <img src="assets/tech/nginx.svg?v=t10" alt="Nginx" width="88"> <img src="assets/tech/flask.svg?v=t10" alt="Flask" width="88"> <img src="assets/tech/fastapi.svg?v=t10" alt="FastAPI" width="88"> <img src="assets/tech/gh-pages.svg?v=t10" alt="GH Pages" width="88">
 
 </p>
 
@@ -64,7 +64,7 @@
 
 <p align="center">
 
-<img src="assets/tech/tensorflow.svg?v=t9" alt="TensorFlow" width="88"> <img src="assets/tech/pytorch.svg?v=t9" alt="PyTorch" width="88"> <img src="assets/tech/keras.svg?v=t9" alt="Keras" width="88"> <img src="assets/tech/opencv.svg?v=t9" alt="OpenCV" width="88"> <img src="assets/tech/scikit-learn.svg?v=t9" alt="scikit-learn" width="88"> <img src="assets/tech/numpy.svg?v=t9" alt="NumPy" width="88"> <img src="assets/tech/pandas.svg?v=t9" alt="Pandas" width="88"> <img src="assets/tech/ultralytics-yolo.svg?v=t9" alt="Ultralytics YOLO" width="88"> <img src="assets/tech/hugging-face.svg?v=t9" alt="Hugging Face" width="88"> <img src="assets/tech/ollama.svg?v=t9" alt="Ollama" width="88"> <img src="assets/tech/cuda.svg?v=t9" alt="CUDA" width="88"> <img src="assets/tech/jupyter.svg?v=t9" alt="Jupyter" width="88">
+<img src="assets/tech/tensorflow.svg?v=t10" alt="TensorFlow" width="88"> <img src="assets/tech/pytorch.svg?v=t10" alt="PyTorch" width="88"> <img src="assets/tech/keras.svg?v=t10" alt="Keras" width="88"> <img src="assets/tech/opencv.svg?v=t10" alt="OpenCV" width="88"> <img src="assets/tech/scikit-learn.svg?v=t10" alt="scikit-learn" width="88"> <img src="assets/tech/numpy.svg?v=t10" alt="NumPy" width="88"> <img src="assets/tech/pandas.svg?v=t10" alt="Pandas" width="88"> <img src="assets/tech/ultralytics-yolo.svg?v=t10" alt="Ultralytics YOLO" width="88"> <img src="assets/tech/hugging-face.svg?v=t10" alt="Hugging Face" width="88"> <img src="assets/tech/ollama.svg?v=t10" alt="Ollama" width="88"> <img src="assets/tech/cuda.svg?v=t10" alt="CUDA" width="88"> <img src="assets/tech/jupyter.svg?v=t10" alt="Jupyter" width="88">
 
 </p>
 
@@ -72,7 +72,7 @@
 
 <p align="center">
 
-<img src="assets/tech/godot-4.svg?v=t9" alt="Godot 4" width="88"> <img src="assets/tech/unity.svg?v=t9" alt="Unity" width="88"> <img src="assets/tech/unreal-engine.svg?v=t9" alt="Unreal Engine" width="88"> <img src="assets/tech/blender.svg?v=t9" alt="Blender" width="88"> <img src="assets/tech/clion.svg?v=t9" alt="CLion" width="88"> <img src="assets/tech/rider.svg?v=t9" alt="Rider" width="88"> <img src="assets/tech/tinkercad.svg?v=t9" alt="TinkerCAD" width="88"> <img src="assets/tech/sketchup.svg?v=t9" alt="SketchUp" width="88">
+<img src="assets/tech/godot-4.svg?v=t10" alt="Godot 4" width="88"> <img src="assets/tech/unity.svg?v=t10" alt="Unity" width="88"> <img src="assets/tech/unreal-engine.svg?v=t10" alt="Unreal Engine" width="88"> <img src="assets/tech/blender.svg?v=t10" alt="Blender" width="88"> <img src="assets/tech/clion.svg?v=t10" alt="CLion" width="88"> <img src="assets/tech/rider.svg?v=t10" alt="Rider" width="88"> <img src="assets/tech/tinkercad.svg?v=t10" alt="TinkerCAD" width="88"> <img src="assets/tech/sketchup.svg?v=t10" alt="SketchUp" width="88">
 
 </p>
 
@@ -80,7 +80,7 @@
 
 <p align="center">
 
-<img src="assets/tech/siemens-s7.svg?v=t9" alt="Siemens S7" width="88"> <img src="assets/tech/tia-portal.svg?v=t9" alt="TIA Portal" width="88"> <img src="assets/tech/allen-bradley.svg?v=t9" alt="Allen-Bradley" width="88"> <img src="assets/tech/studio-5000.svg?v=t9" alt="Studio 5000" width="88"> <img src="assets/tech/schneider-electric.svg?v=t9" alt="Schneider Electric" width="88"> <img src="assets/tech/abb.svg?v=t9" alt="ABB" width="88"> <img src="assets/tech/delta.svg?v=t9" alt="Delta" width="88"> <img src="assets/tech/panasonic-fpwin.svg?v=t9" alt="Panasonic FPWIN" width="88"> <img src="assets/tech/mitsubishi-gx-works.svg?v=t9" alt="Mitsubishi GX Works" width="88"> <img src="assets/tech/keyence-kv-studio.svg?v=t9" alt="Keyence KV Studio" width="88"> <img src="assets/tech/omron-cx-programmer.svg?v=t9" alt="Omron CX-Programmer" width="88"> <img src="assets/tech/ignition-scada.svg?v=t9" alt="Ignition SCADA" width="88"> <img src="assets/tech/mqtt.svg?v=t9" alt="MQTT" width="88"> <img src="assets/tech/modbus.svg?v=t9" alt="Modbus" width="88"> <img src="assets/tech/opc-ua.svg?v=t9" alt="OPC UA" width="88">
+<img src="assets/tech/siemens-s7.svg?v=t10" alt="Siemens S7" width="88"> <img src="assets/tech/tia-portal.svg?v=t10" alt="TIA Portal" width="88"> <img src="assets/tech/allen-bradley.svg?v=t10" alt="Allen-Bradley" width="88"> <img src="assets/tech/studio-5000.svg?v=t10" alt="Studio 5000" width="88"> <img src="assets/tech/schneider-electric.svg?v=t10" alt="Schneider Electric" width="88"> <img src="assets/tech/abb.svg?v=t10" alt="ABB" width="88"> <img src="assets/tech/delta.svg?v=t10" alt="Delta" width="88"> <img src="assets/tech/panasonic-fpwin.svg?v=t10" alt="Panasonic FPWIN" width="88"> <img src="assets/tech/mitsubishi-gx-works.svg?v=t10" alt="Mitsubishi GX Works" width="88"> <img src="assets/tech/keyence-kv-studio.svg?v=t10" alt="Keyence KV Studio" width="88"> <img src="assets/tech/omron-cx-programmer.svg?v=t10" alt="Omron CX-Programmer" width="88"> <img src="assets/tech/ignition-scada.svg?v=t10" alt="Ignition SCADA" width="88"> <img src="assets/tech/mqtt.svg?v=t10" alt="MQTT" width="88"> <img src="assets/tech/modbus.svg?v=t10" alt="Modbus" width="88"> <img src="assets/tech/opc-ua.svg?v=t10" alt="OPC UA" width="88">
 
 </p>
 
@@ -88,7 +88,7 @@
 
 <p align="center">
 
-<img src="assets/tech/ladder-logic.svg?v=t9" alt="Ladder Logic" width="88"> <img src="assets/tech/vfd-and-servo.svg?v=t9" alt="VFD & Servo" width="88"> <img src="assets/tech/24v-dc-sensor.svg?v=t9" alt="24V DC / Sensor" width="88"> <img src="assets/tech/relay-and-contactor.svg?v=t9" alt="Relay & Contactor" width="88"> <img src="assets/tech/panel-wiring.svg?v=t9" alt="Panel Wiring" width="88"> <img src="assets/tech/autocad-electrical.svg?v=t9" alt="AutoCAD Electrical" width="88"> <img src="assets/tech/eplan.svg?v=t9" alt="EPLAN" width="88"> <img src="assets/tech/labview.svg?v=t9" alt="LabVIEW" width="88"> <img src="assets/tech/proteus.svg?v=t9" alt="Proteus" width="88"> <img src="assets/tech/ltspice.svg?v=t9" alt="LTspice" width="88"> <img src="assets/tech/multisim.svg?v=t9" alt="Multisim" width="88">
+<img src="assets/tech/ladder-logic.svg?v=t10" alt="Ladder Logic" width="88"> <img src="assets/tech/vfd-and-servo.svg?v=t10" alt="VFD & Servo" width="88"> <img src="assets/tech/24v-dc-sensor.svg?v=t10" alt="24V DC / Sensor" width="88"> <img src="assets/tech/relay-and-contactor.svg?v=t10" alt="Relay & Contactor" width="88"> <img src="assets/tech/panel-wiring.svg?v=t10" alt="Panel Wiring" width="88"> <img src="assets/tech/autocad-electrical.svg?v=t10" alt="AutoCAD Electrical" width="88"> <img src="assets/tech/eplan.svg?v=t10" alt="EPLAN" width="88"> <img src="assets/tech/labview.svg?v=t10" alt="LabVIEW" width="88"> <img src="assets/tech/proteus.svg?v=t10" alt="Proteus" width="88"> <img src="assets/tech/ltspice.svg?v=t10" alt="LTspice" width="88"> <img src="assets/tech/multisim.svg?v=t10" alt="Multisim" width="88">
 
 </p>
 
@@ -96,7 +96,7 @@
 
 <p align="center">
 
-<img src="assets/tech/git.svg?v=t9" alt="Git" width="88"> <img src="assets/tech/github.svg?v=t9" alt="GitHub" width="88"> <img src="assets/tech/gitlab.svg?v=t9" alt="GitLab" width="88"> <img src="assets/tech/docker.svg?v=t9" alt="Docker" width="88"> <img src="assets/tech/kubernetes.svg?v=t9" alt="Kubernetes" width="88"> <img src="assets/tech/linux.svg?v=t9" alt="Linux" width="88"> <img src="assets/tech/ubuntu.svg?v=t9" alt="Ubuntu" width="88"> <img src="assets/tech/debian.svg?v=t9" alt="Debian" width="88"> <img src="assets/tech/kali-linux.svg?v=t9" alt="Kali Linux" width="88"> <img src="assets/tech/vs-code.svg?v=t9" alt="VS Code" width="88"> <img src="assets/tech/vim.svg?v=t9" alt="Vim" width="88"> <img src="assets/tech/ansible.svg?v=t9" alt="Ansible" width="88"> <img src="assets/tech/terraform.svg?v=t9" alt="Terraform" width="88"> <img src="assets/tech/jenkins.svg?v=t9" alt="Jenkins" width="88"> <img src="assets/tech/aws.svg?v=t9" alt="AWS" width="88"> <img src="assets/tech/google-cloud.svg?v=t9" alt="Google Cloud" width="88"> <img src="assets/tech/azure.svg?v=t9" alt="Azure" width="88"> <img src="assets/tech/cloudflare.svg?v=t9" alt="Cloudflare" width="88"> <img src="assets/tech/grafana.svg?v=t9" alt="Grafana" width="88"> <img src="assets/tech/prometheus.svg?v=t9" alt="Prometheus" width="88"> <img src="assets/tech/windows-terminal.svg?v=t9" alt="Windows Terminal" width="88"> <img src="assets/tech/android.svg?v=t9" alt="Android" width="88">
+<img src="assets/tech/git.svg?v=t10" alt="Git" width="88"> <img src="assets/tech/github.svg?v=t10" alt="GitHub" width="88"> <img src="assets/tech/gitlab.svg?v=t10" alt="GitLab" width="88"> <img src="assets/tech/docker.svg?v=t10" alt="Docker" width="88"> <img src="assets/tech/kubernetes.svg?v=t10" alt="Kubernetes" width="88"> <img src="assets/tech/linux.svg?v=t10" alt="Linux" width="88"> <img src="assets/tech/ubuntu.svg?v=t10" alt="Ubuntu" width="88"> <img src="assets/tech/debian.svg?v=t10" alt="Debian" width="88"> <img src="assets/tech/kali-linux.svg?v=t10" alt="Kali Linux" width="88"> <img src="assets/tech/vs-code.svg?v=t10" alt="VS Code" width="88"> <img src="assets/tech/vim.svg?v=t10" alt="Vim" width="88"> <img src="assets/tech/ansible.svg?v=t10" alt="Ansible" width="88"> <img src="assets/tech/terraform.svg?v=t10" alt="Terraform" width="88"> <img src="assets/tech/jenkins.svg?v=t10" alt="Jenkins" width="88"> <img src="assets/tech/aws.svg?v=t10" alt="AWS" width="88"> <img src="assets/tech/google-cloud.svg?v=t10" alt="Google Cloud" width="88"> <img src="assets/tech/azure.svg?v=t10" alt="Azure" width="88"> <img src="assets/tech/cloudflare.svg?v=t10" alt="Cloudflare" width="88"> <img src="assets/tech/grafana.svg?v=t10" alt="Grafana" width="88"> <img src="assets/tech/prometheus.svg?v=t10" alt="Prometheus" width="88"> <img src="assets/tech/windows-terminal.svg?v=t10" alt="Windows Terminal" width="88"> <img src="assets/tech/android.svg?v=t10" alt="Android" width="88">
 
 </p>
 
@@ -104,7 +104,7 @@
 
 <p align="center">
 
-<img src="assets/tech/arduino.svg?v=t9" alt="Arduino" width="88"> <img src="assets/tech/raspberry-pi.svg?v=t9" alt="Raspberry Pi" width="88"> <img src="assets/tech/esp32.svg?v=t9" alt="ESP32" width="88"> <img src="assets/tech/stm32.svg?v=t9" alt="STM32" width="88"> <img src="assets/tech/home-assistant.svg?v=t9" alt="Home Assistant" width="88">
+<img src="assets/tech/arduino.svg?v=t10" alt="Arduino" width="88"> <img src="assets/tech/raspberry-pi.svg?v=t10" alt="Raspberry Pi" width="88"> <img src="assets/tech/esp32.svg?v=t10" alt="ESP32" width="88"> <img src="assets/tech/stm32.svg?v=t10" alt="STM32" width="88"> <img src="assets/tech/home-assistant.svg?v=t10" alt="Home Assistant" width="88">
 
 </p>
 
@@ -112,31 +112,31 @@
 
 <p align="center">
 
-<a href="https://github.com/THEGHOSTz14/GHOST_WEB_GAME-"><img src="assets/repos/GHOST_WEB_GAME-.svg?v=20261102c5" alt="GHOST_WEB_GAME-" width="480"></a>
+<a href="https://github.com/THEGHOSTz14/GHOST_WEB_GAME-"><img src="assets/repos/GHOST_WEB_GAME-.svg?v=20261102c6" alt="GHOST_WEB_GAME-" width="480"></a>
 
 </p>
 
 <p align="center">
 
-<a href="https://github.com/THEGHOSTz14/YOLO-BASIC-MODEL"><img src="assets/repos/YOLO-BASIC-MODEL.svg?v=20261102c5" alt="YOLO-BASIC-MODEL" width="480"></a>
+<a href="https://github.com/THEGHOSTz14/YOLO-BASIC-MODEL"><img src="assets/repos/YOLO-BASIC-MODEL.svg?v=20261102c6" alt="YOLO-BASIC-MODEL" width="480"></a>
 
 </p>
 
 <p align="center">
 
-<a href="https://github.com/THEGHOSTz14/C-"><img src="assets/repos/C-.svg?v=20261102c5" alt="C-" width="480"></a>
+<a href="https://github.com/THEGHOSTz14/C-"><img src="assets/repos/C-.svg?v=20261102c6" alt="C-" width="480"></a>
 
 </p>
 
 <p align="center">
 
-<a href="https://github.com/THEGHOSTz14/PROFICADDD"><img src="assets/repos/PROFICADDD.svg?v=20261102c5" alt="PROFICADDD" width="480"></a>
+<a href="https://github.com/THEGHOSTz14/PROFICADDD"><img src="assets/repos/PROFICADDD.svg?v=20261102c6" alt="PROFICADDD" width="480"></a>
 
 </p>
 
 <p align="center">
 
-<a href="https://theghostz14.github.io/PROFICADDD/"><img src="https://img.shields.io/badge/-Launch%20demo-140e0e?style=flat&labelColor=140e0e&color=140e0e&logo=googlechrome&logoColor=e0533d" alt="launch demo"></a>
+<a href="https://theghostz14.github.io/PROFICADDD/"><img src="https://img.shields.io/badge/-Launch%20demo-141416?style=flat&labelColor=141416&color=141416&logo=googlechrome&logoColor=e8e8e8" alt="launch demo"></a>
 
 </p>
 
@@ -144,7 +144,7 @@
 
 <p align="center">
 
-<img src="assets/languages.svg?v=20261102c5" alt="Most used languages" width="340">
+<img src="assets/languages.svg?v=20261102c6" alt="Most used languages" width="340">
 
 </p>
 
@@ -163,7 +163,7 @@
 
 <p align="center">
 
-<a href="https://github.com/THEGHOSTz14"><img src="https://img.shields.io/badge/-GitHub-140e0e?style=flat&labelColor=140e0e&color=140e0e&logo=github&logoColor=FFFFFF" alt="GitHub"></a> <a href="mailto:204194426+THEGHOSTz14@users.noreply.github.com"><img src="https://img.shields.io/badge/-Email-140e0e?style=flat&labelColor=140e0e&color=140e0e&logo=gmail&logoColor=EA4335" alt="Email"></a>
+<a href="https://github.com/THEGHOSTz14"><img src="https://img.shields.io/badge/-GitHub-141416?style=flat&labelColor=141416&color=141416&logo=github&logoColor=FFFFFF" alt="GitHub"></a> <a href="mailto:204194426+THEGHOSTz14@users.noreply.github.com"><img src="https://img.shields.io/badge/-Email-141416?style=flat&labelColor=141416&color=141416&logo=gmail&logoColor=EA4335" alt="Email"></a>
 
 </p>
 
@@ -177,8 +177,8 @@
 
 <div align="center">
 
-  <img src="assets/motto.svg?v=933b441b" alt="while (alive) { learn(); build(); ship(); }" width="414">
+  <img src="assets/motto.svg?v=a42d73a1" alt="while (alive) { learn(); build(); ship(); }" width="414">
 
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:b31217,100:0b0707&height=130&section=footer&text=struggle%20%C2%B7%20endure%20%C2%B7%20contend&fontSize=23&fontColor=e8e1d5&fontAlignY=82" alt="footer wave" width="100%">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:d8d8d8,100:0b0b0b&height=130&section=footer&text=struggle%20%C2%B7%20endure%20%C2%B7%20contend&fontSize=23&fontColor=f0f0f0&fontAlignY=82" alt="footer wave" width="100%">
 
 </div>

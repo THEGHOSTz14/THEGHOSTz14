@@ -21,7 +21,7 @@ import build_icons
 import gh
 
 ROOT = Path(__file__).resolve().parent.parent
-PILL = "140e0e"
+PILL = "141416"
 USERNAME = "THEGHOSTz14"
 
 # (label, simple-icons slug or "" for a text-only tile, logo colour)
@@ -307,8 +307,8 @@ def build():
     a("  <em>“Struggle, endure, contend. For that alone is the sword of one who defies death.”</em>"
       " — <sub>Berserk</sub>")
     a("")
-    # teal on dark, GitHub blue on light - the same widget would be unreadable
-    # in one of the two themes without this
+    # the same widget would be unreadable in one of the two themes without this:
+    # ink on paper, so white text reads on GitHub dark and near-black on GitHub light
     def typing(color):
         return ("https://readme-typing-svg.demolab.com/?font=Fira%20Code&center=true&width=360&height=44"
                 f"&color={color}&vCenter=true&size=19&pause=1000&lines="
@@ -317,9 +317,9 @@ def build():
                             "Godot%204%20%2B%20GDScript",
                             "Automating%20the%20boring%20parts"]))
     a("  <picture>")
-    a(f'    <source media="(prefers-color-scheme: dark)" srcset="{typing("e0533d")}" />')
-    a(f'    <source media="(prefers-color-scheme: light)" srcset="{typing("8b1a1a")}" />')
-    a(f'    <img alt="typewriter intro" src="{typing("e0533d")}" width="360" />')
+    a(f'    <source media="(prefers-color-scheme: dark)" srcset="{typing("e8e8e8")}" />')
+    a(f'    <source media="(prefers-color-scheme: light)" srcset="{typing("3a3a3a")}" />')
+    a(f'    <img alt="typewriter intro" src="{typing("e8e8e8")}" width="360" />')
     a("  </picture>")
     a("")
     a("  " + img(
@@ -354,8 +354,8 @@ def build():
         "  " + img(f"assets/stats.svg?v={date.today():%Y%m%d}{build_icons.STATS_VERSION}", "GitHub stats", "360"),
         "  " + img(
             "https://github-readme-streak-stats.herokuapp.com/?user=" + USERNAME + BUST
-            + "&theme=tokyonight&background=140e0e&border=3a2a28&ring=b31217&fire=e0533d"
-            "&currStreakLabel=c9a227&sideLabels=e8e1d5&dates=96897f&sideNums=e8e1d5&currStreakNum=e8e1d5&stroke=3a2a28&hide_border=false&card_width=360&card_height=150",
+            + "&theme=highcontrast&background=141416&border=3a3a3a&ring=e8e8e8&fire=f0f0f0"
+            "&currStreakLabel=d0d0d0&sideLabels=f0f0f0&dates=9a9a9a&sideNums=f0f0f0&currStreakNum=f0f0f0&stroke=3a3a3a&hide_border=false&card_width=360&card_height=150",
             "Contribution streak"),
     ]))
     a("## 🗡️ Tech stack")
@@ -388,8 +388,8 @@ def build():
         demo = DEMOS.get(repo)
         if demo:
             p.extend(centered([
-                "  " + img(f"https://img.shields.io/badge/-Launch%20demo-140e0e?style=flat"
-                           f"&labelColor=140e0e&color=140e0e&logo=googlechrome&logoColor=e0533d",
+                "  " + img(f"https://img.shields.io/badge/-Launch%20demo-{PILL}?style=flat"
+                           f"&labelColor={PILL}&color={PILL}&logo=googlechrome&logoColor=e8e8e8",
                            "launch demo").replace('<img ', '<a href="' + demo + '"><img ', 1) + "</a>",
             ]))
     for repo, pitch, _logo in hidden:
@@ -451,9 +451,9 @@ def build():
     a("  " + img(f"assets/motto.svg?v={motto_v}",
                  "while (alive) { learn(); build(); ship(); }", "414"))
     a("")
-    a("  " + img("https://capsule-render.vercel.app/api?type=waving&color=0:b31217,100:0b0707"
+    a("  " + img("https://capsule-render.vercel.app/api?type=waving&color=0:d8d8d8,100:0b0b0b"
                  "&height=130&section=footer&text=struggle%20%C2%B7%20endure%20%C2%B7%20contend"
-                 "&fontSize=23&fontColor=e8e1d5&fontAlignY=82", "footer wave", "100%"))
+                 "&fontSize=23&fontColor=f0f0f0&fontAlignY=82", "footer wave", "100%"))
     a("")
     a("</div>")
     a("")

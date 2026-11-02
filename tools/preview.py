@@ -41,9 +41,18 @@ def data_uri(name, width=1000):
 
 
 def inline_assets(html):
-    for name, width in (("banner.png", 1000), ("profile-card.png", 1240)):
-        uri = data_uri(name, width)
-        html = re.sub(rf'<img src="assets/{re.escape(name)}"([^>]*)>',
+    # The hero ships as banner.jpg + an animated banner.webp, and every asset URL
+    # carries a camo-busting ?v= hash, so the match has to tolerate both. A missing
+    # file is skipped rather than fatal: the preview still renders from relative
+    # paths once the caller adds a <base>.
+    for name, width in (("banner.jpg", 1000), ("profile-card.png", 1240)):
+        try:
+            uri = data_uri(name, width)
+        except FileNotFoundError:
+            print(f"preview: assets/{name} not found, leaving the relative link",
+                  file=sys.stderr)
+            continue
+        html = re.sub(rf'<img src="assets/{re.escape(name)}(?:\?[^"]*)?"([^>]*)>',
                       lambda m, u=uri: f'<img src="{u}"{m.group(1)}>', html)
     return html
 
@@ -63,7 +72,17 @@ def main():
     )
     body = urllib.request.urlopen(req, timeout=90).read().decode()
     body = inline_assets(body)
-    html = f"<style>{STYLE}</style><div class='wrap'><div class='gh'>{body}</div></div>"
+    # A preview written anywhere other than the repo root still has to resolve the
+    # relative asset links the README uses, so point them back at it.
+    here, rel = out.parent.resolve(), "./"
+    if here != ROOT.resolve():
+        try:
+            rel = "../" * len(here.relative_to(ROOT.resolve()).parts)
+        except ValueError:
+            print(f"preview: {here} is outside the repo, relative asset links "
+                  f"will not resolve", file=sys.stderr)
+    html = (f"<base href='{rel}'><style>{STYLE}</style>"
+            f"<div class='wrap'><div class='gh'>{body}</div></div>")
     out.write_text(html, encoding="utf-8")
     print(f"{out} written ({len(html)//1024} KB)")
 

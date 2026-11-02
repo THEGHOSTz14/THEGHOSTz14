@@ -24,8 +24,8 @@ ROOT = Path(__file__).resolve().parent.parent
 TECH_DIR = ROOT / "assets" / "tech"
 REPO_DIR = ROOT / "assets" / "repos"
 CACHE = Path(__file__).resolve().parent / ".icons"
-TILE_VERSION = "t9"
-CARD_VERSION = "c5"
+TILE_VERSION = "t10"
+CARD_VERSION = "c6"
 
 FONT = "Segoe UI,Helvetica,Arial,sans-serif"
 
@@ -119,22 +119,22 @@ TILE = """<svg xmlns="http://www.w3.org/2000/svg" width="96" height="118" viewBo
 </style>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#201617"/><stop offset="1" stop-color="#0a0707"/>
+    <stop offset="0" stop-color="#171717"/><stop offset="1" stop-color="#0a0a0a"/>
   </linearGradient>
   <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
     <stop offset="0" stop-color="#ffffff" stop-opacity=".16"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
   </linearGradient>
   <clipPath id="clip"><rect x="0" y="0" width="96" height="96" rx="22"/></clipPath>
 </defs>
-<rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="url(#bg)" stroke="#3a2a28"/>
+<rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="url(#bg)" stroke="#3a3a3a"/>
 <g clip-path="url(#clip)">
   <rect x="1" y="1" width="94" height="46" rx="20" fill="url(#sheen)"/>
   <rect x="1" y="52" width="94" height="43" rx="18" fill="#000000" opacity=".22"/>
   <g transform="rotate(16 48 48)"><rect class="gleam" x="-46" y="-40" width="18" height="180" fill="#ffffff" opacity=".09"/></g>
   <g class="float"><g class="spin">{art}</g></g>
 </g>
-<rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="none" stroke="#f2e8dd" stroke-opacity=".07"/>
-<text x="48" y="112" text-anchor="middle" font-family="{font}" font-size="11.5" fill="#96897f"{fit}>{label}</text>
+<rect x="0.5" y="0.5" width="95" height="95" rx="21.5" fill="none" stroke="#f5f5f5" stroke-opacity=".07"/>
+<text x="48" y="112" text-anchor="middle" font-family="{font}" font-size="11.5" fill="#9a9a9a"{fit}>{label}</text>
 </svg>
 """
 
@@ -148,30 +148,30 @@ CARD = """<svg xmlns="http://www.w3.org/2000/svg" width="480" height="132" viewB
 </style>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#1a1111"/><stop offset="1" stop-color="#0a0707"/>
+    <stop offset="0" stop-color="#141414"/><stop offset="1" stop-color="#0a0a0a"/>
   </linearGradient>
   <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0" stop-color="#b31217"/><stop offset="1" stop-color="#e0533d"/>
+    <stop offset="0" stop-color="#6e6e6e"/><stop offset="1" stop-color="#f2f2f2"/>
   </linearGradient>
   <clipPath id="clip"><rect x="1" y="1" width="478" height="130" rx="16"/></clipPath>
 </defs>
-<rect x="0.5" y="0.5" width="479" height="131" rx="16" fill="url(#bg)" stroke="#3a2a28"/>
+<rect x="0.5" y="0.5" width="479" height="131" rx="16" fill="url(#bg)" stroke="#3a3a3a"/>
 <g clip-path="url(#clip)">
-  <rect class="sweep" x="0" y="-20" width="110" height="180" fill="#b31217" opacity=".05" transform="skewX(-14)"/>
+  <rect class="sweep" x="0" y="-20" width="110" height="180" fill="#ffffff" opacity=".05" transform="skewX(-14)"/>
 </g>
 <rect x="0.5" y="0.5" width="479" height="2.5" rx="1" fill="url(#edge)" opacity=".85"/>
 <text x="24" y="40" font-family="{font}" font-size="19" font-weight="700" fill="{name_color}">{repo}</text>
 <g class="arrow">
-  <path d="M448 30 L458 20 M450 20 H458 V28" fill="none" stroke="#b31217" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M448 30 L458 20 M450 20 H458 V28" fill="none" stroke="#e8e8e8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 {desc}
 <circle cx="29" cy="113" r="5" fill="{lang_color}"/>
-<text x="41" y="117" font-family="{font}" font-size="12" fill="#96897f">{lang}</text>
+<text x="41" y="117" font-family="{font}" font-size="12" fill="#9a9a9a">{lang}</text>
 <g font-family="{font}" font-size="12">
-  <g transform="translate(330 104) scale(.78)"><path fill="#c9a227" d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"/></g>
-  <text x="344" y="116" fill="#96897f">{stars}</text>
-  <g transform="translate(388 104) scale(.78)"><path fill="#96897f" d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"/></g>
-  <text x="402" y="116" fill="#96897f">{forks}</text>
+  <g transform="translate(330 104) scale(.78)"><path fill="#d0d0d0" d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"/></g>
+  <text x="344" y="116" fill="#9a9a9a">{stars}</text>
+  <g transform="translate(388 104) scale(.78)"><path fill="#9a9a9a" d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"/></g>
+  <text x="402" y="116" fill="#9a9a9a">{forks}</text>
 </g>
 </svg>
 """
@@ -217,11 +217,11 @@ def card_svg(repo, desc, stars, forks, language, index):
     parts = []
     for line in lines:
         parts.append(f'<text x="24" y="{y}" font-family="{FONT}" font-size="13" '
-                     f'fill="#96897f">{html.escape(line)}</text>')
+                     f'fill="#9a9a9a">{html.escape(line)}</text>')
         y += 19
     return CARD.format(repo=html.escape(repo), desc="\n".join(parts), font=FONT,
-                       name_color="#e8e1d5", lang=html.escape(language or "—"),
-                       lang_color=LANG_COLORS.get(language, "#7d6f65"),
+                       name_color="#f0f0f0", lang=html.escape(language or "—"),
+                       lang_color=LANG_COLORS.get(language, "#737373"),
                        stars=stars, forks=forks,
                        delay=-(index * 0.8) % 6.8, version=CARD_VERSION)
 
@@ -272,14 +272,14 @@ STATS = """<svg xmlns="http://www.w3.org/2000/svg" width="360" height="150" view
 </style>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#1a1111"/><stop offset="1" stop-color="#0a0707"/>
+    <stop offset="0" stop-color="#141414"/><stop offset="1" stop-color="#0a0a0a"/>
   </linearGradient>
   <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0" stop-color="#b31217" stop-opacity=".1"/><stop offset=".5" stop-color="#b31217" stop-opacity=".85"/><stop offset="1" stop-color="#b31217" stop-opacity=".1"/>
+    <stop offset="0" stop-color="#dcdcdc" stop-opacity=".1"/><stop offset=".5" stop-color="#dcdcdc" stop-opacity=".85"/><stop offset="1" stop-color="#dcdcdc" stop-opacity=".1"/>
   </linearGradient>
   <clipPath id="card"><rect x="0.5" y="0.5" width="359" height="149" rx="14"/></clipPath>
 </defs>
-<rect x="0.5" y="0.5" width="359" height="149" rx="14" fill="url(#bg)" stroke="#3a2a28"/>
+<rect x="0.5" y="0.5" width="359" height="149" rx="14" fill="url(#bg)" stroke="#3a3a3a"/>
 <rect x="0.5" y="0.5" width="359" height="2.5" rx="1" fill="url(#edge)"/>
 <g clip-path="url(#card)">
   <rect class="sweep" x="0" y="0" width="38" height="150" fill="#ffffff" opacity=".045"/>
@@ -288,7 +288,7 @@ STATS = """<svg xmlns="http://www.w3.org/2000/svg" width="360" height="150" view
 </svg>
 """
 
-STATS_VERSION = "s2"
+STATS_VERSION = "s3"
 STATS_CELLS = [
     ("contributions", "Contributions"),
     ("commits", "Commits"),
@@ -348,9 +348,9 @@ def build_stats_card():
         x, y = 32 + col * 168, 58 + row * 54
         cells.append(
             f'<text x="{x}" y="{y}" font-family="{FONT}" font-size="24" font-weight="700" '
-            f'fill="#e8e1d5">{numbers[key]:,}</text>\n'
+            f'fill="#f0f0f0">{numbers[key]:,}</text>\n'
             f'<text x="{x}" y="{y + 18}" font-family="{FONT}" font-size="10.5" '
-            f'fill="#96897f" letter-spacing=".4">{label}</text>'
+            f'fill="#9a9a9a" letter-spacing=".4">{label}</text>'
         )
     svg = STATS.format(metrics="\n".join(cells), version=STATS_VERSION)
     path = ROOT / "assets" / "stats.svg"
@@ -373,7 +373,7 @@ def main():
 USERNAME_FOR_API = "THEGHOSTz14"
 
 
-LANG_FALLBACK = ["#b31217", "#e0533d", "#A371F7", "#F0883E", "#3FB950", "#DB61A2", "#E3B341", "#39C5CF"]
+LANG_FALLBACK = ["#8B949E", "#F0F0F0", "#A371F7", "#F0883E", "#3FB950", "#DB61A2", "#E3B341", "#39C5CF"]
 
 LANGS = """<svg xmlns="http://www.w3.org/2000/svg" width="340" height="150" viewBox="0 0 340 150" role="img" aria-label="Most used languages">
 <!-- {version} -->
@@ -383,13 +383,13 @@ LANGS = """<svg xmlns="http://www.w3.org/2000/svg" width="340" height="150" view
 </style>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#1a1111"/><stop offset="1" stop-color="#0a0707"/>
+    <stop offset="0" stop-color="#141414"/><stop offset="1" stop-color="#0a0a0a"/>
   </linearGradient>
   <clipPath id="bar"><rect x="20" y="42" width="300" height="10" rx="5"/></clipPath>
 </defs>
-<rect x="0.5" y="0.5" width="339" height="149" rx="14" fill="url(#bg)" stroke="#3a2a28"/>
-<text x="20" y="26" font-family="{font}" font-size="13" font-weight="700" fill="#e8e1d5">Most used languages</text>
-<rect x="20" y="42" width="300" height="10" rx="5" fill="#241a19"/>
+<rect x="0.5" y="0.5" width="339" height="149" rx="14" fill="url(#bg)" stroke="#3a3a3a"/>
+<text x="20" y="26" font-family="{font}" font-size="13" font-weight="700" fill="#f0f0f0">Most used languages</text>
+<rect x="20" y="42" width="300" height="10" rx="5" fill="#1e1e1e"/>
 <g clip-path="url(#bar)">
 {segments}
   <rect class="glow" x="20" y="42" width="44" height="10" fill="#ffffff" opacity=".22"/>
@@ -407,19 +407,19 @@ MOTTO = """<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="46" viewB
 </style>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#1a1111"/><stop offset="1" stop-color="#0a0707"/>
+    <stop offset="0" stop-color="#141414"/><stop offset="1" stop-color="#0a0a0a"/>
   </linearGradient>
 </defs>
-<rect x="0.5" y="0.5" width="{w1}" height="45" rx="12" fill="url(#bg)" stroke="#3a2a28"/>
-<rect class="glow" x="0.5" y="0.5" width="{w1}" height="45" rx="12" fill="none" stroke="#b31217" stroke-width="1.4"/>
-<rect x="1" y="7" width="3" height="32" rx="1.5" fill="#b31217"/>
+<rect x="0.5" y="0.5" width="{w1}" height="45" rx="12" fill="url(#bg)" stroke="#3a3a3a"/>
+<rect class="glow" x="0.5" y="0.5" width="{w1}" height="45" rx="12" fill="none" stroke="#7a7a7a" stroke-width="1.4"/>
+<rect x="1" y="7" width="3" height="32" rx="1.5" fill="#e8e8e8"/>
 <text x="20" y="29" font-family="Cascadia Mono,Consolas,DejaVu Sans Mono,monospace" font-size="15">
-  <tspan fill="#e0533d">while</tspan><tspan fill="#96897f"> (</tspan><tspan fill="#c9a227">alive</tspan><tspan fill="#96897f">) {{</tspan>
-  <tspan fill="#e8e1d5"> learn</tspan><tspan fill="#96897f">();</tspan><tspan fill="#e8e1d5"> build</tspan><tspan fill="#96897f">();</tspan><tspan fill="#e8e1d5"> ship</tspan><tspan fill="#96897f">(); }}</tspan>
+  <tspan fill="#e8e8e8">while</tspan><tspan fill="#9a9a9a"> (</tspan><tspan fill="#b5b5b5">alive</tspan><tspan fill="#9a9a9a">) {{</tspan>
+  <tspan fill="#f0f0f0"> learn</tspan><tspan fill="#9a9a9a">();</tspan><tspan fill="#f0f0f0"> build</tspan><tspan fill="#9a9a9a">();</tspan><tspan fill="#f0f0f0"> ship</tspan><tspan fill="#9a9a9a">(); }}</tspan>
 </text>
 </svg>
 """
-MOTTO_VERSION = "m1"
+MOTTO_VERSION = "m2"
 
 
 def build_motto():
@@ -461,14 +461,14 @@ def build_languages(repo_names):
     for i, (lang, size) in enumerate(top):
         width = 300 * size / total
         color = LANG_COLORS.get(lang) or LANG_FALLBACK[i % len(LANG_FALLBACK)]
-        segs.append(f'<rect x="{x:.1f}" y="42" width="{width:.1f}" height="10" fill="{color}" stroke="#0a0707" stroke-width="1"/>')
+        segs.append(f'<rect x="{x:.1f}" y="42" width="{width:.1f}" height="10" fill="{color}" stroke="#0a0a0a" stroke-width="1"/>')
         col, row = divmod(i, 3)
         lx, ly = 20 + col * 160, 78 + row * 24
         name = lang if len(lang) <= 14 else lang[:13] + "…"
         legend.append(
             f'<circle cx="{lx + 4}" cy="{ly - 4}" r="4" fill="{color}"/>'
-            f'<text x="{lx + 14}" y="{ly}" font-family="{FONT}" font-size="11.5" fill="#96897f">'
-            f'{html.escape(name)} <tspan fill="#7d6f65">{size * 100 / total:.0f}%</tspan></text>'
+            f'<text x="{lx + 14}" y="{ly}" font-family="{FONT}" font-size="11.5" fill="#9a9a9a">'
+            f'{html.escape(name)} <tspan fill="#737373">{size * 100 / total:.0f}%</tspan></text>'
         )
         x += width
 
