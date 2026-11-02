@@ -37,8 +37,8 @@
 
 <p align="center">
 
-<img src="assets/stats.svg?v=20261101s2" alt="GitHub stats" width="360">
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=THEGHOSTz14&v=95c5a59991&theme=tokyonight&background=140e0e&border=3a2a28&ring=b31217&fire=e0533d&currStreakLabel=c9a227&sideLabels=e8e1d5&dates=96897f&sideNums=e8e1d5&currStreakNum=e8e1d5&stroke=3a2a28&hide_border=false&card_width=360&card_height=150" alt="Contribution streak">
+<img src="assets/stats.svg?v=20261102s2" alt="GitHub stats" width="360">
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=THEGHOSTz14&v=175841e5c9&theme=tokyonight&background=140e0e&border=3a2a28&ring=b31217&fire=e0533d&currStreakLabel=c9a227&sideLabels=e8e1d5&dates=96897f&sideNums=e8e1d5&currStreakNum=e8e1d5&stroke=3a2a28&hide_border=false&card_width=360&card_height=150" alt="Contribution streak">
 
 </p>
 
@@ -112,25 +112,25 @@
 
 <p align="center">
 
-<a href="https://github.com/THEGHOSTz14/GHOST_WEB_GAME-"><img src="assets/repos/GHOST_WEB_GAME-.svg?v=20261101c5" alt="GHOST_WEB_GAME-" width="480"></a>
+<a href="https://github.com/THEGHOSTz14/GHOST_WEB_GAME-"><img src="assets/repos/GHOST_WEB_GAME-.svg?v=20261102c5" alt="GHOST_WEB_GAME-" width="480"></a>
 
 </p>
 
 <p align="center">
 
-<a href="https://github.com/THEGHOSTz14/YOLO-BASIC-MODEL"><img src="assets/repos/YOLO-BASIC-MODEL.svg?v=20261101c5" alt="YOLO-BASIC-MODEL" width="480"></a>
+<a href="https://github.com/THEGHOSTz14/YOLO-BASIC-MODEL"><img src="assets/repos/YOLO-BASIC-MODEL.svg?v=20261102c5" alt="YOLO-BASIC-MODEL" width="480"></a>
 
 </p>
 
 <p align="center">
 
-<a href="https://github.com/THEGHOSTz14/C-"><img src="assets/repos/C-.svg?v=20261101c5" alt="C-" width="480"></a>
+<a href="https://github.com/THEGHOSTz14/C-"><img src="assets/repos/C-.svg?v=20261102c5" alt="C-" width="480"></a>
 
 </p>
 
 <p align="center">
 
-<a href="https://github.com/THEGHOSTz14/PROFICADDD"><img src="assets/repos/PROFICADDD.svg?v=20261101c5" alt="PROFICADDD" width="480"></a>
+<a href="https://github.com/THEGHOSTz14/PROFICADDD"><img src="assets/repos/PROFICADDD.svg?v=20261102c5" alt="PROFICADDD" width="480"></a>
 
 </p>
 
@@ -144,7 +144,7 @@
 
 <p align="center">
 
-<img src="assets/languages.svg?v=20261101c5" alt="Most used languages" width="340">
+<img src="assets/languages.svg?v=20261102c5" alt="Most used languages" width="340">
 
 </p>
 
