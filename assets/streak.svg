@@ -18,16 +18,16 @@
 <g clip-path="url(#card)">
   <rect class="sweep" x="0" y="0" width="38" height="150" fill="#ffffff" opacity=".045"/>
 </g>
-<text x="32" y="58" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="24" font-weight="700" fill="#f0f0f0">9</text>
+<text x="32" y="58" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="24" font-weight="700" fill="#f0f0f0">11</text>
 <text x="32" y="76" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="10.5" fill="#9a9a9a" letter-spacing=".4">day current streak</text>
-<text x="32" y="90" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="9" fill="#737373">25 Oct - 02 Nov</text>
-<text x="200" y="58" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="24" font-weight="700" fill="#f0f0f0">9</text>
+<text x="32" y="90" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="9" fill="#737373">23 Oct - 02 Nov</text>
+<text x="200" y="58" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="24" font-weight="700" fill="#f0f0f0">11</text>
 <text x="200" y="76" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="10.5" fill="#9a9a9a" letter-spacing=".4">day longest streak</text>
-<text x="200" y="90" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="9" fill="#737373">25 Oct - 02 Nov</text>
-<text x="32" y="112" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="24" font-weight="700" fill="#f0f0f0">124</text>
+<text x="200" y="90" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="9" fill="#737373">23 Oct - 02 Nov</text>
+<text x="32" y="112" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="24" font-weight="700" fill="#f0f0f0">125</text>
 <text x="32" y="130" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="10.5" fill="#9a9a9a" letter-spacing=".4">contributions</text>
 <text x="32" y="144" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="9" fill="#737373">all time</text>
-<text x="200" y="112" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="24" font-weight="700" fill="#f0f0f0">13</text>
+<text x="200" y="112" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="24" font-weight="700" fill="#f0f0f0">14</text>
 <text x="200" y="130" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="10.5" fill="#9a9a9a" letter-spacing=".4">active days</text>
 <text x="200" y="144" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="9" fill="#737373">since 20 Mar 2025</text>
 </svg>

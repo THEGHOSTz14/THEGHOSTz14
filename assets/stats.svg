@@ -18,9 +18,9 @@
 <g clip-path="url(#card)">
   <rect class="sweep" x="0" y="0" width="38" height="150" fill="#ffffff" opacity=".045"/>
 </g>
-<text x="32" y="58" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="24" font-weight="700" fill="#f0f0f0">124</text>
+<text x="32" y="58" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="24" font-weight="700" fill="#f0f0f0">125</text>
 <text x="32" y="76" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="10.5" fill="#9a9a9a" letter-spacing=".4">Contributions</text>
-<text x="200" y="58" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="24" font-weight="700" fill="#f0f0f0">114</text>
+<text x="200" y="58" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="24" font-weight="700" fill="#f0f0f0">104</text>
 <text x="200" y="76" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="10.5" fill="#9a9a9a" letter-spacing=".4">Commits</text>
 <text x="32" y="112" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="24" font-weight="700" fill="#f0f0f0">6</text>
 <text x="32" y="130" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="10.5" fill="#9a9a9a" letter-spacing=".4">Public repos</text>
