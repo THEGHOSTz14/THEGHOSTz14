@@ -37,8 +37,8 @@
 
 <p align="center">
 
-<img src="assets/stats.svg?v=20261106s3" alt="GitHub stats" width="360">
-<img src="assets/streak.svg?v=20261106k1" alt="Contribution streak" width="360">
+<img src="assets/stats.svg?v=20261107s3" alt="GitHub stats" width="360">
+<img src="assets/streak.svg?v=20261107k1" alt="Contribution streak" width="360">
 
 </p>
 
@@ -112,25 +112,25 @@
 
 <p align="center">
 
-<a href="https://github.com/THEGHOSTz14/GHOST_WEB_GAME-"><img src="assets/repos/GHOST_WEB_GAME-.svg?v=20261106c6" alt="GHOST_WEB_GAME-" width="480"></a>
+<a href="https://github.com/THEGHOSTz14/GHOST_WEB_GAME-"><img src="assets/repos/GHOST_WEB_GAME-.svg?v=20261107c6" alt="GHOST_WEB_GAME-" width="480"></a>
 
 </p>
 
 <p align="center">
 
-<a href="https://github.com/THEGHOSTz14/YOLO-BASIC-MODEL"><img src="assets/repos/YOLO-BASIC-MODEL.svg?v=20261106c6" alt="YOLO-BASIC-MODEL" width="480"></a>
+<a href="https://github.com/THEGHOSTz14/YOLO-BASIC-MODEL"><img src="assets/repos/YOLO-BASIC-MODEL.svg?v=20261107c6" alt="YOLO-BASIC-MODEL" width="480"></a>
 
 </p>
 
 <p align="center">
 
-<a href="https://github.com/THEGHOSTz14/C-"><img src="assets/repos/C-.svg?v=20261106c6" alt="C-" width="480"></a>
+<a href="https://github.com/THEGHOSTz14/C-"><img src="assets/repos/C-.svg?v=20261107c6" alt="C-" width="480"></a>
 
 </p>
 
 <p align="center">
 
-<a href="https://github.com/THEGHOSTz14/PROFICADDD"><img src="assets/repos/PROFICADDD.svg?v=20261106c6" alt="PROFICADDD" width="480"></a>
+<a href="https://github.com/THEGHOSTz14/PROFICADDD"><img src="assets/repos/PROFICADDD.svg?v=20261107c6" alt="PROFICADDD" width="480"></a>
 
 </p>
 
@@ -144,7 +144,7 @@
 
 <p align="center">
 
-<img src="assets/languages.svg?v=20261106c6" alt="Most used languages" width="340">
+<img src="assets/languages.svg?v=20261107c6" alt="Most used languages" width="340">
 
 </p>
 
